@@ -2,12 +2,12 @@
 
 angular
   .module( 'globalgamejam2015App' )
-  .controller( 'ConceptCtrl', function ( $scope, $state, gameData, Game ) {
+  .controller( 'ConceptCtrl', function ( $scope, $state, gameData, Game, devsData ) {
 
     // Event Handlers
 
     $scope.onOkButtonClicked = function () {
-      gameData.setGame( $scope.title );
+      gameData.initGame( $scope.title );
       $state.go( 'planning.team' );
     };
 

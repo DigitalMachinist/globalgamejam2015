@@ -13,13 +13,18 @@ angular
       ( function init () {
 
         // Abilities
-        if ( !self.abilityMap || typeof( self.abilityMap ) !== 'object' ) {
-          throw new Error( 'Invalid abilityMap!' );
+        if ( !self.abilities || !self.abilities instanceof Array || self.abilities.length < 1 ) {
+          throw new Error( 'Invalid abilities!' );
         }
 
         // Animations
         if ( !self.animationMap || typeof( self.animationMap ) !== 'object' ) {
           throw new Error( 'Invalid animationMap!' );
+        }
+
+        // Icon
+        if ( !self.icon || typeof( self.icon ) !== 'string' ) {
+          throw new Error( 'Invalid icon!' );
         }
 
         // Job Levels

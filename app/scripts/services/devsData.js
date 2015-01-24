@@ -12,18 +12,28 @@ angular
     self.getRandomDev = function ( maxLevel ) {
 
       // Choose a random level between 1 and maxLevel.
-      var level = Math.ceil( Math.random() * maxLevel );
+      var randomLevel = Math.ceil( Math.random() * maxLevel );
 
       // Fill an array with that many random job levels.
       var jobLevels = [];
-      for ( var i = 0; i < level; i++ ) {
-        jobLevels.push( jobsData.getRandomJobLevel( i === 0 ) );
+      var abilities = [];
+      for ( var i = 0; i < randomLevel; i++ ) {
+        var jobLevel = jobsData.getRandomJobLevel( i === 0 );
+        var count = 0;
+        for ( var j = 0; j < jobLevels.length; j++ ) {
+          if ( jobLevel === jobLevels[ j ] ) {
+            count++;
+          }
+        }
+        jobLevels.push( jobLevel );
+        abilities.push( jobsData.jobsMap[ jobLevel.jobName ].abilities[ count ] );
       }
 
       // Create a dev from a random person and the job levels array.
       return new Dev(
         peopleData.getRandomPerson(),
-        jobLevels
+        jobLevels,
+        abilities
       );
 
     };

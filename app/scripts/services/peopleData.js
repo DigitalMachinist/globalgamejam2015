@@ -155,5 +155,8 @@ angular
       ];
 
     } )();
+
+    // Export
+    return self;
   
   } );

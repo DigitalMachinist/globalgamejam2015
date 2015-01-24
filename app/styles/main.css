@@ -129,6 +129,12 @@ button.selected {
     right: 5px;
     color: #ff371a;
 }
+.dev-confirm {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #51d96a;
+}
 
 .dev-avatar {
     width: 140px;
@@ -245,9 +251,9 @@ button.selected {
 .ability .stat-icon { font-size: 32px; }
 
 /** PROGRAMMER **/
-.ability-prg .main-ability { left: 270px; top: 115px; }
-.ability-prg .ability-1 { left: 270px; top: 15px; }
-.ability-prg .ability-2 { left: 170px; top: 115px; }
+.ability-cod .main-ability { left: 270px; top: 115px; }
+.ability-cod .ability-1 { left: 270px; top: 15px; }
+.ability-cod .ability-2 { left: 170px; top: 115px; }
 
 /** ARTIST **/
 .ability-art .main-ability { left: 450px; top: 115px; }

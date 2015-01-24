@@ -4,19 +4,19 @@ angular
   .module( 'globalgamejam2015App' )
   .directive( 'devcard', function () {
     return {
-      templateUrl: 'views/devcard.html',
+      templateUrl: 'views/confirmcard.html',
       restrict: 'E',
       scope: {
         model: '=',
-        onFired: '='
+        onHireConfirm: '='
       },
       link: function postLink( $scope, $element, $attrs ) {
 
         // Event Handlers
         
-        $scope.onFireButtonClicked = function () {
-          if ( typeof( $scope.onFired ) === 'function' ) {
-            $scope.onFired( $scope.model );
+        $scope.onHireButtonClicked = function () {
+          if ( typeof( $scope.onHireConfirm ) === 'function' ) {
+            $scope.onHireConfirm( $scope.model );
           }
         };
 
