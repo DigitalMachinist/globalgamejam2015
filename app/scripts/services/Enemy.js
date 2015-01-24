@@ -69,6 +69,11 @@ angular
         return self.qa;
       };
 
+      // Hire Cost
+      self.getHireCost = function () {
+        return self.hireCost;
+      };
+
       // HP
       self.doDamage = function ( damageHp ) {
         self.currentHp += damageHp;
@@ -144,6 +149,11 @@ angular
         // Fun
         if ( !self.fun || !parseInt( self.fun ) ) {
           self.fun = 30;
+        }
+
+        // Hire Cost
+        if ( !self.hireCost || !parseInt( self.hireCost ) ) {
+          self.hireCost = 10;
         }
 
         // HP
