@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"te",
+				"text-align"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
 				"AR",
 				"AR"
 			],
@@ -27,6 +39,38 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/styles/main.css",
+			"settings":
+			{
+				"buffer_size": 6401,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/planning.team.html",
+			"settings":
+			{
+				"buffer_size": 9086,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/team.html",
+			"settings":
+			{
+				"buffer_size": 13146,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/sprint.html",
+			"settings":
+			{
+				"buffer_size": 4539,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -84,10 +128,17 @@
 	},
 	"expanded_folders":
 	[
-		"/Y/__repos/__projects/globalgamejam2015"
+		"/D/github/globalgamejam2015",
+		"/D/github/globalgamejam2015/app",
+		"/D/github/globalgamejam2015/app/styles",
+		"/D/github/globalgamejam2015/app/views"
 	],
 	"file_history":
 	[
+		"/D/github/globalgamejam2015/app/project.html",
+		"/D/github/globalgamejam2015/app/team.html",
+		"/D/github/globalgamejam2015/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/test_underscore/vendor/jquery.js",
+		"/D/github/globalgamejam2015/Gruntfile.js",
 		"/C/Users/Jeff/Documents/__dev/__repos/__projects/globalgamejam2015/dist/index.html",
 		"/Y/__repos/__projects/globalgamejam2015/bower.json",
 		"/Y/__repos/__projects/globalgamejam2015/package.json",
@@ -211,11 +262,7 @@
 		"/Y/__repos/__projects/peir/client/app/directives/quizScorecard/quizScorecardDirective.js",
 		"/Y/__repos/__projects/peir/client/app/views/user/Program/Module1/M1P09_PainMisbeliefsExercise/M1P09_PainMisbeliefsExercise.html",
 		"/Y/__repos/__projects/peir/client/app/views/user/Program/Module2/M2P08_KTCommentary4/M2P08_KTCommentary4Controller.js",
-		"/Y/__repos/__projects/peir/client/app/views/user/Program/Module2/M2P08_KTCommentary4/M2P08_KTCommentary4.html",
-		"/Y/__repos/__projects/peir/client/app/views/user/Program/Module1/Module1Controller.js",
-		"/Y/__repos/__projects/peir/client/app/services/$peirReferencesData/$peirReferencesData.js",
-		"/Y/__repos/__projects/peir/client/app/services/$peirQuestionnaireData/$peirQuestionnaireData.js",
-		"/Y/__repos/__projects/peir/client/app/directives/peirNavPageItem/peirNavPageItemDirective.js"
+		"/Y/__repos/__projects/peir/client/app/views/user/Program/Module2/M2P08_KTCommentary4/M2P08_KTCommentary4.html"
 	],
 	"find":
 	{
@@ -234,6 +281,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			" \n                    ",
+			"                    ",
+			"fa-5x",
+			"<div class=\"schedule-complete fa fa-times fa-5x\"></div>",
+			"fa-3x",
+			"fa fa-times fa-3x",
+			"schedule-block",
+			"fa-3x",
+			"character",
 			"<p class=\"input-group\">\n                      <input type=\"text\" class=\"form-control\" datepicker-popup=\"MMMM d, yyyy\" ng-model=\"report.formVars.dateMin\" is-open=\"opened\" datepicker-options=\"{{ dateOptions }}\" close-text=\"Close\" />\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-default\" ng-click=\"open( $event )\"><i class=\"glyphicon glyphicon-calendar\"></i></button>\n                      </span>\n                    </p>",
 			"{\n",
 			"Ready",
@@ -328,8 +384,127 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/styles/main.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6401,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3122,
+								3122
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3674.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/planning.team.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9086,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2292,
+								2292
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1122.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/team.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13146,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2416,
+								2416
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 836.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/sprint.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4539,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1916,
+								1916
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 638.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
 			]
 		}
 	],
