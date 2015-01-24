@@ -1,0 +1,54 @@
+<div class="fight">
+	<div class="battlefield">
+		<div class="enemy-sprites">
+			<ul>
+				<li ng-repeat="enemy in enemies">
+					<div class="sprite-container">
+						<i class="fa fa-2x fa-hand-o-down" ng-show="isEnemySelected( enemy )"></i>
+						<sprite facing="right" model="enemy" ng-hover="onEnemyHovered( enemy )" ng-click="onEnemyClicked( enemy )"></sprite>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="dev-sprites">
+			<ul>
+				<li ng-repeat="dev in devs">
+					<div class="sprite-container">
+						<i class="fa fa-2x fa-hand-o-down" ng-show="isDevSelected( dev )"></i>
+						<sprite facing="left" model="enemy" ng-hover="onDevHovered( dev )" ng-click="onDevClicked( dev )"></sprite>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="fight-controls">
+		<div class="enemy-list">
+			<ul>
+				<li ng-repeat="enemy in enemies">
+					<div class="enemy-list-item" ng-class="{ 'selected': isEnemySelected( enemy ) }" ng-hover="onEnemyHovered( enemy )" ng-click="onEnemyClicked( enemy )">{{ enemy.name }}</div> 
+				</li>
+			</ul>
+		</div>
+		<div class="ability-list">
+			<div class="left-arrow float-left" ng-click="onChangeDevArrowClicked( 'left' )">
+				<i class="fa fa-2x fa-left"></i>
+			</div>
+			<ul class="scrollable float-left">
+				<li ng-repeat="ability in selectedDev.abilities">
+					<div class="ability-list-item" ng-class="{ 'selected': isAbilitySelected( ability ) }" ng-hover="onAbilityHovered( ability )" ng-click="onAbilityClicked( ability )">{{ ability.name }}</div> 
+				</li>
+			</ul>
+			<div class="right-arrow float-left" ng-click="onChangeDevArrowClicked( 'right' )">
+				<i class="fa fa-2x fa-right"></i>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="enemy-list">
+			<ul>
+				<li ng-repeat="dev in devs">
+					<status class="dev-list-item" ng-class="{ 'selected': isDevSelected( enemy ) }" ng-hover="onDevHovered( dev )" ng-click="onDevClicked( dev )">{{ dev.name }}</status> 
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
