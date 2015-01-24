@@ -2,13 +2,13 @@
 
 angular
   .module( 'globalgamejam2015App' )
-  .service( 'Game', function Game() {
+  .factory( 'Game', function Game() {
 
     return function Game( nameString, numMonths, startBudget, conceptBonus, prototypeBonus,
       conceptMinFun, prototypeMinFun, alphaMinFun, betaMinFun, releaseMinFun ) {
 
       // Validate arguments.
-      if ( !nameString || typeof( nameString !== 'string' ) ) {
+      if ( !nameString || typeof( nameString ) !== 'string' ) {
         throw new Error( 'Invalid name!' );
       }
       if ( !numMonths || !parseInt( numMonths ) || numMonths < 0 ) {
@@ -110,7 +110,7 @@ angular
         self.currentMonth = 0;
         self.fun = 0;
         self.max$$$ = 999;
-        self.setName( nameString );
+        self.name = nameString;
         self.numMonths = numMonths;
         self.prototypeBonus = prototypeBonus;
         self.prototypeMinFun = prototypeMinFun;
