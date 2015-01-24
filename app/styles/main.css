@@ -9,6 +9,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, button {
     font-family: 'Press Start 2P', Arial, sans-serif;
     text-transform: uppercase;
     margin: 0;
+    text-shadow: 3px 3px 0px #000000;
 }
 
 h1 { font-size: 42px; }
@@ -237,6 +238,7 @@ button.selected {
     padding: 5px 2px 0 3px;
     text-align: center;
     position: absolute;
+    text-shadow: none;
 }
 
 .ability .stat-icon, .ability .ability-name { text-align: center;}
@@ -327,21 +329,48 @@ button.selected {
 }
 
 .milestone-progress, .milestone-phase {
-    padding: 40px;
+    margin: 40px 0 80px 40px;
 }
+
+.milestone-progress-text {
+    width: 760px;
+    text-align: center;
+    position: absolute;
+    z-index: 99;
+    top: 110px;
+    text-shadow: 3px 3px 0px #000000;
+}
+
+.milestone-phase .segment {
+    border-right: 5px solid #333333;
+    height: 80px;
+    width: 185px; /* 760/4 = 190 */
+    margin-top: 5px;
+    background: transparent;
+    position: relative;
+    z-index: 101;
+    float: left;
+}
+
+.milestone-phase .segment h3 {
+    margin: 18px 0;
+    text-align:  center;
+}
+
+.milestone-phase .segment.last-child { border: 0 none; width: 190px; }
 
 #milestone-area .stat-bar-container {
     height: 80px;
-    width: 755px;
+    width: 760px; /* 760/4 = 190 */
     background: #000000;
     margin-top: -80px;
 }
 
 #milestone-area .stat-bar-filled {
     height: 80px;
-    width: 355px; /* testing */
+    width: 285px; /* testing */
     background: #51d96a;
     position: relative;
-    z-index: 999;
+    z-index: 98;
     margin-top: 5px;
 }

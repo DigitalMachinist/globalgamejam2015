@@ -384,7 +384,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -414,7 +414,7 @@
 						"translation.y": 3674.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -442,7 +442,7 @@
 						"translation.y": 1122.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -458,8 +458,8 @@
 						"selection":
 						[
 							[
-								2416,
-								2416
+								2506,
+								2506
 							]
 						],
 						"settings":
@@ -472,7 +472,7 @@
 						"translation.y": 836.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
