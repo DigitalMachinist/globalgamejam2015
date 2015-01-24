@@ -2,14 +2,14 @@
 
 angular
   .module( 'globalgamejam2015App' )
-  .controller( 'PlanningCtrl', function ( $scope, $location, gameData ) {
+  .controller( 'PlanningCtrl', function ( $scope, $state, gameData ) {
 
     // Init
     ( function init () {
 
-      console.log( gameData.game );
+      // Redirect the user back to the main menu if their game isn't initalized.
       if ( !gameData.game ) {
-        $location.href = '#';
+        $state.go( 'menu.main' );
       }
 
     } )();

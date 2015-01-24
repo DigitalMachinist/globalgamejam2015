@@ -28,6 +28,8 @@ angular
     ( function init () {
 
       self.game = null;
+      self.devs = [];
+      
 
     } )();
 
