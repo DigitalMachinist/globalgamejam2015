@@ -1,0 +1,21 @@
+<div class="status">
+	<div class="name float-left">
+		{{ model.name }}
+	</div>
+	<div class="hp float-left">
+		<label for="{{ model.name }}-hp">HP</label>
+		<div role="progressbar" id="{{ model.name }}-hp" class="progress-bar" ng-class="{ 'critical': isHpCritical( model.currentHp ), 'moderate': isHpModerate( model.currentHp), 'safe': isHpSafe( model.currentHp ) }" aria-valuenow="{{ model.currentHp }}" aria-valuemin="0" aria-valuemax="{{ model.maxHp }}" style="width: {{ getHpPercent() }}%">
+		    {{ model.currentHp }}
+		  </div>
+		</div>
+	</div>
+	<div class="atb float-left">
+		<div class="progress">
+			<label for="{{ model.name }}-atb">ATB</label>
+		  <div role="progressbar" id="{{ model.name }}-atb" class="progress-bar" ng-class="{ 'not-ready': !isAtbReady(), 'ready': isAtbReady() }" aria-valuenow="{{ model.atbProgress }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ model.atbProgress }}%">
+		    <span class="sr-only">ATB {{ model.atbProgress }}% filled</span>
+		  </div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</div>

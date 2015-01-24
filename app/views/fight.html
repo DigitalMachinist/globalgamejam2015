@@ -46,7 +46,7 @@
 		<div class="enemy-list">
 			<ul>
 				<li ng-repeat="dev in devs">
-					<status class="dev-list-item" ng-class="{ 'selected': isDevSelected( enemy ) }" ng-hover="onDevHovered( dev )" ng-click="onDevClicked( dev )">{{ dev.name }}</status> 
+					<status model="dev" class="dev-list-item" ng-class="{ 'selected': isDevSelected( enemy ) }" ng-hover="onDevHovered( dev )" ng-click="onDevClicked( dev )">{{ dev.name }}</status> 
 				</li>
 			</ul>
 		</div>
