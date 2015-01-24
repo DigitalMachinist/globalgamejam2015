@@ -1,1 +1,0 @@
-"use strict";angular.module("globalgamejam2015App",["ngAnimate","ngSanitize"]),angular.module("globalgamejam2015App").controller("MainCtrl",["$scope",function(a){a.awesomeThings=["HTML5 Boilerplate","AngularJS","Karma"]}]);

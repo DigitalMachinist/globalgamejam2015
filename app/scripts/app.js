@@ -1,15 +1,15 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name globalgamejam2015App
- * @description
- * # globalgamejam2015App
- *
- * Main module of the application.
- */
-angular
-  .module('globalgamejam2015App', [
-    'ngAnimate',
-    'ngSanitize'
-  ]);
+angular.module( 'globalgamejam2015App', [
+  'ngSanitize',
+  'ui.router'
+] )
+.config( function ( $stateProvider, $urlRouterProvider ) {
+  //delete $httpProvider.defaults.headers.common['X-Requested-With'];
+  $urlRouterProvider.otherwise( '/' );
+  $stateProvider.state( 'index', {
+    url: '/',
+    templateUrl: 'views/main.html',
+    controller: 'MainCtrl'
+  } );
+} );
