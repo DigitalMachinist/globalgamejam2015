@@ -2,7 +2,7 @@
 
 angular
 	.module( 'globalgamejam2015App' )
-  .service( 'Person', function Person() {
+  .factory( 'Person', function Person() {
 
     return function Person( baseObj ) {
 

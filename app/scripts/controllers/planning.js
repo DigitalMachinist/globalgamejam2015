@@ -9,7 +9,8 @@ angular
 
       // Redirect the user back to the main menu if their game isn't initalized.
       if ( !gameData.game ) {
-        $state.go( 'menu.main' );
+        //$state.go( 'menu.main' );
+        gameData.setGame( 'TEST' );
       }
 
     } )();

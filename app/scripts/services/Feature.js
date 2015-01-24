@@ -2,7 +2,7 @@
 
 angular
   .module( 'globalgamejam2015App' )
-  .service( 'Feature', function Feature( jobsData ) {
+  .factory( 'Feature', function Feature( jobsData ) {
 
     return function Feature( nameString, descriptionString, affinityJobName, cost, fun ) {
 

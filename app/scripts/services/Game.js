@@ -5,7 +5,7 @@ angular
   .factory( 'Game', function Game() {
 
     return function Game( nameString, numMonths, startBudget, conceptBonus, prototypeBonus,
-      conceptMinFun, prototypeMinFun, alphaMinFun, betaMinFun, releaseMinFun ) {
+      prototypeMinFun, alphaMinFun, betaMinFun, releaseMinFun ) {
 
       // Validate arguments.
       if ( !nameString || typeof( nameString ) !== 'string' ) {
@@ -22,9 +22,6 @@ angular
       }
       if ( !prototypeBonus || !parseInt( prototypeBonus ) || prototypeBonus < 0 ) {
         throw new Error( 'Invalid prototypeBonus!' );
-      }
-      if ( !conceptMinFun || !parseInt( conceptMinFun ) || conceptMinFun < 0 ) {
-        throw new Error( 'Invalid conceptMinFun!' );
       }
       if ( !prototypeMinFun || !parseInt( prototypeMinFun ) || prototypeMinFun < 0 ) {
         throw new Error( 'Invalid prototypeMinFun!' );
@@ -105,7 +102,6 @@ angular
         self.alphaMinFun = alphaMinFun;
         self.betaMinFun = betaMinFun;
         self.conceptBonus = conceptBonus;
-        self.conceptMinFun = conceptMinFun;
         self.current$$$ = startBudget;
         self.currentMonth = 0;
         self.fun = 0;

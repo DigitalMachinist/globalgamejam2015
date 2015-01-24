@@ -1,0 +1,30 @@
+<div class="dev-card">
+  <div ng-show="!isNull()">
+    <div class="dev-fire" ng-if="type === 'team'" ng-click="onFireButtonClicked()">
+      <span class="fa fa-times fa-2x"></span>
+    </div>
+    <div class="dev-hire" ng-if="type === 'hire'" ng-click="onHireButtonClicked()">
+      <span class="fa fa-plus fa-2x"></span>
+    </div>
+    <div class="dev-avatar"></div>
+    <ul>
+      <li class="stat dev-stat">
+        <h3 class="stat-name">HP</h3>
+        <h3 class="stat-bar">{{ model.getMaxHp() }}</h3>
+      </li>
+      <li class="stat dev-stat">
+        <h3 class="stat-name">SPD</h3>
+        <h3 class="stat-bar">{{ model.getAtbSpeed() }}</h3>
+      </li>
+      <li class="stat dev-stat">
+        <h3 class="stat-name">XP</h3>
+        <h3 class="stat-bar">{{ model.getXp() }}</h3>
+      </li>
+    </ul>
+  </div>
+  <div ng-show="isNull()">
+    <div class="dev-hire" ng-if="type === 'hire'" ng-click="onHireButtonClicked()">
+      <span class="fa fa-plus fa-2x"></span>
+    </div>
+  </div>
+</div>

@@ -2,7 +2,7 @@
 
 angular
   .module( 'globalgamejam2015App' )
-  .service( 'Job', function Job( JobLevel ) {
+  .factory( 'Job', function Job( JobLevel ) {
 
     return function Job( baseObj ) {
 

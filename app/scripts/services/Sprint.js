@@ -2,7 +2,7 @@
 
 angular
   .module( 'globalgamejam2015App' )
-  .service( 'Sprint', function Sprint( enemyData ) {
+  .factory( 'Sprint', function Sprint( enemyData ) {
 
     return function Sprint( difficulty, length, investment, payout, phaseName ) {
 

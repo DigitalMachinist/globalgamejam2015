@@ -2,7 +2,7 @@
 
 angular
   .module( 'globalgamejam2015App' )
-  .service( 'Ability', function Ability() {
+  .factory( 'Ability', function Ability() {
 
     return function Ability( nameString, abilityFn ) {
 

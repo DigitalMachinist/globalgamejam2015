@@ -1,192 +1,151 @@
-<div id="game-area">
-        <div id="header">
-            <h1 class="view-title">Team</h1>
-            <h1 class="game-title">{Title}</h1>
-        </div>
-
-        <div id="content">
-            <!-- This goes on every screen -->
-            <div id="nav">
-                <button class="nav-btn">Project</button>
-                <button class="nav-btn disabled">Team</button>
-                <button class="nav-btn">Sprint</button>
-            </div>
-
-            <div id="sidebar">
-                <ul>
-                    <li>
-                    <div class="dev-card">
-                        <div class="dev-fire"><span class="fa fa-times fa-2x"></span></div>
-                        <div class="dev-avatar"></div>
-                        <ul>
-                            <li class="stat dev-stat">
-                                <h3 class="stat-name">HP</h3>
-                                <h3 class="stat-bar">56</h3>
-                            </li>
-                            <li class="stat dev-stat">
-                                <h3 class="stat-name">SPD</h3>
-                                <h3 class="stat-bar">124</h3>
-                            </li>
-                            <li class="stat dev-stat">
-                                <h3 class="stat-name">XP</h3>
-                                <h3 class="stat-bar">567</h3>
-                            </li>
-                        </ul>
-                    </div>
-                    </li>
-                    <li>
-                        <div class="dev-card">
-                            <div class="dev-hire"><span class="fa fa-plus fa-2x"></span></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="dev-card">
-                            <div class="dev-hire"><span class="fa fa-plus fa-2x"></span></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="dev-card">
-                            <div class="dev-hire"><span class="fa fa-plus fa-2x"></span></div>
-                        </div>
-                    </li>
-               </ul> 
-            </div>
-            <div id="dev-info">
-
-                <div id="dev-strengths">
-                <h3>Strengths</h3>
-                    <ul>
-                        <li class="stat dev-strength clearfix">
-                            <div class="stat-icon fa fa-bug fa-2x"></div>
-                            <h3 class="stat-name">BUG</h3>
-                            <div class="stat-bar stat-bar-filled"></div>
-                            <div class="stat-bar stat-bar-container"></div>
-                        </li>
-                        <li class="stat dev-strength clearfix">
-                            <div class="stat-icon fa fa-briefcase fa-2x"></div>
-                            <h3 class="stat-name">EXE</h3>
-                            <div class="stat-bar stat-bar-filled"></div>
-                            <div class="stat-bar stat-bar-container"></div>
-                        </li>
-                        <li class="stat dev-strength clearfix">
-                            <div class="stat-icon fa fa-twitter fa-2x"></div>
-                            <h3 class="stat-name">CRT</h3>
-                            <div class="stat-bar stat-bar-filled"></div>
-                            <div class="stat-bar stat-bar-container"></div>
-                        </li>
-                        <li class="stat dev-strength clearfix">
-                            <div class="stat-icon fa fa-crosshairs fa-2x"></div>
-                            <h3 class="stat-name">HRD</h3>
-                            <div class="stat-bar stat-bar-filled"></div>
-                            <div class="stat-bar stat-bar-container"></div>
-                        </li>
-                        <li class="stat dev-strength clearfix">
-                            <div class="stat-icon fa fa-mobile fa-2x"></div>
-                            <h3 class="stat-name">CSL</h3>
-                            <div class="stat-bar stat-bar-filled"></div>
-                            <div class="stat-bar stat-bar-container"></div>
-                        </li>
-                        <li class="stat dev-strength clearfix">
-                            <div class="stat-icon fa fa-sitemap fa-2x"></div>
-                            <h3 class="stat-name">CLN</h3>
-                            <div class="stat-bar stat-bar-filled"></div>
-                            <div class="stat-bar stat-bar-container"></div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div id="dev-abilities">
-                    <h3 id="dev-name">Tabyrose</h3>
-                    <h2 id="dev-job">ART</h2>
-
-                    <!-- Programmer -->
-                    <div class="ability-set ability-prg">
-                        <button class="ability main-ability selected">
-                            <div class="stat-icon fa fa-keyboard-o"></div>
-                            <h3 class="ability-name">PRG</h3>
-                        </button>
-                        <button class="ability ability-1 selected">
-                            <div class="stat-icon fa fa-keyboard-o"></div>
-                        </button>
-                        <button class="ability ability-2">
-                            <div class="stat-icon fa fa-keyboard-o"></div>
-                        </button>
-                    </div>
-
-                    <!-- Artist -->
-                    <div class="ability-set ability-art">
-                        <button class="ability main-ability">
-                            <div class="stat-icon fa fa-paint-brush"></div>
-                            <h3 class="ability-name">ART</h3>
-                        </button>
-                        <button class="ability ability-1 disabled">
-                            <div class="stat-icon fa fa-paint-brush"></div>
-                        </button>
-                        <button class="ability ability-2 disabled">
-                            <div class="stat-icon fa fa-paint-brush"></div>
-                        </button>
-                    </div>
-
-                    <!-- PR -->
-                    <div class="ability-set ability-pr">
-                        <button class="ability main-ability">
-                            <div class="stat-icon fa fa-comments"></div>
-                            <h3 class="ability-name">PR</h3>
-                        </button>
-                        <button class="ability ability-1 disabled">
-                            <div class="stat-icon fa fa-comments"></div>
-                        </button>
-                        <button class="ability ability-2 disabled">
-                            <div class="stat-icon fa fa-comments"></div>
-                        </button>
-                       </div> 
-
-                    <!-- Producer -->
-                    <div class="ability-set ability-prd">
-                        <button class="ability main-ability">
-                            <div class="stat-icon fa fa-line-chart"></div>
-                            <h3 class="ability-name">PRD</h3>
-                        </button>
-                        <button class="ability ability-1 disabled">
-                            <div class="stat-icon fa fa-line-chart"></div>
-                        </button>
-                        <button class="ability ability-2 disabled">
-                            <div class="stat-icon fa fa-line-chart"></div>
-                        </button>
-                    </div>
-
-                    <!-- Designer -->
-                    <div class="ability-set ability-dsn">
-                        <button class="ability main-ability">
-                            <div class="stat-icon fa fa-magic"></div>
-                            <h3 class="ability-name">DSN</h3>
-                        </button>
-                        <button class="ability ability-1 disabled">
-                            <div class="stat-icon fa fa-magic"></div>
-                        </button>
-                        <button class="ability ability-2 disabled">
-                            <div class="stat-icon fa fa-magic"></div>
-                        </button>
-                    </div>
-
-                    <!-- QA -->
-                    <div class="ability-set ability-qa">
-                        <button class="ability main-ability">
-                            <div class="stat-icon fa fa-gamepad"></div>
-                            <h3 class="ability-name">QA</h3>
-                        </button>
-                        <button class="ability ability-1 disabled">
-                            <div class="stat-icon fa fa-gamepad"></div>
-                        </button>
-                        <button class="ability ability-2 disabled">
-                            <div class="stat-icon fa fa-gamepad"></div>
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-
+<div class="planning-team">
+  <div id="header">
+    <h1 class="view-title">Team</h1>
+    <h1 class="game-title">{Title}</h1>
+  </div>
+  <div id="content">
+    <!-- This goes on every screen -->
+    <div id="nav">
+      <button class="nav-btn">Project</button>
+      <button class="nav-btn disabled">Team</button>
+      <button class="nav-btn">Sprint</button>
     </div>
+    <div id="sidebar">
+      <ul ng-if="state === 'team'">
+        <li ng-repeat="dev in devsData.devs">
+          <devcard index="{{ $index }}" model="dev" type="team" on-fired="onDevFired" on-hired="onDevHire" ng-click="onDevClicked( dev )"></devcard>
+        </li>
+      </ul>
+      <ul ng-if="state === 'hire'">
+        <li ng-repeat="dev in devsData.hireableDevs">
+          <devcard index="{{ $index }}" model="dev" type="hire" on-hired="onHireableDevHire" ng-click="onHireableDevClicked( dev )"></devcard>
+        </li>
+      </ul>
+    </div>
+    <div id="dev-info">
+      <div id="dev-strengths">
+        <h3>Strengths</h3>
+        <ul>
+          <li class="stat dev-strength clearfix">
+            <div class="stat-icon fa fa-bug fa-2x"></div>
+            <h3 class="stat-name">BUG</h3>
+            <div class="stat-bar stat-bar-filled"></div>
+            <div class="stat-bar stat-bar-container"></div>
+          </li>
+          <li class="stat dev-strength clearfix">
+            <div class="stat-icon fa fa-briefcase fa-2x"></div>
+            <h3 class="stat-name">EXE</h3>
+            <div class="stat-bar stat-bar-filled"></div>
+            <div class="stat-bar stat-bar-container"></div>
+          </li>
+          <li class="stat dev-strength clearfix">
+            <div class="stat-icon fa fa-twitter fa-2x"></div>
+            <h3 class="stat-name">CRT</h3>
+            <div class="stat-bar stat-bar-filled"></div>
+            <div class="stat-bar stat-bar-container"></div>
+          </li>
+          <li class="stat dev-strength clearfix">
+            <div class="stat-icon fa fa-crosshairs fa-2x"></div>
+            <h3 class="stat-name">HRD</h3>
+            <div class="stat-bar stat-bar-filled"></div>
+            <div class="stat-bar stat-bar-container"></div>
+          </li>
+          <li class="stat dev-strength clearfix">
+            <div class="stat-icon fa fa-mobile fa-2x"></div>
+            <h3 class="stat-name">CSL</h3>
+            <div class="stat-bar stat-bar-filled"></div>
+            <div class="stat-bar stat-bar-container"></div>
+          </li>
+          <li class="stat dev-strength clearfix">
+            <div class="stat-icon fa fa-sitemap fa-2x"></div>
+            <h3 class="stat-name">CLN</h3>
+            <div class="stat-bar stat-bar-filled"></div>
+            <div class="stat-bar stat-bar-container"></div>
+          </li>
+        </ul>
+      </div>
+      <div id="dev-abilities">
+        <h3 id="dev-name">Tabyrose</h3>
+        <h2 id="dev-job">ART</h2>
+        <!-- Programmer -->
+        <div class="ability-set ability-prg">
+          <button class="ability main-ability selected">
+          <div class="stat-icon fa fa-keyboard-o"></div>
+          <h3 class="ability-name">PRG</h3>
+          </button>
+          <button class="ability ability-1 selected">
+          <div class="stat-icon fa fa-keyboard-o"></div>
+          </button>
+          <button class="ability ability-2">
+          <div class="stat-icon fa fa-keyboard-o"></div>
+          </button>
+        </div>
+        <!-- Artist -->
+        <div class="ability-set ability-art">
+          <button class="ability main-ability">
+          <div class="stat-icon fa fa-paint-brush"></div>
+          <h3 class="ability-name">ART</h3>
+          </button>
+          <button class="ability ability-1 disabled">
+          <div class="stat-icon fa fa-paint-brush"></div>
+          </button>
+          <button class="ability ability-2 disabled">
+          <div class="stat-icon fa fa-paint-brush"></div>
+          </button>
+        </div>
+        <!-- PR -->
+        <div class="ability-set ability-pr">
+          <button class="ability main-ability">
+          <div class="stat-icon fa fa-comments"></div>
+          <h3 class="ability-name">PR</h3>
+          </button>
+          <button class="ability ability-1 disabled">
+          <div class="stat-icon fa fa-comments"></div>
+          </button>
+          <button class="ability ability-2 disabled">
+          <div class="stat-icon fa fa-comments"></div>
+          </button>
+        </div>
+        <!-- Producer -->
+        <div class="ability-set ability-prd">
+          <button class="ability main-ability">
+          <div class="stat-icon fa fa-line-chart"></div>
+          <h3 class="ability-name">PRD</h3>
+          </button>
+          <button class="ability ability-1 disabled">
+          <div class="stat-icon fa fa-line-chart"></div>
+          </button>
+          <button class="ability ability-2 disabled">
+          <div class="stat-icon fa fa-line-chart"></div>
+          </button>
+        </div>
+        <!-- Designer -->
+        <div class="ability-set ability-dsn">
+          <button class="ability main-ability">
+          <div class="stat-icon fa fa-magic"></div>
+          <h3 class="ability-name">DSN</h3>
+          </button>
+          <button class="ability ability-1 disabled">
+          <div class="stat-icon fa fa-magic"></div>
+          </button>
+          <button class="ability ability-2 disabled">
+          <div class="stat-icon fa fa-magic"></div>
+          </button>
+        </div>
+        <!-- QA -->
+        <div class="ability-set ability-qa">
+          <button class="ability main-ability">
+          <div class="stat-icon fa fa-gamepad"></div>
+          <h3 class="ability-name">QA</h3>
+          </button>
+          <button class="ability ability-1 disabled">
+          <div class="stat-icon fa fa-gamepad"></div>
+          </button>
+          <button class="ability ability-2 disabled">
+          <div class="stat-icon fa fa-gamepad"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

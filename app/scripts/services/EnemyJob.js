@@ -2,7 +2,7 @@
 
 angular
   .module( 'globalgamejam2015App' )
-  .service( 'Enemyjob', function Enemyjob() {
+  .factory( 'Enemyjob', function Enemyjob() {
 
     return function EnemyJob( nameString, abilitiesArray, animationMap ) {
 

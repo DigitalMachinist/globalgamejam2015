@@ -2,7 +2,7 @@
 
 angular
   .module( 'globalgamejam2015App' )
-  .service( 'Animation', function Animation() {
+  .factory( 'Animation', function Animation() {
 
     return function Animation( nameString, framesArray ) {
 
