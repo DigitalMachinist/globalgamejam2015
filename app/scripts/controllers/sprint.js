@@ -1,7 +1,7 @@
 'use strict';
 angular
 	.module( 'globalgamejam2015App' )
-	.controller( 'FightCtrl', function ( $scope ) {
+	.controller( 'SprintCtrl', function ( $scope ) {
 
     // Event Handlers
 

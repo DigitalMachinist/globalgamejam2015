@@ -5,9 +5,10 @@ body {
     margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p, ul, ol {
+h1, h2, h3, h4, h5, h6, p, ul, ol, button {
     font-family: 'Press Start 2P', Arial, sans-serif;
     text-transform: uppercase;
+    margin: 0;
 }
 
 h1 { font-size: 42px; }
@@ -19,7 +20,10 @@ h3 { font-size: 18px; }
     width: 1200px;
     height: 800px;
     margin: 0 auto;
+    position: relative;
 }
+
+/** HEADER **/
 #header {
     background: #000000;
     height: 80px;
@@ -28,21 +32,49 @@ h3 { font-size: 18px; }
 #header .view-title, #header .game-title {
     font-size: 42px;
     padding: 10px;
+    margin-top: 15px;
 }
 
 #header .view-title {
     float: left;
+    color: #444444;
 }
 
 #header .game-title {
     float: right;
 }
 
+/** SCREEN BUTTONS **/
+#nav {
+    position: absolute;
+    top: 800px;
+    left: 15px;
+}
+
+#nav .nav-btn {
+    background: #000000;
+    color: #ffffff;
+    padding: 15px;
+    margin: 0 6px 0 0;
+    border: 0 none;
+}
+
+#nav .nav-btn.disabled {
+    background: #333333;
+    color: #666666;
+    padding: 15px;
+    margin: 0 6px 0 0;
+    border: 0 none;
+}
+
+/** DEV SIDEBAR **/
+
 #sidebar {
     width: 400px;
     height: 800px;
-    background: #000000;
+    background: #444444;
     overflow: hidden;
+    float: left;
 }
 
 #sidebar ul {
@@ -57,7 +89,7 @@ h3 { font-size: 18px; }
     position: relative;
     height: 280px;
     width: 140px;
-    background: #666666;
+    background: #000000;
     float: left;
     margin: 15px;
     padding: 15px;
@@ -95,4 +127,72 @@ h3 { font-size: 18px; }
     margin: 0;
     float: right;
 
+}
+
+/** DEV LEVEL AREA **/
+#dev-info {
+    float: left;
+    width: 800px;
+    margin: 0;
+}
+#dev-strengths {
+    background: #444444;
+    height: 160px;
+    padding: 15px;
+}
+
+#dev-strengths h3  {
+    margin: 0;
+}
+
+.dev-strength {
+    width: 370px;
+    float: left;
+}
+
+.dev-strength .stat-icon {
+    width: 40px;
+    float: left;
+}
+.dev-strength .stat-name {
+    width: 70px;
+    float: left;
+}
+
+.dev-strength .stat-bar-container {
+    height: 24px;
+    width: 240px;
+    background: #000000;
+    float: left;
+    margin-top: -24px;
+}
+
+.dev-strength .stat-bar-filled {
+    height: 24px;
+    width: 120px; /* testing */
+    background: #0095ff;
+    float: left;
+    position: relative;
+    z-index: 999;
+    margin-top: 5px;
+}
+
+/** DEV ABILITY/LEVELING AREA **/
+
+.ability {
+    width: 80px;
+    height: 80px;
+    background: #000000;
+    padding: 3px 2px 2px 3px;
+    text-align: center;
+    border: 0 none;
+    color: #ffffff;
+}
+
+.ability .stat-icon, .ability .ability-name {
+    text-align: center;
+}
+
+.ability .ability-prg .main-ability {
+    
 }
