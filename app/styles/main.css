@@ -63,7 +63,7 @@ button.selected {
 
 #header .view-title, #header .game-title {
     font-size: 42px;
-    padding: 10px;
+    padding: 10px 15px;
     margin-top: 15px;
 }
 
@@ -373,4 +373,66 @@ button.selected {
     position: relative;
     z-index: 98;
     margin-top: 5px;
+}
+
+/**********************************************************
+ ** SPRINT PAGE *******************************************
+ **********************************************************/
+
+.sprint-card {
+    position: relative;
+    width: 310px;
+    background: #000000;
+    float: left;
+    margin: 60px 30px 60px 30px;
+    padding: 15px;
+}
+
+.sprint-card h2 { 
+    text-align: center;
+    margin-bottom: 40px;
+
+}
+
+.sprint-card .stat-name {
+    clear: both;
+    float: left;
+    margin: 0;
+    width: 80px;
+}
+
+.sprint-card .stat-bar {
+    margin: 0;
+    /*float: left;*/
+    margin-left: 80px;
+}
+
+.sprint-btn {
+    width: 340px;
+    position: absolute;
+    top: 330px;
+    right: 0px;
+    padding: 15px;
+    font-size: 32px;
+}
+
+.sprint-card .stat-bar-container {
+    height: 40px;
+    width: 200px;
+    background: #333333;
+    margin-top: -40px;
+    margin-left: 80px;
+}
+
+.sprint-card .stat-bar-filled {
+    height: 40px;
+    width: 200px; /* testing */
+    background: #51d96a;
+    position: relative;
+    z-index: 999;
+    margin-top: 5px;
+}
+
+.sprint-card .sprint-stat {
+    clear: both;
 }
