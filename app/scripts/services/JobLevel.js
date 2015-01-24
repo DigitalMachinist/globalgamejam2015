@@ -9,16 +9,11 @@ angular
       // Create the base object to augment.
       var self = baseObj;
 
-      // Helpers
-      function isNumber( n ) {
-        return !isNaN( parseFloat( n ) ) && isFinite( n );
-      }
-
       // Init
       ( function init () {
 
         // ATB
-        if ( !self.atbSpeed || !isNumber( self.atbSpeed ) ) {
+        if ( !self.atbSpeed || !parseInt( self.atbSpeed ) ) {
           self.atbSpeed = 0;
         }
 

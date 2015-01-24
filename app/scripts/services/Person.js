@@ -9,16 +9,11 @@ angular
     	// Create the base object to augment.
     	var self = baseObj;
 
-      // Helpers
-      function isNumber( n ) {
-        return !isNaN( parseFloat( n ) ) && isFinite( n );
-      }
-
       // Init
       ( function init () {
 
         // ATB
-        if ( !self.atbSpeed || !isNumber( self.atbSpeed ) ) {
+        if ( !self.atbSpeed || !parseInt( self.atbSpeed ) ) {
           self.atbSpeed = 10;
         }
 
@@ -57,8 +52,8 @@ angular
           self.name = 'DEV';
         }
         else {
-          if ( self.name.length > 6 ) {
-            self.name = self.name.substring( 0, 5 );
+          if ( self.name.length > 8 ) {
+            self.name = self.name.substring( 0, 7 );
           }
           self.name = self.name.toUpperCase();
         }
