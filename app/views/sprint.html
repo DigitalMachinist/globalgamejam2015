@@ -3,10 +3,10 @@
 		<!-- <div class="sprint-instructions">Choose an enemy.</div> -->
 		<div class="enemy-sprites">
 			<ul>
-				<li ng-repeat="enemy in enemies" ng-if="!enemy.empty">
+				<li ng-repeat="enemy in enemies" ng-if="!enemy.empty && enemy.getCurrentHp() > 0">
 					<div class="sprite-container">
 						<i class="fa fa-3x sprite-icon enemy-sprite-{{ $index + 1 }}" ng-class="{ 'fa-caret-down':enemy === actionTarget || enemy === actionEnemy, 'shaking': dev.isShaking }"></i>
-						<div class="enemy-sprite enemy-sprite-{{ $index + 1 }} {{ enemy.getCurrentAniClass() }}" ng-mouseenter="onEnemyHovered( enemy )" ng-click="onEnemyClicked( enemy )"></div>
+						<div class="enemy-sprite enemy-sprite-{{ $index + 1 }} {{ enemy.getCurrentAniClass() }}" ng-mouseenter="onEnemyHovered( enemy )" ng-click="onEnemyClicked( enemy )" ng-class="{ 'acting-enemy': enemy.isActing }"></div>
 					</div>
 				</li>
 			</ul>
@@ -14,7 +14,7 @@
 		<div class="dev-sprites">
 			<ul>
 				<li ng-repeat="dev in devs" ng-if="!dev.empty">
-					<div class="sprite-container">
+					<div class="sprite-container" ng-class="{ 'acting-dev': dev.isActing }">
 						<i class="fa fa-3x sprite-icon dev-sprite-{{ $index + 1 }}" ng-class="{ 'fa-caret-down': dev === actionTarget || enemy === actionDev }"></i>
 						<div class="dev-sprite dev-sprite-{{ $index + 1 }} {{ dev.getCurrentAniClass() }}" ng-class="{ 'shaking': dev.isShaking }" ng-mouseenter="onDevHovered( dev )" ng-mouseleave="onDevUnhovered( dev )" ng-click="onDevClicked( dev )"></div>
 					</div>

@@ -15,19 +15,27 @@ angular
       var randomLevel = Math.ceil( Math.random() * maxLevel );
 
       // Fill an array with that many random job levels.
+      // var levelMap = {
+      //   'ART': 0, 'COD': 0, 'DSN': 0, 'PR': 0, 'PRD': 0, 'QA': 0
+      // };
       var jobLevels = [];
-      var abilities = [ self.attackAbility ];
+      var abilities = [ jobsData.attackAbility ];
       for ( var i = 0; i < randomLevel; i++ ) {
         var jobLevel = jobsData.getRandomJobLevel( i === 0 );
+        //levelMap[ jobLevel.jobName ]++;
         var count = 0;
         for ( var j = 0; j < jobLevels.length; j++ ) {
-          if ( jobLevel === jobLevels[ j ] ) {
+          if ( jobLevel.jobName === jobLevels[ j ].jobName ) {
             count++;
           }
         }
+        var copyJobLevel = angular.copy( jobLevel );
         jobLevels.push( jobLevel );
-        abilities.push( jobsData.jobsMap[ jobLevel.jobName ].abilities[ count ] );
+        var copyAbility = angular.copy( jobsData.jobsMap[ jobLevel.jobName ].abilities[ count ] );
+        abilities.push( copyAbility );
       }
+
+      console.log( abilities );
 
       // Create a dev from a random person and the job levels array.
       var dev = new Dev(
@@ -83,41 +91,7 @@ angular
         self.getEmptyDev() 
       ];
 
-      self.attackAbility = new Ability(
-        'ATTACK', 
-        '', 
-        '', 
-        1, 
-        'Use the pointy end.', 
-        function ( dev, target, ability, $scope ) {
-          var isMiss = ( Math.random() > 0.9 );
-          if ( isMiss ) {
-            $scope.instructions = dev.getName() + ' whiffs! ' + 
-              target.getName() + ' laughs a little.';
-            return;
-          }
-          var targetJob = target.job.name.toLowerCase();
-          var attackerStat = dev[ targetJob ];
-          var squareable = Math.max( 0, attackerStat - 10 );
-          var nonSquareable = Math.min( 10, attackerStat );
-          var damage = squareable * squareable + Math.random() * nonSquareable;
-          var isCritical = ( Math.random() > 0.8 );
-          if ( isCritical ) {
-            var multiplier = 1 + Math.random();
-            damage *= multiplier;
-          }
-          var finalDamage = Math.round( damage );
-          target.doDamage( damage ); 
-          if ( isCritical ) {
-            $scope.instructions = dev.getName() + ' scored a crit! ' + 
-              target.getName() + ' takes ' + finalDamage + ' damage.';
-          }
-          else {
-            $scope.instructions = dev.getName() + ' hit! ' + 
-              target.getName() + ' takes ' + finalDamage + ' damage.';
-          }
-        }
-      );
+      
 
     } )();
 

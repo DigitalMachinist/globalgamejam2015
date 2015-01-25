@@ -21,6 +21,51 @@ angular
 
     ( function init () {
 
+      self.attackAbilityFn = function ( dev, target, ability, $scope, $rootScope ) {
+        var isMiss = ( Math.random() > 0.95 );
+        if ( isMiss ) {
+          $scope.instructions = dev.getName() + ' whiffs! ' + 
+            target.getName() + ' laughs a little.';
+          return;
+        }
+        var targetJob = target.job.name.toLowerCase();
+        var attackStat = 10;
+        switch ( targetJob ) {
+          case 'bug': dev.getBugStat(); break;
+          case 'csl': dev.getCasualStat(); break;
+          case 'cln': dev.getCloneStat(); break;
+          case 'crt': dev.getCriticStat(); break;
+          case 'exe': dev.getExecutiveStat(); break;
+          case 'hrd': dev.getHardcoreStat(); break;
+        }
+        var damage = 0.75 * ( 0.5 * attackStat * Math.random() + attackStat );
+        var isCritical = ( Math.random() > 0.6 );
+        if ( isCritical ) {
+          var multiplier = 2 + Math.random();
+          damage *= multiplier;
+        }
+        var finalDamage = Math.round( damage );
+        target.doDamage( finalDamage ); 
+        if ( isCritical ) {
+          $scope.instructions = dev.getName() + ' scored a crit! ' + 
+            target.getName() + ' takes ' + finalDamage + ' damage.';
+        }
+        else {
+          $scope.instructions = dev.getName() + ' hit! ' + 
+            target.getName() + ' takes ' + finalDamage + ' damage.';
+        }
+        $rootScope.$apply();
+      };
+
+      self.attackAbility = new Ability(
+        'ATTACK', 
+        '', 
+        '', 
+        1, 
+        'Use the pointy end.', 
+        self.attackAbilityFn
+      );
+
       self.jobs = [
 
         new Job( {
@@ -57,9 +102,7 @@ angular
               '', 
               100, 
               'Heals one party member',
-              function () {
-
-              }
+              self.attackAbilityFn
             ),
             new Ability( 
               'GRAFIX UPGRADE',
@@ -67,9 +110,7 @@ angular
               'GRAFIX UPGRADE', 
               100, 
               '2x attack vs Casuals and Hardcores',
-              function () {
-
-              }
+              self.attackAbilityFn
             ),
             new Ability( 
               'CATCHY TUNE',
@@ -77,9 +118,7 @@ angular
               'GRAFIX UPGRADE', 
               100, 
               '50% chance to eliminate a Clone from the sprint',
-              function () {
-
-              }
+              self.attackAbilityFn
             )
           ],
           animationMap: {
@@ -156,9 +195,7 @@ angular
               '', 
               100, 
               'Clones do half damage to the party',
-              function () {
-
-              }
+              self.attackAbilityFn
             ),
             new Ability( 
               'CATCH EXCEPTION',
@@ -166,9 +203,7 @@ angular
               'OBFUSCATE', 
               100, 
               'Reflect next exception a bug throws',
-              function () {
-
-              }
+              self.attackAbilityFn
             ),
             new Ability( 
               'DIVIDE AND CONQUER',
@@ -176,9 +211,7 @@ angular
               'OBFUSCATE', 
               100, 
               'Set all enemy HP to average % HP in battle',
-              function () {
-
-              }
+              self.attackAbilityFn
             )
           ],
           animationMap: {
@@ -255,9 +288,7 @@ angular
               '', 
               100, 
               'Powerful attack to a single enemy; ineffective against Casuals',
-              function () {
-
-              }
+              self.attackAbilityFn
             ),
             new Ability( 
               'ADDICTION PSYCHOLOGY',
@@ -265,9 +296,7 @@ angular
               'ROGUELIKE',
               100, 
               'Slows Hardcores, Casuals and Critics ',
-              function () {
-
-              }
+              self.attackAbilityFn
             ),
             new Ability( 
               'PLAYTEST',
@@ -275,9 +304,7 @@ angular
               'ROGUELIKE', 
               100, 
               'Increases Payout when Executives are in the sprint',
-              function () {
-
-              }
+              self.attackAbilityFn
             )
           ],
           animationMap: {
@@ -354,9 +381,7 @@ angular
               '', 
               100, 
               'Increase speed of all party members',
-              function () {
-
-              }
+              self.attackAbilityFn
             ),
             new Ability( 
               'SHIT UMBRELLA',
@@ -364,9 +389,7 @@ angular
               'CRUNCH',
               100, 
               'Producer takes damage for adjacent party members for a short time',
-              function () {
-
-              }
+              self.attackAbilityFn
             ),
             new Ability( 
               'SCRUM',
@@ -374,9 +397,7 @@ angular
               'CRUNCH', 
               100, 
               'Heal all party members',
-              function () {
-
-              }
+              self.attackAbilityFn
             )
           ],
           animationMap: {
@@ -453,9 +474,7 @@ angular
               '', 
               100, 
               'Attack all enemies for a small amount of damage',
-              function () {
-
-              }
+              self.attackAbilityFn
             ),
             new Ability( 
               '"REVIEWS"',
@@ -463,9 +482,7 @@ angular
               'TEASER', 
               100, 
               'Defend party against Critics',
-              function () {
-
-              }
+              self.attackAbilityFn
             ),
             new Ability( 
               'CROWDFUNDING',
@@ -473,9 +490,7 @@ angular
               'TEASER', 
               100, 
               'Increases payout when Hardcores are in the sprint',
-              function () {
-
-              }
+              self.attackAbilityFn
             )
           ],
           animationMap: {
@@ -552,9 +567,7 @@ angular
               '', 
               100, 
               'Defense to party against bugs',
-              function () {
-
-              }
+              self.attackAbilityFn
             ),
             new Ability( 
               'DRM',
@@ -562,9 +575,7 @@ angular
               'TEST PLAN', 
               100, 
               'Damage to all enemies; Hardcore immune',
-              function () {
-
-              }
+              self.attackAbilityFn
             ),
             new Ability( 
               'BREAKTHROUGH',
@@ -572,9 +583,7 @@ angular
               'TEST PLAN', 
               100, 
               'Decrease length of sprint by 1 month',
-              function () {
-
-              }
+              self.attackAbilityFn
             )
           ],
           animationMap: {

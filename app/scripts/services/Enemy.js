@@ -88,9 +88,9 @@ angular
 
       // HP
       self.doDamage = function ( damageHp ) {
-        self.currentHp += damageHp;
-        if ( self.currentHp < 0 ) {
-          self.currentHp = 0;
+        self.currentHP -= damageHp;
+        if ( self.currentHP < 0 ) {
+          self.currentHP = 0;
         }
         self.isShaking = true;
         $timeout( function () {
@@ -98,14 +98,14 @@ angular
         }, 500 );
       };
       self.doHealing = function ( healHp ) {
-        self.currentHp += healHp;
+        self.currentHP += healHp;
         var maxHp = self.getMaxHp();
-        if ( self.currentHp > maxHp ) {
-          self.currentHp = maxHp;
+        if ( self.currentHP > maxHp ) {
+          self.currentHP = maxHp;
         }
       };
       self.getCurrentHp = function () {
-        return self.currentHp;
+        return self.currentHP;
       };
       self.getMaxHp = function () {
         return self.maxHP;
@@ -175,8 +175,8 @@ angular
         // HP
         if ( !self.maxHP || !parseInt( self.maxHP ) ) {
           self.maxHP = 30;
-          self.currentHP = self.maxHP;
         }
+        self.currentHP = self.maxHP;
 
         // Job
         if ( !self.job || typeof( self.job ) !== 'object' ) {

@@ -19,7 +19,7 @@ angular
           hireCost = enemy.getHireCost();
         }
         while ( hireCost >= minHireCost && hireCost <= maxHireCost );
-        return enemy;
+        return angular.copy( enemy );
       };
 
     self.getEmptyEnemy = function () {
