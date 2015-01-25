@@ -7,6 +7,11 @@ angular.module( 'globalgamejam2015App', [
 .config( function ( $stateProvider, $urlRouterProvider ) {
   
   $stateProvider
+    .state( 'cancelled', {
+      url: '/cancelled', 
+      templateUrl: 'views/cancelled.html',
+      controller: 'CancelledCtrl'
+    } )
     .state( 'menu', {
       url: '/menu',
       templateUrl: 'views/menu.html',
@@ -17,6 +22,11 @@ angular.module( 'globalgamejam2015App', [
       templateUrl: 'views/menu.credits.html',
       controller: 'MenuCreditsCtrl'
     } )
+    .state( 'menu.concept', {
+      url: '/concept', 
+      templateUrl: 'views/concept.html',
+      controller: 'ConceptCtrl'
+    } )
     .state( 'menu.instructions', {
       url: '/instructions',
       templateUrl: 'views/menu.instructions.html',
@@ -26,21 +36,6 @@ angular.module( 'globalgamejam2015App', [
       url: '/main',
       templateUrl: 'views/menu.main.html',
       controller: 'MenuMainCtrl'
-    } )
-    .state( 'sprint', {
-      url: '/sprint', 
-      templateUrl: 'views/sprint.html',
-      controller: 'SprintCtrl'
-    } )
-    .state( 'cancelled', {
-      url: '/cancelled', 
-      templateUrl: 'views/cancelled.html',
-      controller: 'CancelledCtrl'
-    } )
-    .state( 'concept', {
-      url: '/concept', 
-      templateUrl: 'views/concept.html',
-      controller: 'ConceptCtrl'
     } )
     .state( 'planning', {
       url: '/planning', 
@@ -71,6 +66,11 @@ angular.module( 'globalgamejam2015App', [
       url: '/released', 
       templateUrl: 'views/released.html',
       controller: 'ReleasedCtrl'
+    } )
+    .state( 'sprint', {
+      url: '/sprint', 
+      templateUrl: 'views/sprint.html',
+      controller: 'SprintCtrl'
     } );
 
   $urlRouterProvider.otherwise( '/menu/main' );
