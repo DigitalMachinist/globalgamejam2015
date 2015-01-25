@@ -20,19 +20,7 @@ angular
       // Abilities
       self.hasAbility = function ( jobName, abilityName ) {
 
-        var hasJob = false;
-        for ( var i = 0; i < self.jobLevels.length; i++ ) {
-          if ( jobName === self.jobLevels[ i ].jobName ) {
-            hasJob = true;
-            break;
-          }
-        }
-
-        if ( !hasJob ) {
-          return false;
-        }
-
-        for ( var j = 0; j < self.abilities.length; j++ ) {
+        for ( var i = 0; i < self.abilities.length; i++ ) {
           if ( jobName === self.abilities[ i ].jobName && abilityName === self.abilities[ i ].name ) {
             return true;
           }
@@ -202,7 +190,7 @@ angular
           return false;
         }
         self.xp -= xpToSpend;
-        if ( self.xp > 0 ) {
+        if ( self.xp < 0 ) {
           self.xp = 0;
         }
         return true;

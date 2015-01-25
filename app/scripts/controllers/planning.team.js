@@ -2,7 +2,7 @@
 
 angular
   .module( 'globalgamejam2015App' )
-  .controller( 'PlanningTeamCtrl', function ( $scope, gameData, devsData, jobsData ) {
+  .controller( 'PlanningTeamCtrl', function ( $scope, gameData, devsData, jobsData, $timeout ) {
 
     // Sidebar Event Handlers
 
@@ -34,8 +34,10 @@ angular
     // Ability Web Event Handlers
 
     $scope.onAbilityClicked = function ( ability ) {
-      if ( !$scope.selectedDev.hasAbility( ability.name ) ) {
-        
+      if ( !$scope.selectedDev.hasAbility( ability.jobName, ability.name ) ) {
+        if ( $scope.selectedDev.spendXp( ability.xpCost ) ) {
+          levelUp( ability );
+        }
       }
     };
 
@@ -44,6 +46,20 @@ angular
     $scope.isState = function ( cardState ) {
       return ( cardState === $scope.state2 );
     };
+
+    function levelUp ( ability ) {
+      var job = jobsData.jobsMap[ ability.jobName ];
+      var found = false;
+      for ( var i = 0; i < $scope.selectedDev.jobLevels.length; i++ ) {
+        if ( ability.jobName === $scope.selectedDev.jobLevels.jobName ) {
+          found = true;
+          break;
+        }
+      }
+      var jobLevel = ( found ) ? job.firstJobLevel : job.higherJobLevel;
+      $scope.selectedDev.jobLevels.push( jobLevel );
+      $scope.selectedDev.abilities.push( ability );
+    }
 
     // Init
     
@@ -60,9 +76,16 @@ angular
 
       $scope.devsData.devs[ 0 ] = devsData.getRandomDev( 1 );
       $scope.selectedDev = $scope.devsData.devs[ 0 ];
-      $scope.selectedDev.gainXp( 900 );
+      $scope.selectedDev.gainXp( 2000 );
 
       console.log( $scope.selectedDev );
+
+      $timeout( function () {
+        $( '[data-toggle="popover"]' ).popover( { 
+          trigger: 'hover', 
+          placement: 'top' 
+        } );
+      }, 500 );
 
     } )();
 

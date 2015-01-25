@@ -4,11 +4,14 @@ angular
   .module( 'globalgamejam2015App' )
   .factory( 'Ability', function Ability() {
 
-    return function Ability( nameString, jobName, prerequisite, abilityFn ) {
+    return function Ability( nameString, jobName, prerequisite, xpCost, description, abilityFn ) {
 
       // Validate arguments
       if ( !abilityFn || typeof( abilityFn ) !== 'function' ) {
         throw new Error( 'Invalid abilityFn!' );
+      }
+      if ( typeof( description ) !== 'string' ) {
+        throw new Error( 'Invalid description!' );
       }
       if ( !jobName || typeof( jobName ) !== 'string' ) {
         throw new Error( 'Invalid jobName!' );
@@ -19,6 +22,9 @@ angular
       if ( typeof( prerequisite ) !== 'string' ) {
         throw new Error( 'Invalid prerequisite!' );
       }
+      if ( !xpCost || !parseInt( xpCost ) || xpCost < 0 ) {
+        throw new Error( 'Invalid xpCost!' );
+      }
 
       // Create the base object to augment.
       var self = {};
@@ -27,9 +33,11 @@ angular
       ( function init () {
 
         self.abilityFn = abilityFn;
+        self.description = description;
         self.jobName = jobName;
         self.name = nameString;
         self.prerequisite = prerequisite;
+        self.xpCost = xpCost;
 
       } )();
       

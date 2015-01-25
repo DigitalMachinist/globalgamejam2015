@@ -55,6 +55,8 @@ angular
               'ABILITY 1',
               'ART', 
               '', 
+              100, 
+              'Description',
               function () {
 
               }
@@ -63,6 +65,8 @@ angular
               'ABILITY 2',
               'ART', 
               'ABILITY 1', 
+              100, 
+              'Description',
               function () {
 
               }
@@ -71,6 +75,8 @@ angular
               'ABILITY 3',
               'ART', 
               'ABILITY 1', 
+              100, 
+              'Description',
               function () {
 
               }
@@ -144,6 +150,8 @@ angular
               'ABILITY 1',
               'COD', 
               '', 
+              100, 
+              'Description',
               function () {
 
               }
@@ -152,6 +160,8 @@ angular
               'ABILITY 2',
               'COD', 
               'ABILITY 1', 
+              100, 
+              'Description',
               function () {
 
               }
@@ -160,6 +170,8 @@ angular
               'ABILITY 3',
               'COD', 
               'ABILITY 1', 
+              100, 
+              'Description',
               function () {
 
               }
@@ -233,6 +245,8 @@ angular
               'ABILITY 1',
               'DSN', 
               '', 
+              100, 
+              'Description',
               function () {
 
               }
@@ -240,7 +254,9 @@ angular
             new Ability( 
               'ABILITY 2',
               'DSN', 
-              'ABILITY 1', 
+              'ABILITY 1',
+              100, 
+              'Description',
               function () {
 
               }
@@ -249,6 +265,8 @@ angular
               'ABILITY 3',
               'DSN', 
               'ABILITY 1', 
+              100, 
+              'Description',
               function () {
 
               }
@@ -322,6 +340,8 @@ angular
               'ABILITY 1',
               'PRD', 
               '', 
+              100, 
+              'Description',
               function () {
 
               }
@@ -329,7 +349,9 @@ angular
             new Ability( 
               'ABILITY 2',
               'PRD', 
-              'ABILITY 1', 
+              'ABILITY 1',
+              100, 
+              'Description',
               function () {
 
               }
@@ -338,6 +360,8 @@ angular
               'ABILITY 3',
               'PRD', 
               'ABILITY 1', 
+              100, 
+              'Description',
               function () {
 
               }
@@ -411,6 +435,8 @@ angular
               'ABILITY 1',
               'PR', 
               '', 
+              100, 
+              'Description',
               function () {
 
               }
@@ -419,6 +445,8 @@ angular
               'ABILITY 2',
               'PR', 
               'ABILITY 1', 
+              100, 
+              'Description',
               function () {
 
               }
@@ -427,6 +455,8 @@ angular
               'ABILITY 3',
               'PR', 
               'ABILITY 1', 
+              100, 
+              'Description',
               function () {
 
               }
@@ -500,6 +530,8 @@ angular
               'ABILITY 1',
               'QA', 
               '', 
+              100, 
+              'Description',
               function () {
 
               }
@@ -508,6 +540,8 @@ angular
               'ABILITY 2',
               'QA', 
               'ABILITY 1', 
+              100, 
+              'Description',
               function () {
 
               }
@@ -516,6 +550,8 @@ angular
               'ABILITY 3',
               'QA', 
               'ABILITY 1', 
+              100, 
+              'Description',
               function () {
 
               }

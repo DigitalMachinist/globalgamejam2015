@@ -74,12 +74,11 @@
           </li>
         </ul>
       </div>
-      <div id="dev-abilities">
+      <div id="dev-abilities" >
         <h3 id="dev-name">{{ selectedDev.getName() }}</h3>
         <h2 id="dev-job">{{ selectedDev.getInitialJobName() }}</h2>
-        <!-- Programmer -->
         <div ng-repeat="job in jobsData.jobs" class="ability-set ability-{{ job.name | lowercase }}">
-          <button ng-repeat="ability in job.abilities" class="ability main-ability" ng-class="{ 'selected': selectedDev.hasAbility( ability.jobName, ability.name ), 'ability-1': $index == 1, 'ability-2': $index == 2, 'disabled': ability.prerequisite != '' && !selectedDev.hasAbility( ability.jobName, ability.prerequisite ) }">
+          <button ng-repeat="ability in job.abilities" class="ability main-ability" ng-class="{ 'selected': selectedDev.hasAbility( ability.jobName, ability.name ), 'ability-1': $index == 1, 'ability-2': $index == 2, 'disabled': ability.prerequisite != '' && !selectedDev.hasAbility( ability.jobName, ability.prerequisite ) }" ng-click="onAbilityClicked( ability )" data-toggle="popover" title="{{ ability.name }}" data-content="{{ ability.description }}">
             <div class="stat-icon fa {{ job.icon }}"></div>
             <h3 class="ability-name">{{ job.name }}</h3>
           </button>
