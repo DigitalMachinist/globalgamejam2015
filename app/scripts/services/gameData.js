@@ -13,8 +13,8 @@ angular
         title, // Title
         12,    // Number of months
         200,   // Start budget $$$
-        100,   // Concept completion bonus $$$ 
-        250,   // Prototype completion bonus $$$
+        200,   // Concept completion bonus $$$ 
+        400,   // Prototype completion bonus $$$
         2500,  // Fun required to advance to prototype
         5000,  // Fun required to advance to beta
         7500   // Fun required to advance to release
