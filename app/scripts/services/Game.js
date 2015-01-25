@@ -139,7 +139,7 @@ angular
         self.conceptBonus = conceptBonus;
         self.current$$$ = startBudget;
         self.currentMonth = 1;
-        self.fun = 5600;
+        self.fun = 0;
         self.max$$$ = 999;
         self.name = nameString;
         self.numMonths = numMonths;

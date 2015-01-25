@@ -28,7 +28,8 @@
 			<ul>
 				<li ng-repeat="enemy in enemies" ng-if="!enemy.empty" ng-mouseenter="onEnemyHovered( enemy )" ng-click="onEnemyClicked( enemy )" ng-class="{ 'selected': enemy === selectedEnemy }">
 					<div class="enemy-list-icon fa fa-2x left" ng-class="{ 'fa-caret-right': enemy === waitingActor }"></div> 
-					<div class="enemy-list-item left">{{ enemy.job.name }}</div> 
+					<div class="enemy-list-item left">{{ enemy.job.name }}</div>
+					<div class="enemy-list-hp left"> <span class="dev-list-hp-points">{{ enemy.getCurrentHp() }}</span>/<span class="dev-list-hp-total">{{ enemy.getMaxHp() }}</span></div> 
 					<div class="clearfix"></div>
 				</li>
 			</ul>

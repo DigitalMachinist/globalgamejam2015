@@ -499,7 +499,7 @@ input {
 #build-milestone-area .budget {
     float: left;
     margin-right: 75px;
-    margin-top: 85px;
+    margin-top: 40px;
 }
 
 #build-milestone-area .milestone-progress {
@@ -509,7 +509,7 @@ input {
 }
 
 #build-milestone-area .milestone-progress-text {
-    top: 85px;
+    top: 40px;
 }
 
 /** FEATURES AREA **/
@@ -623,8 +623,10 @@ input {
 .enemy-list, .ability-list, .dev-list { float: left; padding: 10px; position: relative; }
 
 .enemy-list {
-    width: 140px;
+    width: 180px;
 }
+
+.enemy-list-hp { width: 100px; position: absolute; left: 80px; margin-top: 5px; }
 
 .enemy-list-item, .ability-list-item, .dev-list-item, .dev-list-hp, .dev-list .stat-bar-filled, .dev-list .stat-bar-container {
     margin-left: 10px;
@@ -633,7 +635,7 @@ input {
 }
 
 .ability-list {
-    width: 500px;
+    width: 400px;
 }
 
 /*.ability-list .left-arrow, .ability-list .right-arrow {
@@ -643,7 +645,7 @@ input {
 }*/
 
 .ability-list .scrollable {
-    width: 460px;
+    width: 360px;
     height: 110px;
     margin: 0 20px;
     overflow-y: auto;
