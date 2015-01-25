@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"background",
+				"background-position"
+			],
+			[
 				"text",
 				"text-align"
 			],
@@ -39,54 +43,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "app/styles/main.css",
-			"settings":
-			{
-				"buffer_size": 10336,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/concept.html",
-			"settings":
-			{
-				"buffer_size": 259,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/sprint.html",
-			"settings":
-			{
-				"buffer_size": 2021,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/menu.html",
-			"settings":
-			{
-				"buffer_size": 89,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/menu.main.html",
-			"settings":
-			{
-				"buffer_size": 417,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/scripts/services/jobsData.js",
-			"settings":
-			{
-				"buffer_size": 13568,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -147,11 +103,24 @@
 		"/D/github/globalgamejam2015",
 		"/D/github/globalgamejam2015/app",
 		"/D/github/globalgamejam2015/app/scripts",
-		"/D/github/globalgamejam2015/app/styles",
-		"/D/github/globalgamejam2015/app/views"
+		"/D/github/globalgamejam2015/app/scripts/services",
+		"/D/github/globalgamejam2015/app/styles"
 	],
 	"file_history":
 	[
+		"/D/github/globalgamejam2015/app/styles/main.css",
+		"/D/github/globalgamejam2015/app/scripts/services/peopleData.js",
+		"/D/github/globalgamejam2015/app/scripts/services/Dev.js",
+		"/D/github/globalgamejam2015/app/scripts/services/devsData.js",
+		"/D/github/globalgamejam2015/app/views/sprint.html",
+		"/D/github/globalgamejam2015/app/styles/bootstrap.css",
+		"/C/Users/Tabby/Downloads/ICOFormat-2.1f1-win64/dist/README.html",
+		"/D/github/globalgamejam2015/node_modules/grunt-google-cdn/node_modules/bower/lib/util/hogan-colors.js",
+		"/D/github/globalgamejam2015/app/scripts/services/jobsData.js",
+		"/D/github/globalgamejam2015/app/views/sprite.html",
+		"/D/github/globalgamejam2015/app/views/menu.main.html",
+		"/D/github/globalgamejam2015/app/views/menu.html",
+		"/D/github/globalgamejam2015/app/views/concept.html",
 		"/D/github/globalgamejam2015/app/views/planning.html",
 		"/D/github/globalgamejam2015/app/views/menu.credits.html",
 		"/D/github/globalgamejam2015/app/views/menu.instructions.html",
@@ -163,7 +132,6 @@
 		"/D/github/globalgamejam2015/app/project.html",
 		"/D/github/globalgamejam2015/app/sprint.html",
 		"/D/github/globalgamejam2015/app/build.html",
-		"/D/github/globalgamejam2015/app/views/sprint.html",
 		"/D/github/globalgamejam2015/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/test_underscore/vendor/jquery.js",
 		"/D/github/globalgamejam2015/Gruntfile.js",
 		"/C/Users/Jeff/Documents/__dev/__repos/__projects/globalgamejam2015/dist/index.html",
@@ -267,19 +235,7 @@
 		"/Y/__repos/__projects/peir/client/app/views/user/KTPortfolio/PASTGlobalRatingsResults/PASTGlobalRatingsResults.html",
 		"/Y/__repos/__projects/peir/client/app/views/user/KTPortfolio/PretestResults/PretestResultsController.js",
 		"/Y/__repos/__projects/peir/client/app/views/user/KTPortfolio/PosttestResults/PosttestResultsController.js",
-		"/Y/__repos/__projects/peir/client/app/views/user/KTPortfolio/PASTGlobalRatingsResults/PASTGlobalRatingsResults.js",
-		"/Y/__repos/__projects/peir/templates/email/accountActivated.ejs",
-		"/Y/__repos/__projects/peir/client/app/services/$peirPASTGlobalRatingsData/$peirPASTGlobalRatingsData.js",
-		"/Y/__repos/__projects/peir/client/app/services/$peirPretestData/$peirPretestData.js",
-		"/Y/__repos/__projects/peir/client/app/services/$peirPosttestData/$peirPosttestData.js",
-		"/Y/__repos/__projects/peir/client/app/views/user/KTPortfolio/Welcome/Welcome.html",
-		"/Y/__repos/__projects/peir/client/app/directives/peirNavKtItem/peirNavKtItem.html",
-		"/Y/__repos/__projects/peir/client/app/directives/peirContentPastGlobalRatings/peirContentPastGlobalRatings.html",
-		"/Y/__repos/__projects/peir/client/app/views/user/Program/Module3/M3P11_KTExercise3/M3P11_KTExercise3.html",
-		"/Y/__repos/__projects/peir/client/app/directives/peirContentKtExercise/peirContentKtExercise.html",
-		"/Y/__repos/__projects/peir/client/app/views/user/Program/Module2/M2P06_PASTGlobalRatingScaleDefinitions/M2P06_PASTGlobalRatingScaleDefinitionsController.js",
-		"/Y/__repos/__projects/peir/client/app/views/user/Program/Module2/M2P06_PASTGlobalRatingScaleDefinitions/M2P06_PASTGlobalRatingScaleDefinitions.html",
-		"/Y/__repos/__projects/peir/client/app/directives/errorMessage/errorMessageDirective.js"
+		"/Y/__repos/__projects/peir/client/app/views/user/KTPortfolio/PASTGlobalRatingsResults/PASTGlobalRatingsResults.js"
 	],
 	"find":
 	{
@@ -298,6 +254,29 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"popover",
+			"stat-bar-filled left",
+			"enemy",
+			"-234px;",
+			"enemy-sprite-icon",
+			"fa-hand-o-down",
+			"-0",
+			"background-position: ",
+			"312px;",
+			"-pr-",
+			"pr",
+			"234px;",
+			"cod",
+			"156px;",
+			"art",
+			"78px;",
+			"cod",
+			"prd",
+			"cod",
+			"-cod-",
+			"0px;",
+			"0px",
+			"enemy",
 			"HEAD",
 			"<li class=\"feature\">",
 			"float-",
@@ -408,182 +387,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app/styles/main.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10336,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2051,
-								2051
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1300.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/views/concept.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 259,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								259,
-								259
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/views/sprint.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2021,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1086,
-								1086
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 380.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/views/menu.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 89,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								88,
-								88
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/views/menu.main.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 417,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								29,
-								29
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/scripts/services/jobsData.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 13568,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								229,
-								229
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -660,7 +465,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 324.0,
+	"side_bar_width": 268.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

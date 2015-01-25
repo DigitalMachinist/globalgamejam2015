@@ -269,7 +269,7 @@ input {
     float: left;
     position: relative;
     z-index: 999;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 /** DEV ABILITY/LEVELING AREA **/
@@ -344,6 +344,44 @@ input {
 .ability-qa .main-ability { left: 190px; top: 240px; }
 .ability-qa .ability-1 { left: 70px; top: 190px; }
 .ability-qa .ability-2 { left: 70px; top: 290px; }
+
+/** POPOVERS **/
+.popover {
+  max-width: 500px;
+  width: 500px;
+  background-color: #000000;
+  color: #ffffff;
+  border: 0 none;
+  text-transform: uppercase;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+     -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+     -moz-background-clip: padding;
+          background-clip: padding-box;
+}
+
+.popover-title {
+  padding: 8px 14px;
+  margin: 0;
+  font-size: 21px;
+  background-color: #000000;
+  border-bottom: 0 none;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+
+.popover-content {
+  font-size: 16px;
+}
+
+.popover.top .arrow:after, .popover.right .arrow:after, .popover.bottom .arrow:after, .popover.left .arrow:after {
+  border-top-color: #000000;
+}
 
 /**********************************************************
  ** PROJECT PAGE ******************************************
@@ -588,7 +626,7 @@ input {
     width: 140px;
 }
 
-.enemy-list-item, .ability-list-item, .dev-list-item, .dev-list-hp, .stat-bar-filled, .stat-bar-container {
+.enemy-list-item, .ability-list-item, .dev-list-item, .dev-list-hp, .dev-list .stat-bar-filled, .dev-list .stat-bar-container {
     margin-left: 10px;
     margin-top: 5px;
     margin-bottom: 5px;
