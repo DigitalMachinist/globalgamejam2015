@@ -4,10 +4,10 @@ angular
 	.module( 'globalgamejam2015App' )
   .factory( 'Dev', function Dev( jobsData ) {
 
-  	return function Dev( person, jobLevelsArray ) {
+  	return function Dev( person, jobLevelsArray, abilitiesArray ) {
 
   		// Validate arguments.
-  		if ( !person || typeof( person !== 'object' ) ) {
+  		if ( !person || typeof( person ) !== 'object' ) {
   			throw new Error( 'Invalid person!' );
   		}
   		if ( !jobLevelsArray || !jobLevelsArray instanceof Array || jobLevelsArray.length < 1 ) {
@@ -16,6 +16,29 @@ angular
 
   		// Create the base object to augment.
 	  	var self = {};
+
+      // Abilities
+      self.hasAbility = function ( jobName, abilityName ) {
+
+        var hasJob = false;
+        for ( var i = 0; i < self.jobLevels.length; i++ ) {
+          if ( jobName === self.jobLevels[ i ].jobName ) {
+            hasJob = true;
+            break;
+          }
+        }
+
+        if ( !hasJob ) {
+          return false;
+        }
+
+        for ( var j = 0; j < self.abilities.length; j++ ) {
+          if ( jobName === self.abilities[ i ].jobName && abilityName === self.abilities[ i ].name ) {
+            return true;
+          }
+        }
+
+      };
 
 	  	// Animations
       self.advanceAnimationFrame = function () {
@@ -59,27 +82,55 @@ angular
 
 	  	// Enemy Stats
 	  	self.getBugStat = function () {
-	  		return self.jobLevels.reduce( sumProperty( 'bug' ) );
+        var total = self.person.bug;
+        for ( var i = 0; i < self.jobLevels.length; i++ ) {
+          total += self.jobLevels[ i ].bug;
+        }
+        return total;
 	  	};
 	  	self.getCasualStat = function () {
-	  		return self.jobLevels.reduce( sumProperty( 'csl' ) );
+        var total = self.person.csl;
+        for ( var i = 0; i < self.jobLevels.length; i++ ) {
+          total += self.jobLevels[ i ].csl;
+        }
+        return total;
 	  	};
 	  	self.getCloneStat = function () {
-	  		return self.jobLevels.reduce( sumProperty( 'cln' ) );
+        var total = self.person.cln;
+        for ( var i = 0; i < self.jobLevels.length; i++ ) {
+          total += self.jobLevels[ i ].cln;
+        }
+        return total;
 	  	};
 	  	self.getCriticStat = function () {
-	  		return self.jobLevels.reduce( sumProperty( 'crt' ) );
+        var total = self.person.crt;
+        for ( var i = 0; i < self.jobLevels.length; i++ ) {
+          total += self.jobLevels[ i ].crt;
+        }
+        return total;
 	  	};
 	  	self.getExecutiveStat = function () {
-	  		return self.jobLevels.reduce( sumProperty( 'exe' ) );
+        var total = self.person.exe;
+        for ( var i = 0; i < self.jobLevels.length; i++ ) {
+          total += self.jobLevels[ i ].exe;
+        }
+        return total;
 	  	};
 	  	self.getHardcoreStat = function () {
-	  		return self.jobLevels.reduce( sumProperty( 'hrd' ) );
+        var total = self.person.hrd;
+        for ( var i = 0; i < self.jobLevels.length; i++ ) {
+          total += self.jobLevels[ i ].hrd;
+        }
+        return total;
 	  	};
 
       // Hire Cost
       self.getHireCost = function () {
-        return self.jobLevels.reduce( sumProperty( 'hireCost' ) );
+        var total = 0;
+        for ( var i = 0; i < self.jobLevels.length; i++ ) {
+          total += self.jobLevels[ i ].hireCost;
+        }
+        return total;
       };
 
       // HP
@@ -100,7 +151,13 @@ angular
 	  		return self.currentHp;
 	  	};
 	  	self.getMaxHp = function () {
-	  		return self.jobLevels.reduce( sumProperty( 'hp' ) );
+        //console.log( self.jobLevels );
+        var total = 0;
+        for ( var i = 0; i < self.jobLevels.length; i++ ) {
+          total += self.jobLevels[ i ].maxHP;
+        }
+        //console.log( total );
+        return total;
 	  	};
 	  	self.isHpCritical = function () {
 	    	return self.currentHp < ( 0.4 * self.maxHp );
@@ -113,8 +170,8 @@ angular
 	    };
 
 	    // Jobs
-	    self.getInitialJob = function () {
-	    	return self.jobLevels[ 0 ].job;
+	    self.getInitialJobName = function () {
+	    	return self.jobLevels[ 0 ].jobName;
 	    };
 	    self.getJobLevels = function () {
 	    	return self.jobLevels;
@@ -132,7 +189,7 @@ angular
 
       // XP
       self.gainXp = function ( xpToAdd ) {
-        self.addXp += xpToAdd;
+        self.xp += xpToAdd;
         if ( self.xp > 999 ) {
           self.xp = 999;
         }
@@ -161,13 +218,16 @@ angular
 	  	// Init
 	  	( function init () {
 
+        // These have to be set before anything else.
+        self.jobLevels = jobLevelsArray;
+        self.abilities = abilitiesArray;
+
         self.atbMax = 1000;
 		  	self.atbProgress = 0;
 		  	self.atbSpeed = 10;
         self.currentAniFrame = 0;
         self.currentAniName = 'idle';
 		  	self.currentHp = self.getMaxHp();
-		  	self.jobLevels = jobLevelsArray;
 	  		self.person = person;
         self.xp = 0;
 

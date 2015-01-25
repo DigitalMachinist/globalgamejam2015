@@ -2,13 +2,13 @@
 
 angular
   .module( 'globalgamejam2015App' )
-  .factory( 'gameData', function gameData( Game ) {
+  .factory( 'gameData', function gameData( Game, devsData ) {
 
     // Create the base object to augment.
     var self = {};
 
     // Game
-    self.setGame = function ( title ) {
+    self.initGame = function ( title ) {
       self.game = new Game(
         title, // Title
         12,    // Number of months
@@ -20,6 +20,7 @@ angular
         7500, // Fun required to advance to beta
         10000  // Fun required to advance to release
       );
+      devsData.getRandomHireableDevs( self.game.getCurrentMonth() + 1 );
       console.log( self.game );
     };
 

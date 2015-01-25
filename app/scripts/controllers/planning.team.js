@@ -2,28 +2,47 @@
 
 angular
   .module( 'globalgamejam2015App' )
-  .controller( 'PlanningTeamCtrl', function ( $scope, gameData, devsData ) {
+  .controller( 'PlanningTeamCtrl', function ( $scope, gameData, devsData, jobsData ) {
 
-    // Event Handlers
+    // Sidebar Event Handlers
 
-    $scope.onDevFired = function ( dev ) {
-      console.log( dev );
+    $scope.onDevFireClicked = function ( dev ) {
+      if ( dev === $scope.selectedDev ) {
+        $scope.selectedDev = null;
+      }
+      dev = null;
     };
 
-    $scope.onDevHire = function ( dev, index ) {
-      //console.log( index, dev );
+    $scope.onDevClicked = function ( dev ) {
+      $scope.selectedDev = dev;
+    };
+
+    $scope.onHireCardClicked = function ( index ) {
       hireIndex = index;
-      $scope.state = 'hire';
+      $scope.cardState = 'hire';
     };
 
-    $scope.onHireableDevHire = function ( dev, index ) {
-      //console.log( index, dev );
+    $scope.onHireableDevHireClicked = function ( dev, index ) {
       var hireDev = devsData.hireableDevs[ index ];
-      if ( gameData.spend$$$( hireDev.getHireCost() ) ) {
+      if ( gameData.game.spend$$$( hireDev.getHireCost() ) ) {
         devsData.devs[ hireIndex ] = hireDev;
         devsData.hireableDevs[ index ] = null;
       }
-      $scope.state = 'team';
+      $scope.cardState = 'team';
+    };
+
+    // Ability Web Event Handlers
+
+    $scope.onAbilityClicked = function ( ability ) {
+      if ( !$scope.selectedDev.hasAbility( ability.name ) ) {
+        
+      }
+    };
+
+    // Helpers
+
+    $scope.isState = function ( cardState ) {
+      return ( cardState === $scope.state2 );
     };
 
     // Init
@@ -32,12 +51,18 @@ angular
 
     ( function init () {
 
+      hireIndex = 0;
       $scope.devsData = devsData;
       $scope.gameData = gameData;
-      hireIndex = 0;
+      $scope.jobsData = jobsData;
+      $scope.selectedDev = null;
       $scope.state = 'team';
 
-      console.log( $scope.state );
+      $scope.devsData.devs[ 0 ] = devsData.getRandomDev( 1 );
+      $scope.selectedDev = $scope.devsData.devs[ 0 ];
+      $scope.selectedDev.gainXp( 900 );
+
+      console.log( $scope.selectedDev );
 
     } )();
 

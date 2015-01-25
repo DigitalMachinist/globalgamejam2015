@@ -25,6 +25,7 @@ angular
 
         new Job( {
           name: 'ART',
+          icon: 'fa-paint-brush',
           firstJobLevel: new JobLevel( {
             jobName: 'ART', 
             atbSpeed: 10,
@@ -49,26 +50,32 @@ angular
             hireCost: 10,
             maxHP: 10
           } ),
-          abilityMap: {
-            'ABILITY 1': new Ability( 
+          abilities: [
+            new Ability( 
+              'ABILITY 1',
+              'ART', 
+              '', 
+              function () {
+
+              }
+            ),
+            new Ability( 
+              'ABILITY 2',
+              'ART', 
               'ABILITY 1', 
               function () {
 
-              } 
+              }
             ),
-            'ABILITY 2': new Ability( 
-              'ABILITY 2', 
+            new Ability( 
+              'ABILITY 3',
+              'ART', 
+              'ABILITY 1', 
               function () {
 
-              } 
-            ),
-            'ABILITY 3': new Ability( 
-              'ABILITY 3', 
-              function () {
-
-              } 
+              }
             )
-          },
+          ],
           animationMap: {
             'attack': new Animation(
               'attack',
@@ -107,6 +114,7 @@ angular
 
         new Job( {
           name: 'COD',
+          icon: 'fa-keyboard-o',
           firstJobLevel: new JobLevel( {
             jobName: 'COD', 
             atbSpeed: 10,
@@ -131,26 +139,32 @@ angular
             hireCost: 10,
             maxHP: 10
           } ),
-          abilityMap: {
-            'ABILITY 1': new Ability( 
+          abilities: [
+            new Ability( 
+              'ABILITY 1',
+              'COD', 
+              '', 
+              function () {
+
+              }
+            ),
+            new Ability( 
+              'ABILITY 2',
+              'COD', 
               'ABILITY 1', 
               function () {
 
-              } 
+              }
             ),
-            'ABILITY 2': new Ability( 
-              'ABILITY 2', 
+            new Ability( 
+              'ABILITY 3',
+              'COD', 
+              'ABILITY 1', 
               function () {
 
-              } 
-            ),
-            'ABILITY 3': new Ability( 
-              'ABILITY 3', 
-              function () {
-
-              } 
+              }
             )
-          },
+          ],
           animationMap: {
             'attack': new Animation(
               'attack',
@@ -189,6 +203,7 @@ angular
 
         new Job( {
           name: 'DSN',
+          icon: 'fa-magic',
           firstJobLevel: new JobLevel( {
             jobName: 'DSN', 
             atbSpeed: 10,
@@ -213,26 +228,32 @@ angular
             hireCost: 10,
             maxHP: 10
           } ),
-          abilityMap: {
-            'ABILITY 1': new Ability( 
+          abilities: [
+            new Ability( 
+              'ABILITY 1',
+              'DSN', 
+              '', 
+              function () {
+
+              }
+            ),
+            new Ability( 
+              'ABILITY 2',
+              'DSN', 
               'ABILITY 1', 
               function () {
 
-              } 
+              }
             ),
-            'ABILITY 2': new Ability( 
-              'ABILITY 2', 
+            new Ability( 
+              'ABILITY 3',
+              'DSN', 
+              'ABILITY 1', 
               function () {
 
-              } 
-            ),
-            'ABILITY 3': new Ability( 
-              'ABILITY 3', 
-              function () {
-
-              } 
+              }
             )
-          },
+          ],
           animationMap: {
             'attack': new Animation(
               'attack',
@@ -271,6 +292,7 @@ angular
 
         new Job( {
           name: 'PRD',
+          icon: 'fa-line-chart',
           firstJobLevel: new JobLevel( {
             jobName: 'PRD', 
             atbSpeed: 10,
@@ -295,26 +317,32 @@ angular
             hireCost: 10,
             maxHP: 10
           } ),
-          abilityMap: {
-            'ABILITY 1': new Ability( 
+          abilities: [
+            new Ability( 
+              'ABILITY 1',
+              'PRD', 
+              '', 
+              function () {
+
+              }
+            ),
+            new Ability( 
+              'ABILITY 2',
+              'PRD', 
               'ABILITY 1', 
               function () {
 
-              } 
+              }
             ),
-            'ABILITY 2': new Ability( 
-              'ABILITY 2', 
+            new Ability( 
+              'ABILITY 3',
+              'PRD', 
+              'ABILITY 1', 
               function () {
 
-              } 
-            ),
-            'ABILITY 3': new Ability( 
-              'ABILITY 3', 
-              function () {
-
-              } 
+              }
             )
-          },
+          ],
           animationMap: {
             'attack': new Animation(
               'attack',
@@ -353,6 +381,7 @@ angular
 
         new Job( {
           name: 'PR',
+          icon: 'fa-comments',
           firstJobLevel: new JobLevel( {
             jobName: 'PR', 
             atbSpeed: 10,
@@ -377,26 +406,32 @@ angular
             hireCost: 10,
             maxHP: 10
           } ),
-          abilityMap: {
-            'ABILITY 1': new Ability( 
+          abilities: [
+            new Ability( 
+              'ABILITY 1',
+              'PR', 
+              '', 
+              function () {
+
+              }
+            ),
+            new Ability( 
+              'ABILITY 2',
+              'PR', 
               'ABILITY 1', 
               function () {
 
-              } 
+              }
             ),
-            'ABILITY 2': new Ability( 
-              'ABILITY 2', 
+            new Ability( 
+              'ABILITY 3',
+              'PR', 
+              'ABILITY 1', 
               function () {
 
-              } 
-            ),
-            'ABILITY 3': new Ability( 
-              'ABILITY 3', 
-              function () {
-
-              } 
+              }
             )
-          },
+          ],
           animationMap: {
             'attack': new Animation(
               'attack',
@@ -435,6 +470,7 @@ angular
 
         new Job( {
           name: 'QA',
+          icon: 'fa-gamepad',
           firstJobLevel: new JobLevel( {
             jobName: 'QA', 
             atbSpeed: 10,
@@ -459,26 +495,32 @@ angular
             hireCost: 10,
             maxHP: 10
           } ),
-          abilityMap: {
-            'ABILITY 1': new Ability( 
+          abilities: [
+            new Ability( 
+              'ABILITY 1',
+              'QA', 
+              '', 
+              function () {
+
+              }
+            ),
+            new Ability( 
+              'ABILITY 2',
+              'QA', 
               'ABILITY 1', 
               function () {
 
-              } 
+              }
             ),
-            'ABILITY 2': new Ability( 
-              'ABILITY 2', 
+            new Ability( 
+              'ABILITY 3',
+              'QA', 
+              'ABILITY 1', 
               function () {
 
-              } 
-            ),
-            'ABILITY 3': new Ability( 
-              'ABILITY 3', 
-              function () {
-
-              } 
+              }
             )
-          },
+          ],
           animationMap: {
             'attack': new Animation(
               'attack',
@@ -520,7 +562,7 @@ angular
       // Build a map of jobs for fast lookups.
       self.jobsMap = {};
       for ( var i = 0; i < self.jobs.length; i++ ) {
-        self.jobsMap[ self.jobs[ i ].jobName ] = self.jobs[ i ];
+        self.jobsMap[ self.jobs[ i ].name ] = self.jobs[ i ];
       }
 
     } )();
