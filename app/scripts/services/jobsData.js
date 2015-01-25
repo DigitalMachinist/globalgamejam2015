@@ -52,21 +52,21 @@ angular
           } ),
           abilities: [
             new Ability( 
-              'GRAFIX UPGRADE',
+              'INSPIRE',
               'ART', 
               '', 
               100, 
-              'Casuals and Hardcores do half damage to party',
+              'Heals one party member',
               function () {
 
               }
             ),
             new Ability( 
-              'LETS ADD UNICORNS',
+              'GRAFIX UPGRADE',
               'ART', 
               'GRAFIX UPGRADE', 
               100, 
-              '2x attack vs Casuals',
+              '2x attack vs Casuals and Hardcores',
               function () {
 
               }
@@ -76,7 +76,7 @@ angular
               'ART', 
               'GRAFIX UPGRADE', 
               100, 
-              '50% chance to eliminate a clone from the sprint',
+              '50% chance to eliminate a Clone from the sprint',
               function () {
 
               }
@@ -347,21 +347,21 @@ angular
               }
             ),
             new Ability( 
-              'ABILITY 2',
+              'SHIT UMBRELLA',
               'PRD', 
-              'ABILITY 1',
+              'CRUNCH',
               100, 
-              'Description',
+              'Producer covers adjacent party members for a short time',
               function () {
 
               }
             ),
             new Ability( 
-              'ABILITY 3',
+              'SCRUM',
               'PRD', 
-              'ABILITY 1', 
+              'CRUNCH', 
               100, 
-              'Description',
+              'Heal all party members',
               function () {
 
               }
@@ -370,19 +370,19 @@ angular
           animationMap: {
             'attack': new Animation(
               'attack',
-              [ '', '' ]
+              [ 'dev-sprite-prd-attack-1', 'dev-sprite-prd-attack-2', 'dev-sprite-prd-attack-3', 'dev-sprite-prd-attack-4', 'dev-sprite-prd-attack-5', 'dev-sprite-prd-attack-6', 'dev-sprite-prd-attack-7' ]
             ),
             'cast': new Animation(
               'cast',
-              [ '', '' ]
+              [ 'dev-sprite-prd-cast-1', 'dev-sprite-prd-cast-2' ]
             ),
             'cower': new Animation(
               'cower',
-              [ '', '' ]
+              [ 'dev-sprite-prd-cower-1' ]
             ),
             'dead': new Animation(
               'dead',
-              [ '', '' ]
+              [ 'dev-sprite-prd-dead-1' ]
             ),
             'flee': new Animation(
               'flee',
@@ -390,15 +390,15 @@ angular
             ),
             'hurt': new Animation(
               'hurt',
-              [ '', '' ]
+              [ 'dev-sprite-prd-hurt-1' ]
             ),
             'idle': new Animation(
               'idle',
-              [ '', '' ]
+              [ 'dev-sprite-prd-idle-1 ', 'dev-sprite-prd-idle-2' ]
             ),
             'win': new Animation(
               'win',
-              [ '', '' ]
+              [ 'dev-sprite-prd-win-1' ]
             )
           }
         } ),
