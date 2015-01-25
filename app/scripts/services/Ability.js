@@ -13,7 +13,7 @@ angular
       if ( typeof( description ) !== 'string' ) {
         throw new Error( 'Invalid description!' );
       }
-      if ( !jobName || typeof( jobName ) !== 'string' ) {
+      if ( typeof( jobName ) !== 'string' ) {
         throw new Error( 'Invalid jobName!' );
       }
       if ( !nameString || typeof( nameString ) !== 'string' ) {

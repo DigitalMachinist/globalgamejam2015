@@ -12,8 +12,8 @@ angular
     self.getRandomSprint = function ( phaseNum ) {
       var randomDifficulty = Math.floor( Math.random() * ( phaseNum - 1 ) ) + 1;
       var randomLength = Math.floor( Math.random() * 2 ) + 1;
-      var randomInvestment = Math.floor( Math.random() * 4 * phaseNum ) * 25 + 50;
-      var randomPayout = Math.floor( Math.random() * 6 * phaseNum ) * 25 + 100;
+      var randomInvestment = Math.floor( Math.random() * 2 * phaseNum ) * 25 + 50;
+      var randomPayout = Math.floor( Math.random() * 5 * phaseNum ) * 25 + 100;
       return new Sprint(
         randomDifficulty,
         randomLength,

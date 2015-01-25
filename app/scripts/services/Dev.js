@@ -2,7 +2,7 @@
 
 angular
 	.module( 'globalgamejam2015App' )
-  .factory( 'Dev', function Dev( jobsData ) {
+  .factory( 'Dev', function Dev( jobsData, $rootScope, $timeout ) {
 
   	return function Dev( person, jobLevelsArray, abilitiesArray ) {
 
@@ -60,11 +60,17 @@ angular
       };
 
 	  	// ATB
-	  	self.addAtbProgress = function ( progressToAdd ) {
-        self.atbProgress += progressToAdd;
+	  	self.advanceAtb = function () {
+        if ( self.currentHp <= 0 ) {
+          return;
+        }
+        self.atbProgress += self.atbSpeed;
         if ( self.atbProgress >= self.atbMax ) {
           self.atbProgress = self.atbMax;
         } 
+        if ( self.isAtbReady() ) {
+          $rootScope.$broadcast( 'readyDev', self );
+        }
       };
       self.getAtbProgress = function () {
 	  		return self.atbProgress;
@@ -142,6 +148,10 @@ angular
 	  		if ( self.currentHp > maxHp ) {
 	  			self.currentHp = maxHp;
 	  		}
+        self.isShaking = true;
+        $timeout( function () {
+          self.isShaking = false;
+        }, 500 );
 	  	};
 	  	self.getCurrentHp = function () {
 	  		return self.currentHp;
@@ -211,18 +221,14 @@ angular
 	  		};
 	  	}
 
-      // Update
-      self.update = function () {
-        self.advanceAnimationFrame();
-        self.addAtbProgress();
-      };
-
 	  	// Init
 	  	( function init () {
 
         // These have to be set before anything else.
         self.jobLevels = jobLevelsArray;
         self.abilities = abilitiesArray;
+        
+        self.isShaking = false;
 
         self.atbMax = 1000;
 		  	self.atbProgress = 0;
@@ -230,6 +236,7 @@ angular
         self.currentAniFrame = 0;
         self.currentAniName = 'idle';
 		  	self.currentHp = self.getMaxHp();
+        self.isActing = false;
 	  		self.person = person;
         self.xp = 0;
 

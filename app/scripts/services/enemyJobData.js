@@ -50,7 +50,7 @@ angular
           {
             'idle': new Animation(
               'idle',
-              [ '' ]
+              [ 'enemy-sprite-bug' ]
             )
           }
         ),
@@ -92,7 +92,7 @@ angular
           {
             'idle': new Animation(
               'idle',
-              [ '' ]
+              [ 'enemy-sprite-cln' ]
             )
           }
         ),
@@ -134,7 +134,7 @@ angular
           {
             'idle': new Animation(
               'idle',
-              [ '' ]
+              [ 'enemy-sprite-crt' ]
             )
           }
         ),
@@ -176,7 +176,7 @@ angular
           {
             'idle': new Animation(
               'idle',
-              [ '' ]
+              [ 'enemy-sprite-csl' ]
             )
           }
         ),
@@ -218,7 +218,7 @@ angular
           {
             'idle': new Animation(
               'idle',
-              [ '' ]
+              [ 'enemy-sprite-exe' ]
             )
           }
         ),
@@ -260,7 +260,7 @@ angular
           {
             'idle': new Animation(
               'idle',
-              [ '' ]
+              [ 'enemy-sprite-hrd' ]
             )
           }
         )

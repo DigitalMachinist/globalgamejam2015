@@ -3,54 +3,20 @@
 		<div class="sprint-instructions">Choose an enemy.</div>
 		<div class="enemy-sprites">
 			<ul>
-				<!-- <li ng-repeat="enemy in enemies">
+				<li ng-repeat="enemy in enemies" ng-if="!enemy.empty">
 					<div class="sprite-container">
-						<i class="fa fa-2x fa-caret-down" ng-show="isEnemySelected( enemy )"></i>
-						<sprite facing="right" model="enemy" ng-hover="onEnemyHovered( enemy )" ng-click="onEnemyClicked( enemy )"></sprite>
-					</div>
-				</li> -->
-				<li>
-					<div class="sprite-container">
-						<i class="fa fa-2x fa-caret-down sprite-icon enemy-sprite-1"></i>
-						<!-- To go in sprite directive -->
-						<div class="enemy-sprite enemy-sprite-1 enemy-sprite-exe"></div>
-					</div>
-				</li>
-				<li>
-					<div class="sprite-container">
-						<i class="fa fa-2x fa-caret-down sprite-icon enemy-sprite-2"></i>
-						<!-- To go in sprite directive -->
-						<div class="enemy-sprite enemy-sprite-2 enemy-sprite-crt"></div>
-					</div>
-				</li>
-				<li>
-					<div class="sprite-container">
-						<i class="fa fa-2x fa-caret-down sprite-icon enemy-sprite-3"></i>
-						<!-- To go in sprite directive -->
-						<div class="enemy-sprite enemy-sprite-3 enemy-sprite-bug"></div>
-					</div>
-				</li>
-				<li>
-					<div class="sprite-container">
-						<i class="fa fa-2x fa-caret-down sprite-icon enemy-sprite-4"></i>
-						<!-- To go in sprite directive -->
-						<div class="enemy-sprite enemy-sprite-4 enemy-sprite-cln"></div>
+						<i class="fa fa-3x sprite-icon enemy-sprite-{{ $index + 1 }}" ng-class="{ 'fa-caret-down':enemy === actionTarget || enemy === actionEnemy, 'shaking': dev.isShaking }"></i>
+						<div class="enemy-sprite enemy-sprite-{{ $index + 1 }} {{ enemy.getCurrentAniClass() }}" ng-mouseenter="onEnemyHovered( enemy )" ng-click="onEnemyClicked( enemy )"></div>
 					</div>
 				</li>
 			</ul>
 		</div>
 		<div class="dev-sprites">
 			<ul>
-				<!-- <li ng-repeat="dev in devs">
+				<li ng-repeat="dev in devs" ng-if="!dev.empty">
 					<div class="sprite-container">
-						<i class="fa fa-2x fa-caret-down" ng-show="isDevSelected( dev )"></i>
-						<sprite facing="left" model="enemy" ng-hover="onDevHovered( dev )" ng-click="onDevClicked( dev )"></sprite>
-					</div>
-				</li> -->
-				<li ng-repeat="dev in devsData.devs">
-					<div class="sprite-container">
-						<i class="fa fa-2x fa-caret-down sprite-icon dev-sprite-{{ $index + 1 }}"></i>
-						<div class="dev-sprite dev-sprite-{{ $index + 1 }} {{ dev.getCurrentAniClass() }}"></div>
+						<i class="fa fa-3x sprite-icon dev-sprite-{{ $index + 1 }}" ng-class="{ 'fa-caret-down': dev === actionTarget || enemy === actionDev }"></i>
+						<div class="dev-sprite dev-sprite-{{ $index + 1 }} {{ dev.getCurrentAniClass() }}" ng-class="{ 'shaking': dev.isShaking }" ng-mouseenter="onDevHovered( dev )" ng-mouseleave="onDevUnhovered( dev )" ng-click="onDevClicked( dev )"></div>
 					</div>
 				</li>
 			</ul>
@@ -60,87 +26,37 @@
 		<div class="enemy-list">
 			<h3>NPC</h3>
 			<ul>
-				<li class="clearfix">
-					<div class="enemy-list-icon fa fa-2x fa-caret-right left"></div> 
-					<div class="enemy-list-item left">EXE 1</div> 
+				<li ng-repeat="enemy in enemies" ng-if="!enemy.empty" ng-mouseenter="onEnemyHovered( enemy )" ng-click="onEnemyClicked( enemy )" ng-class="{ 'selected': enemy === selectedEnemy }">
+					<div class="enemy-list-icon fa fa-2x left" ng-class="{ 'fa-caret-right': enemy === waitingActor }"></div> 
+					<div class="enemy-list-item left">{{ enemy.job.name }}</div> 
+					<div class="clearfix"></div>
 				</li>
-				<li class="clearfix">
-					<div class="enemy-list-icon fa fa-2x fa-caret-right left"></div> 
-					<div class="enemy-list-item left">CRT 1</div> 
-				</li>
-
-				<li class="clearfix">
-					<div class="enemy-list-icon fa fa-2x fa-caret-right left"></div> 
-					<div class="enemy-list-item left">BUG 1</div> 
-				</li>
-				<li class="clearfix">
-					<div class="enemy-list-icon fa fa-2x fa-caret-right left"></div> 
-					<div class="enemy-list-item left">CLN 1</div> 
-				</li>
-
-				<!-- <li ng-repeat="enemy in enemies">
-					<div class="enemy-list-item" ng-class="{ 'selected': isEnemySelected( enemy ) }" ng-hover="onEnemyHovered( enemy )" ng-click="onEnemyClicked( enemy )">{{ enemy.name }}</div> 
-				</li> -->
 			</ul>
 		</div>
 		<div class="ability-list">
-			<h3>ABL</h3>
-			<div class="left-arrow left" ng-click="onChangeDevArrowClicked( 'left' )">
-				<i class="fa fa-2x fa-caret-left"></i>
-			</div>
+			<h3 class="title left">ABL</h3>
+			<div class="act-btn right"><button type="button" ng-click="onActionStartButtonClicked()">GO!</button></div>
+			<div class="clearfix"></div>
 			<ul class="scrollable left">
-				<li class="clearfix selected">
-					<div class="ability-list-icon fa fa-2x fa-caret-right left"></div> 
-					<div class="ability-list-item left">CRUNCH</div> 
+				<li ng-repeat="ability in actionDev.abilities" ng-class="{ 'selected': ability === selectedAbility }" ng-mouseenter="onAbilityHovered( ability )" ng-click="onAbilityClicked( ability )">
+					<div class="ability-list-icon fa fa-2x left" ng-class="{ 'fa-caret-right': ability === actionAbility }"></div> 
+					<div class="ability-list-item left">{{ ability.name }}</div> 
+					<div class="clearfix"></div>
 				</li>
-				<li class="clearfix">
-					<div class="ability-list-icon fa fa-2x fa-caret-right left hide"></div> 
-					<div class="ability-list-item left">SHIT UMBRELLA</div> 
-				</li>
-				<!-- <li ng-repeat="ability in selectedDev.abilities">
-					<div class="ability-list-item" ng-class="{ 'selected': isAbilitySelected( ability ) }" ng-hover="onAbilityHovered( ability )" ng-click="onAbilityClicked( ability )">{{ ability.name }}</div> 
-				</li> -->
 			</ul>
-			<div class="right-arrow right" ng-click="onChangeDevArrowClicked( 'right' )">
-				<i class="fa fa-2x fa-caret-right"></i>
-			</div>
 			<div class="clearfix"></div>
 		</div>
 		<div class="dev-list">
 			<h3>PC</h3>
 			<ul>
-				<li class="clearfix">
-					<div class="dev-list-icon fa fa-2x fa-caret-right left"></div> 
-					<div class="dev-list-item left">TABYROSE</div> 
-					<div class="dev-list-hp left"> <span class="dev-list-hp-points">999</span>/<span class="dev-list-hp-total">999</span></div>
-					<div class="stat-bar stat-bar-filled"></div>
-            		<div class="stat-bar stat-bar-container"></div>
+				<li ng-repeat="dev in devs" ng-class="{ 'selected': dev === selectedDev }">
+					<div class="dev-list-icon fa fa-2x left" ng-class="{ 'fa-caret-right': dev === waitingActor }"></div> 
+					<div class="dev-list-item left">{{ dev.getName() }}</div> 
+					<div class="dev-list-hp left"> <span class="dev-list-hp-points">{{ dev.getCurrentHp() }}</span>/<span class="dev-list-hp-total">{{ dev.getMaxHp() }}</span></div>
+					<div class="stat-bar stat-bar-filled" style="width: {{ dev.getAtbProgress() / dev.atbMax * 200 }}px"></div>
+          <div class="stat-bar stat-bar-container"></div>
+          <div class="clearfix"></div>
 				</li>
-				<li class="clearfix">
-					<div class="dev-list-icon fa fa-2x fa-caret-right left"></div> 
-					<div class="dev-list-item left">JEFFROSE</div> 
-					<div class="dev-list-hp left"> <span class="dev-list-hp-points">999</span>/<span class="dev-list-hp-total">999</span></div>
-					<div class="stat-bar stat-bar-filled"></div>
-            		<div class="stat-bar stat-bar-container"></div>
-				</li>
-
-				<li class="clearfix">
-					<div class="dev-list-icon fa fa-2x fa-caret-right left"></div> 
-					<div class="dev-list-item left">J ZINGER</div> 
-					<div class="dev-list-hp left"> <span class="dev-list-hp-points">999</span>/<span class="dev-list-hp-total">999</span></div>
-					<div class="stat-bar stat-bar-filled"></div>
-            		<div class="stat-bar stat-bar-container"></div>
-				</li>
-				<li class="clearfix">
-					<div class="dev-list-icon fa fa-2x fa-caret-right left"></div> 
-					<div class="dev-list-item left">KRIS NEU</div> 
-					<div class="dev-list-hp left"> <span class="dev-list-hp-points">999</span>/<span class="dev-list-hp-total">999</span></div>
-					<div class="stat-bar stat-bar-filled"></div>
-            		<div class="stat-bar stat-bar-container"></div>
-				</li>
-				<!-- <li ng-repeat="dev in devs">
-					<status model="dev" class="dev-list-item" ng-class="{ 'selected': isDevSelected( enemy ) }" ng-hover="onDevHovered( dev )" ng-click="onDevClicked( dev )">{{ dev.name }}</status> 
-				</li> -->
 			</ul>
 		</div>
 	</div>

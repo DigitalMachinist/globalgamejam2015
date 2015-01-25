@@ -111,6 +111,10 @@ angular
               'idle',
               [ 'dev-sprite-art-idle-1' ]
             ),
+            'walk': new Animation(
+              'idle',
+              [ 'dev-sprite-art-idle-1', 'dev-sprite-art-idle-2' ]
+            ),
             'win': new Animation(
               'win',
               [ 'dev-sprite-art-win-1' ]
@@ -205,6 +209,10 @@ angular
             'idle': new Animation(
               'idle',
               [ 'dev-sprite-cod-idle-1' ]
+            ),
+            'walk': new Animation(
+              'idle',
+              [ 'dev-sprite-cod-idle-1', 'dev-sprite-cod-idle-2' ]
             ),
             'win': new Animation(
               'win',
@@ -301,6 +309,10 @@ angular
               'idle',
               [ 'dev-sprite-dsn-idle-1' ]
             ),
+            'walk': new Animation(
+              'idle',
+              [ 'dev-sprite-dsn-idle-1', 'dev-sprite-dsn-idle-2' ]
+            ),
             'win': new Animation(
               'win',
               [ 'dev-sprite-dsn-win-1' ]
@@ -395,6 +407,10 @@ angular
             'idle': new Animation(
               'idle',
               [ 'dev-sprite-prd-idle-1 ' ]
+            ),
+            'walk': new Animation(
+              'idle',
+              [ 'dev-sprite-prd-idle-1', 'dev-sprite-prd-idle-2' ]
             ),
             'win': new Animation(
               'win',
@@ -491,6 +507,10 @@ angular
               'idle',
               [ 'dev-sprite-pr-idle-1' ]
             ),
+            'walk': new Animation(
+              'idle',
+              [ 'dev-sprite-pr-idle-1', 'dev-sprite-pr-idle-2' ]
+            ),
             'win': new Animation(
               'win',
               [ 'dev-sprite-pr-win-1' ]
@@ -585,6 +605,10 @@ angular
             'idle': new Animation(
               'idle',
               [ 'dev-sprite-qa-idle-1' ]
+            ),
+            'walk': new Animation(
+              'idle',
+              [ 'dev-sprite-qa-idle-1', 'dev-sprite-qa-idle-2' ]
             ),
             'win': new Animation(
               'win',
