@@ -140,6 +140,136 @@ angular
         } ),
 
         new Person( {
+          name: 'ANDYCASK', 
+          atbSpeed: 10,
+          avatarUrl: '',
+          bug: 10,
+          csl: 10,
+          cln: 10,
+          crt: 10, 
+          exe: 10,
+          hrd: 10, 
+          maxHP: 30
+        } ),
+
+        new Person( {
+          name: 'JESSE P', 
+          atbSpeed: 10,
+          avatarUrl: '',
+          bug: 10,
+          csl: 10,
+          cln: 10,
+          crt: 10, 
+          exe: 10,
+          hrd: 10, 
+          maxHP: 30
+        } ),
+
+        new Person( {
+          name: 'JADE PK', 
+          atbSpeed: 10,
+          avatarUrl: '',
+          bug: 10,
+          csl: 10,
+          cln: 10,
+          crt: 10, 
+          exe: 10,
+          hrd: 10, 
+          maxHP: 30
+        } ),
+
+        new Person( {
+          name: 'JO DALY', 
+          atbSpeed: 10,
+          avatarUrl: '',
+          bug: 10,
+          csl: 10,
+          cln: 10,
+          crt: 10, 
+          exe: 10,
+          hrd: 10, 
+          maxHP: 30
+        } ),
+
+        new Person( {
+          name: 'TERISMTH', 
+          atbSpeed: 10,
+          avatarUrl: '',
+          bug: 10,
+          csl: 10,
+          cln: 10,
+          crt: 10, 
+          exe: 10,
+          hrd: 10, 
+          maxHP: 30
+        } ),
+
+        new Person( {
+          name: 'SORAYA', 
+          atbSpeed: 10,
+          avatarUrl: '',
+          bug: 10,
+          csl: 10,
+          cln: 10,
+          crt: 10, 
+          exe: 10,
+          hrd: 10, 
+          maxHP: 30
+        } ),
+
+        new Person( {
+          name: 'VEEREN J', 
+          atbSpeed: 10,
+          avatarUrl: '',
+          bug: 10,
+          csl: 10,
+          cln: 10,
+          crt: 10, 
+          exe: 10,
+          hrd: 10, 
+          maxHP: 30
+        } ),
+
+        new Person( {
+          name: 'SURINDER', 
+          atbSpeed: 10,
+          avatarUrl: '',
+          bug: 10,
+          csl: 10,
+          cln: 10,
+          crt: 10, 
+          exe: 10,
+          hrd: 10, 
+          maxHP: 30
+        } ),
+
+        new Person( {
+          name: 'NAVEEN', 
+          atbSpeed: 10,
+          avatarUrl: '',
+          bug: 10,
+          csl: 10,
+          cln: 10,
+          crt: 10, 
+          exe: 10,
+          hrd: 10, 
+          maxHP: 30
+        } ),
+
+        new Person( {
+          name: 'RICKYHYD', 
+          atbSpeed: 10,
+          avatarUrl: '',
+          bug: 10,
+          csl: 10,
+          cln: 10,
+          crt: 10, 
+          exe: 10,
+          hrd: 10, 
+          maxHP: 30
+        } ),
+
+        new Person( {
           name: 'JUSTINE', 
           atbSpeed: 10,
           avatarUrl: '',

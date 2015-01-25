@@ -61,11 +61,24 @@ angular
       };
 
       // Fun
-      self.addFun = function ( funToAdd ) {
-        self.fun += funToAdd;
+      self.addFeature = function ( feature ) {
+        self.features.push( feature );
+        self.fun += feature.getModifiedFun();
       };
       self.getFun = function () {
         return self.fun;
+      };
+      self.getPhaseFunTotal = function ( phaseNum ) {
+        return self.phasesFun[ phaseNum ];
+      };
+      self.getPhaseFun = function () {
+        return self.phasesFun[ self.getPhaseNum() ] - self.phasesFun[ self.getPhaseNum() - 1 ];
+      };
+      self.getFunTowardPhase = function () {
+        var phase = self.getPhaseNum() - 1;
+        var total = self.getPhaseFunTotal( phase );
+        var current = self.getFun();
+        return current - total;
       };
 
       // Name
@@ -112,15 +125,21 @@ angular
       self.getNumMonths = function () {
         return self.numMonths;
       };
+      self.isPastMonthNum = function ( monthNum ) {
+        return monthNum < self.currentMonth;
+      };
 
       // Init
       ( function init () {
 
+        self.features = [];
+        self.phasesFun = [ 0, prototypeMinFun, betaMinFun, releaseMinFun ];
+
         self.betaMinFun = betaMinFun;
         self.conceptBonus = conceptBonus;
         self.current$$$ = startBudget;
-        self.currentMonth = 0;
-        self.fun = 0;
+        self.currentMonth = 1;
+        self.fun = 5600;
         self.max$$$ = 999;
         self.name = nameString;
         self.numMonths = numMonths;
