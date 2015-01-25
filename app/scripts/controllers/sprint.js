@@ -172,7 +172,7 @@ angular
           if ( $scope.enemies[ i ].getCurrentHp() <= 0 ) {
             for ( var j = 0; j < $scope.devs.length; j++ ) {
               if ( !$scope.devs[ j ].empty ) {
-                $scope.devs[ i ].gainXp( $scope.enemies[ j ].xp );
+                $scope.devs[ j ].gainXp( $scope.enemies[ i ].xp );
               }
             }
             $scope.enemies[ i ] = enemyData.getEmptyEnemy();
