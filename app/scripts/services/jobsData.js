@@ -52,31 +52,31 @@ angular
           } ),
           abilities: [
             new Ability( 
-              'ABILITY 1',
+              'GRAFIX UPGRADE',
               'ART', 
               '', 
               100, 
-              'Description',
+              'Casuals and Hardcores do half damage to party',
               function () {
 
               }
             ),
             new Ability( 
-              'ABILITY 2',
+              'LETS ADD UNICORNS',
               'ART', 
-              'ABILITY 1', 
+              'GRAFIX UPGRADE', 
               100, 
-              'Description',
+              '2x attack vs Casuals',
               function () {
 
               }
             ),
             new Ability( 
-              'ABILITY 3',
+              'CATCHY TUNE',
               'ART', 
-              'ABILITY 1', 
+              'GRAFIX UPGRADE', 
               100, 
-              'Description',
+              '50% chance to eliminate a clone from the sprint',
               function () {
 
               }
@@ -147,31 +147,31 @@ angular
           } ),
           abilities: [
             new Ability( 
-              'ABILITY 1',
+              'OBFUSCATE',
               'COD', 
               '', 
               100, 
-              'Description',
+              'Clones do half damage to the party',
               function () {
 
               }
             ),
             new Ability( 
-              'ABILITY 2',
+              'CATCH EXCEPTION',
               'COD', 
-              'ABILITY 1', 
+              'OBFUSCATE', 
               100, 
-              'Description',
+              'Reflect next exception a bug throws',
               function () {
 
               }
             ),
             new Ability( 
-              'ABILITY 3',
+              'DIVIDE AND CONQUER',
               'COD', 
-              'ABILITY 1', 
+              'OBFUSCATE', 
               100, 
-              'Description',
+              'Set all enemy HP to average % HP in battle',
               function () {
 
               }
@@ -180,19 +180,19 @@ angular
           animationMap: {
             'attack': new Animation(
               'attack',
-              [ '', '' ]
+              [ '.dev-sprite-cod-attack-1', '.dev-sprite-cod-attack-2', '.dev-sprite-cod-attack-3', '.dev-sprite-cod-attack-4', '.dev-sprite-cod-attack-5', '.dev-sprite-cod-attack-6', '.dev-sprite-cod-attack-7', '.dev-sprite-cod-attack-8' ]
             ),
             'cast': new Animation(
               'cast',
-              [ '', '' ]
+              [ '.dev-sprite-cod-cast-1', '.dev-sprite-cod-cast-2' ]
             ),
             'cower': new Animation(
               'cower',
-              [ '', '' ]
+              [ '.dev-sprite-cod-cower-1' ]
             ),
             'dead': new Animation(
               'dead',
-              [ '', '' ]
+              [ '.dev-sprite-cod-dead-1 ' ]
             ),
             'flee': new Animation(
               'flee',
@@ -200,15 +200,15 @@ angular
             ),
             'hurt': new Animation(
               'hurt',
-              [ '', '' ]
+              [ '.dev-sprite-cod-hurt-1' ]
             ),
             'idle': new Animation(
               'idle',
-              [ '', '' ]
+              [ '.dev-sprite-cod-idle-1', '.dev-sprite-cod-idle-2' ]
             ),
             'win': new Animation(
               'win',
-              [ '', '' ]
+              [ '.dev-sprite-cod-win-1' ]
             )
           }
         } ),
