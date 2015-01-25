@@ -22,6 +22,12 @@ angular
         return enemy;
       };
 
+    self.getEmptyEnemy = function () {
+      return {
+        empty: true
+      };
+    };
+
       // Init
       ( function init () {
 

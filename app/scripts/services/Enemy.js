@@ -2,7 +2,7 @@
 
 angular
   .module( 'globalgamejam2015App' )
-  .factory( 'Enemy', function Enemy( jobsData ) {
+  .factory( 'Enemy', function Enemy( jobsData, $rootScope ) {
 
     return function Enemy( baseObj ) {
 
@@ -17,6 +17,12 @@ angular
       };
       self.getAnimationMap = function () {
         return self.job.animationMap;
+      };
+      self.getCurrentAniClass = function () {
+        var aniMap = self.getAnimationMap();
+        var aniArray = aniMap[ self.currentAniName ].framesArray;
+        var aniClass = aniArray[ self.currentAniFrame ];
+        return aniClass;
       };
       self.isLastAnimationFrame = function () {
         var currentAnimation = self.getAnimationMap()[ self.currentAniName ];
@@ -33,11 +39,14 @@ angular
       };
 
       // ATB
-      self.addAtbProgress = function ( progressToAdd ) {
-        self.atbProgress += progressToAdd;
+      self.advanceAtb = function () {
+        self.atbProgress += self.atbSpeed;
         if ( self.atbProgress >= self.atbMax ) {
           self.atbProgress = self.atbMax;
         } 
+        if ( self.isAtbReady() ) {
+          $rootScope.$broadcast( 'readyEnemy', self );
+        }
       };
       self.getAtbProgress = function () {
         return self.atbProgress;
@@ -112,13 +121,6 @@ angular
       // XP
       self.getXp = function () {
         return self.xp;
-      };
-
-      // Update
-      
-      self.update = function () {
-        self.advanceAnimationFrame();
-        self.addAtbProgress();
       };
 
       // Init

@@ -2,7 +2,7 @@
 
 angular
 	.module( 'globalgamejam2015App' )
-  .factory( 'Dev', function Dev( jobsData ) {
+  .factory( 'Dev', function Dev( jobsData, $rootScope ) {
 
   	return function Dev( person, jobLevelsArray, abilitiesArray ) {
 
@@ -60,11 +60,14 @@ angular
       };
 
 	  	// ATB
-	  	self.addAtbProgress = function ( progressToAdd ) {
-        self.atbProgress += progressToAdd;
+	  	self.advanceAtb = function () {
+        self.atbProgress += self.atbSpeed;
         if ( self.atbProgress >= self.atbMax ) {
           self.atbProgress = self.atbMax;
         } 
+        if ( self.isAtbReady() ) {
+          $rootScope.$broadcast( 'readyDev', self );
+        }
       };
       self.getAtbProgress = function () {
 	  		return self.atbProgress;
@@ -210,12 +213,6 @@ angular
 	  			return total + obj[ propertyName ];
 	  		};
 	  	}
-
-      // Update
-      self.update = function () {
-        self.advanceAnimationFrame();
-        self.addAtbProgress();
-      };
 
 	  	// Init
 	  	( function init () {

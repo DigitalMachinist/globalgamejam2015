@@ -14,7 +14,7 @@ angular
     // Helpers
 
     function startSelectedSprint () {
-      console.log( sprintData.selectedSprint );
+      //console.log( sprintData.selectedSprint );
       if ( gameData.game.spend$$$( sprintData.selectedSprint.getInvestment() ) ) {
         $state.go( 'sprint' );
       }
