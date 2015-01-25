@@ -12,7 +12,7 @@ angular
       self.game = new Game(
         title, // Title
         12,    // Number of months
-        50,    // Start budget $$$
+        200,   // Start budget $$$
         100,   // Concept completion bonus $$$ 
         250,   // Prototype completion bonus $$$
         2500,  // Fun required to advance to prototype

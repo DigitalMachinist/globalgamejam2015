@@ -1,7 +1,7 @@
 'use strict';
 angular
 	.module( 'globalgamejam2015App' )
-	.controller( 'SprintCtrl', function ( $scope ) {
+	.controller( 'SprintCtrl', function ( $scope, $state, gameData, $gameLoop, $timeout ) {
 
     // Event Handlers
 
@@ -37,7 +37,16 @@ angular
     
     ( function init () {
 
-
+      // Redirect the user back to the main menu if their game isn't initalized.
+      if ( !gameData.game ) {
+        $state.go( 'menu.main' );
+      }
+      else {
+        // Wait briefly before starting up combat.
+        $timeout( function () {
+          $gameLoop.startUpdate( 100 );
+        }, 2000 );
+      }
 
     } )();
 

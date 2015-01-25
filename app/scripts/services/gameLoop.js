@@ -9,8 +9,11 @@ angular
 
     // Update interval controls.
     var intervalPromise;
-    self.startUpdate = function () {
-      intervalPromise = $interval( update, 100 );
+    self.startUpdate = function ( ms ) {
+      if ( !ms ) {
+        ms = 100;
+      }
+      intervalPromise = $interval( update, ms );
     };
     self.stopUpdate = function () {
       $interval.cancel( intervalPromise );

@@ -1,7 +1,7 @@
 <div id="planning-sprint">
   <div id="header">
     <h1 class="view-title">Sprint</h1>
-    <h1 class="game-title">{Title}</h1>
+    <h1 class="game-title">{{ gameData.game.name }}</h1>
   </div>
   <div id="content">
     <!-- This goes on every screen -->
@@ -10,77 +10,29 @@
       <a href="#" ui-sref="planning.team"><button type="button" class="nav-btn">Team</button></a>
       <button class="nav-btn disabled">Sprint</button>
     </div>
-    <div class="sprint-card sprint-card-1">
-      <h2 class="sprint-title">Door 1</h2>
+    <div ng-repeat="sprint in sprintData.sprints" class="sprint-card sprint-card-{{ $index + 1 }}">
+      <h2 class="sprint-title">Door {{ $index + 1 }}</h2>
       <ul>
         <li class="stat sprint-stat">
           <h3 class="stat-name">LEN</h3>
-          <div class="stat-bar stat-bar-filled"></div>
+          <div class="stat-bar stat-bar-filled" style="width: {{ sprint.getLength() / 3 * 240 }}px"></div>
           <div class="stat-bar stat-bar-container"></div>
         </li>
         <li class="stat sprint-stat">
           <h3 class="stat-name">DIF</h3>
-          <div class="stat-bar stat-bar-filled"></div>
+          <div class="stat-bar stat-bar-filled" style="width: {{ sprint.getDifficulty() / 3 * 240 }}px"></div>
           <div class="stat-bar stat-bar-container"></div>
         </li>
         <li class="stat sprint-stat">
           <h3 class="stat-name">INV</h3>
-          <h3 class="stat-bar money">$50000</h3>
+          <h3 class="stat-bar money">${{ sprint.getInvestment() }}k</h3>
         </li>
         <li class="stat sprint-stat">
           <h3 class="stat-name">PAY</h3>
-          <h3 class="stat-bar money">$150000</h3>
+          <h3 class="stat-bar money">${{ sprint.getPayout() }}k</h3>
         </li>
       </ul>
-      <button class="sprint-btn">Start!</button>
-    </div>
-    <div class="sprint-card sprint-card-2">
-      <h2 class="sprint-title">Door 2</h2>
-      <ul>
-        <li class="stat sprint-stat">
-          <h3 class="stat-name">LEN</h3>
-          <div class="stat-bar stat-bar-filled"></div>
-          <div class="stat-bar stat-bar-container"></div>
-        </li>
-        <li class="stat sprint-stat">
-          <h3 class="stat-name">DIF</h3>
-          <div class="stat-bar stat-bar-filled"></div>
-          <div class="stat-bar stat-bar-container"></div>
-        </li>
-        <li class="stat sprint-stat">
-          <h3 class="stat-name">INV</h3>
-          <h3 class="stat-bar money">$50000</h3>
-        </li>
-        <li class="stat sprint-stat">
-          <h3 class="stat-name">PAY</h3>
-          <h3 class="stat-bar money">$150000</h3>
-        </li>
-      </ul>
-      <button class="sprint-btn">Start!</button>
-    </div>
-    <div class="sprint-card sprint-card-3">
-      <h2 class="sprint-title">Door 3</h2>
-      <ul>
-        <li class="stat sprint-stat">
-          <h3 class="stat-name">LEN</h3>
-          <div class="stat-bar stat-bar-filled"></div>
-          <div class="stat-bar stat-bar-container"></div>
-        </li>
-        <li class="stat sprint-stat">
-          <h3 class="stat-name">DIF</h3>
-          <div class="stat-bar stat-bar-filled"></div>
-          <div class="stat-bar stat-bar-container"></div>
-        </li>
-        <li class="stat sprint-stat">
-          <h3 class="stat-name">INV</h3>
-          <h3 class="stat-bar money">$50000</h3>
-        </li>
-        <li class="stat sprint-stat">
-          <h3 class="stat-name">PAY</h3>
-          <h3 class="stat-bar money">$150000</h3>
-        </li>
-      </ul>
-      <button class="sprint-btn">Start!</button>
+      <button class="sprint-btn" ng-click="onSprintStartButtonClicked( sprint )">Start!</button>
     </div>
   </div>
 </div>
