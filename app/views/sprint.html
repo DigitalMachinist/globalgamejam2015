@@ -30,15 +30,15 @@
 			</ul>
 		</div>
 		<div class="ability-list">
-			<div class="left-arrow float-left" ng-click="onChangeDevArrowClicked( 'left' )">
+			<div class="left-arrow left" ng-click="onChangeDevArrowClicked( 'left' )">
 				<i class="fa fa-2x fa-left"></i>
 			</div>
-			<ul class="scrollable float-left">
+			<ul class="scrollable left">
 				<li ng-repeat="ability in selectedDev.abilities">
 					<div class="ability-list-item" ng-class="{ 'selected': isAbilitySelected( ability ) }" ng-hover="onAbilityHovered( ability )" ng-click="onAbilityClicked( ability )">{{ ability.name }}</div> 
 				</li>
 			</ul>
-			<div class="right-arrow float-left" ng-click="onChangeDevArrowClicked( 'right' )">
+			<div class="right-arrow left" ng-click="onChangeDevArrowClicked( 'right' )">
 				<i class="fa fa-2x fa-right"></i>
 			</div>
 			<div class="clearfix"></div>

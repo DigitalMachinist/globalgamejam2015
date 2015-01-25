@@ -48,6 +48,15 @@ button.selected {
 .left { float: left; }
 .right { float: right; }
 
+.money {
+    color: #fc9838;
+}
+
+.fun {
+    color: #51d96a;
+}
+
+
 #game-area {
     width: 1200px;
     height: 800px;
@@ -319,7 +328,6 @@ button.selected {
 .budget {
     margin-left: 50px;
     margin-top: 80px;
-    color: #eaa000;
 }
 
 /** MILESTONE AREA **/
@@ -360,20 +368,73 @@ button.selected {
 
 .milestone-phase .segment.last-child { border: 0 none; width: 190px; }
 
-#milestone-area .stat-bar-container {
+#milestone-area .stat-bar-container, #build-milestone-area .stat-bar-container {
     height: 80px;
     width: 760px; /* 760/4 = 190 */
     background: #000000;
     margin-top: -80px;
 }
 
-#milestone-area .stat-bar-filled {
+#milestone-area .stat-bar-filled, #build-milestone-area .stat-bar-filled {
     height: 80px;
     width: 285px; /* testing */
     background: #51d96a;
     position: relative;
     z-index: 98;
     margin-top: 5px;
+}
+
+/**********************************************************
+ ** BUILD PAGE *******************************************
+ **********************************************************/
+
+/** MILESTONE AREA **/
+#build-milestone-area {
+    width: 1200px;
+    height: 160px;
+    position: relative;
+    background: #444444;
+}
+
+#build-milestone-area .budget {
+    float: left;
+    margin-right: 75px;
+    margin-top: 85px;
+}
+
+#build-milestone-area .milestone-progress {
+    float: left;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+#build-milestone-area .milestone-progress-text {
+    top: 85px;
+}
+
+/** FEATURES AREA **/
+#features-area {
+    margin-top: 15px;
+    width: 1200px;
+    height: 480px;
+    position: relative;
+    overflow-y: auto;
+
+}
+
+.feature {
+    list-style: none;
+    width: 394px;
+    height: 100px;
+    float: left;
+}
+
+.feature .ability {
+    position: relative;
+}
+
+.feature .feature-stats h3 {
+    margin: -10px 0 -5px 10px;
 }
 
 /**********************************************************
@@ -408,9 +469,6 @@ button.selected {
     margin-left: 80px;
 }
 
-.sprint-card h3.stat-bar {
-    color: #eaa000;
-}
 .sprint-card .stat-bar-container {
     height: 40px;
     width: 200px;
@@ -422,7 +480,7 @@ button.selected {
 .sprint-card .stat-bar-filled {
     height: 40px;
     width: 200px; /* testing */
-    background: #51d96a;
+    background: #ff371a;
     position: relative;
     z-index: 999;
     margin-top: 5px;
@@ -435,7 +493,7 @@ button.selected {
 .sprint-btn {
     width: 340px;
     position: absolute;
-    top: 330px;
+    top: 300px;
     right: 0px;
     padding: 15px;
     font-size: 32px;
