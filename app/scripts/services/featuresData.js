@@ -13,7 +13,7 @@ angular
       self.features = [
 
         new Feature(
-          'FEATURE 1', 
+          'LOWRES UNICORNS', 
           'Description', 
           'ART', 
           jobsData.jobsMap.ART.icon, 
@@ -23,52 +23,176 @@ angular
         ),
 
         new Feature(
-          'FEATURE 2', 
+          'VOXELS', 
           'Description', 
-          'COD', 
-          jobsData.jobsMap.COD.icon, 
-          75, 
+          'ART', 
+          jobsData.jobsMap.ART.icon, 
+          100, 
           400,
-          1
+          2
         ),
 
         new Feature(
-          'FEATURE 3', 
+          'MOVING SCORE', 
           'Description', 
-          'DSN', 
-          jobsData.jobsMap.DSN.icon, 
-          25, 
+          'ART', 
+          jobsData.jobsMap.ART.icon, 
+          200, 
+          800,
+          3
+        ),
+
+        new Feature(
+          'EASTER EGG', 
+          'Description', 
+          'PRD', 
+          jobsData.jobsMap.PRD.icon, 
+          50, 
           200,
           1
         ),
 
         new Feature(
-          'FEATURE 4', 
+          'KICKASSCUTSCENES', 
           'Description', 
           'PRD', 
           jobsData.jobsMap.PRD.icon, 
           100, 
-          500,
+          400,
           2
         ),
 
         new Feature(
-          'FEATURE 5', 
+          'PROD. VALUE', 
           'Description', 
-          'QA', 
-          jobsData.jobsMap.QA.icon, 
-          400, 
-          1000,
+          'PRD', 
+          jobsData.jobsMap.PRD.icon, 
+          200, 
+          800,
           3
         ),
 
         new Feature(
-          'FEATURE 6', 
+          'USEFUL TUTORIALS', 
+          'Description', 
+          'QA', 
+          jobsData.jobsMap.QA.icon, 
+          50, 
+          200,
+          1
+        ),
+
+        new Feature(
+          'ULTRA REAL GORE', 
+          'Description', 
+          'QA', 
+          jobsData.jobsMap.QA.icon, 
+          100, 
+          400,
+          2
+        ),
+
+        
+
+        new Feature(
+          'GOD MODE', 
+          'Description', 
+          'QA', 
+          jobsData.jobsMap.QA.icon, 
+          200, 
+          800,
+          3
+        ),
+
+        new Feature(
+          'DIVERSITY', 
           'Description', 
           'PR', 
           jobsData.jobsMap.PR.icon, 
-          600, 
-          2000,
+          50, 
+          200,
+          1
+        ),
+
+        new Feature(
+          'STRETCH GOALS', 
+          'Description', 
+          'PR', 
+          jobsData.jobsMap.PR.icon, 
+          100, 
+          400,
+          2
+        ),
+
+        new Feature(
+          'VIRAL WEB TIE-IN', 
+          'Description', 
+          'PR', 
+          jobsData.jobsMap.PR.icon, 
+          200, 
+          800,
+          3
+        ),
+
+        new Feature(
+          'BULLET HELL', 
+          'Description', 
+          'COD', 
+          jobsData.jobsMap.COD.icon, 
+          50, 
+          200,
+          1
+        ),
+
+        new Feature(
+          'WIGGLE PHYSICS', 
+          'Description', 
+          'COD', 
+          jobsData.jobsMap.COD.icon, 
+          100, 
+          400,
+          2
+        ),
+
+        new Feature(
+          'LOCALMULTIPLAYER', 
+          'Description', 
+          'COD', 
+          jobsData.jobsMap.COD.icon, 
+          200, 
+          800,
+          3
+        ),
+
+        new Feature(
+          'RADIAL MENU', 
+          'Description', 
+          'DSN', 
+          jobsData.jobsMap.DSN.icon, 
+          50, 
+          200,
+          1
+        ),
+
+        new Feature(
+          'TIGHT CONTROLS', 
+          'Description',
+          'DSN', 
+          jobsData.jobsMap.DSN.icon, 
+          100, 
+          400,
+          2
+        ),
+
+        
+
+        new Feature(
+          'EASY2LRNHRD2MSTR', 
+          'Description', 
+          'DSN', 
+          jobsData.jobsMap.DSN.icon, 
+          200, 
+          800,
           3
         ),
 

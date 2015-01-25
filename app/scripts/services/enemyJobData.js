@@ -17,7 +17,7 @@ angular
           'BUG',
           [
             new Ability(
-              'ABILITY 1',
+              'EXCEPTION',
               'BUG', 
               '', 
               100, 
@@ -27,7 +27,7 @@ angular
               }
             ),
             new Ability(
-              'ABILITY 2',
+              'NULL REFERENCE',
               'BUG', 
               '', 
               100, 
@@ -37,7 +37,7 @@ angular
               }
             ),
             new Ability(
-              'ABILITY 3',
+              'CLIPPING',
               'BUG', 
               '', 
               100, 
@@ -59,7 +59,7 @@ angular
           'CLN',
           [
             new Ability(
-              'ABILITY 1',
+              'LAWYER UP',
               'CLN', 
               '', 
               100, 
@@ -69,7 +69,7 @@ angular
               }
             ),
             new Ability(
-              'ABILITY 2',
+              'ERODE USERBASE',
               'CLN', 
               '', 
               100, 
@@ -79,7 +79,7 @@ angular
               }
             ),
             new Ability(
-              'ABILITY 3',
+              'PIRATE',
               'CLN', 
               '', 
               100, 
@@ -101,7 +101,7 @@ angular
           'CRT',
           [
             new Ability(
-              'ABILITY 1',
+              'EXPOSE',
               'CRT', 
               '', 
               100, 
@@ -111,7 +111,7 @@ angular
               }
             ),
             new Ability(
-              'ABILITY 2',
+              'TWITTER MOB',
               'CRT', 
               '', 
               100, 
@@ -121,7 +121,7 @@ angular
               }
             ),
             new Ability(
-              'ABILITY 3',
+              'LUCKY BREAK',
               'CRT', 
               '', 
               100, 
@@ -143,7 +143,7 @@ angular
           'CSL',
           [
             new Ability(
-              'ABILITY 1',
+              '1-STAR REVIEW',
               'CSL', 
               '', 
               100, 
@@ -153,7 +153,7 @@ angular
               }
             ),
             new Ability(
-              'ABILITY 2',
+              'F2P',
               'CSL', 
               '', 
               100, 
@@ -163,7 +163,7 @@ angular
               }
             ),
             new Ability(
-              'ABILITY 3',
+              'RACE TO THE BOTTOM',
               'CSL', 
               '', 
               100, 
@@ -185,7 +185,7 @@ angular
           'EXE',
           [
             new Ability(
-              'ABILITY 1',
+              'SCOPE CREEP',
               'EXE', 
               '', 
               100, 
@@ -195,7 +195,7 @@ angular
               }
             ),
             new Ability(
-              'ABILITY 2',
+              'YOU\'RE FIRED',
               'EXE', 
               '', 
               100, 
@@ -205,7 +205,7 @@ angular
               }
             ),
             new Ability(
-              'ABILITY 3',
+              'BRIGHT IDEA',
               'EXE', 
               '', 
               100, 
@@ -227,7 +227,7 @@ angular
           'HRD',
           [
             new Ability(
-              'ABILITY 1',
+              'HARASS',
               'HRD', 
               '', 
               100, 
@@ -237,7 +237,7 @@ angular
               }
             ),
             new Ability(
-              'ABILITY 2',
+              'DOX MOB',
               'HRD', 
               '', 
               100, 
@@ -247,7 +247,7 @@ angular
               }
             ),
             new Ability(
-              'ABILITY 3',
+              'STEAM SALE',
               'HRD', 
               '', 
               100, 
