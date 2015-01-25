@@ -16,7 +16,7 @@ angular
         self.currentAniFrame = ( self.currentAniFrame + 1 ) % length;
       };
       self.getAnimationMap = function () {
-        return jobsData[ self.jobName ].animationMap;
+        return self.job.animationMap;
       };
       self.isLastAnimationFrame = function () {
         var currentAnimation = self.animationMap[ self.currentAniName ];
@@ -117,11 +117,6 @@ angular
       // Init
       ( function init () {
 
-        // Abilities
-        if ( !self.abilities || !self.abilities instanceof Array || self.abilities.length < 1 ) {
-          throw new Error( 'Invalid abilities!' );
-        }
-
         // Animation
         self.currentAniFrame = 0;
         self.currentAniName = 'idle';
@@ -162,8 +157,8 @@ angular
         }
 
         // Job
-        if ( !self.jobName || typeof( self.jobName ) !== 'string' ) {
-          throw new Error( 'Invalid jobName!' );
+        if ( !self.job || typeof( self.job ) !== 'object' ) {
+          throw new Error( 'Invalid job!' );
         }
 
         // Name

@@ -70,14 +70,34 @@ angular
 
       // Name
       if ( !self.name || typeof( self.name ) !== 'string' ) {
-          self.name = '1337 H4X GAEM';
+        self.name = '1337 H4X GAEM';
+      }
+      else {
+        if ( self.name.length > 18 ) {
+          self.name = self.name.substring( 0, 17 );
+        }
+        self.name = self.name.toUpperCase();
+      }
+
+      // Phase
+      self.getPhaseNum = function () {
+        if ( self.fun >= self.releaseMinFun ) {
+          return 4;
+        }
+        else if ( self.fun >= self.betaMinFun ) {
+          return 3;
+        }
+        else if ( self.fun >= self.prototypeMinFun ) {
+          return 2;
         }
         else {
-          if ( self.name.length > 18 ) {
-            self.name = self.name.substring( 0, 17 );
-          }
-          self.name = self.name.toUpperCase();
+          return 1;
         }
+      };
+      self.getPhaseName = function ( phaseNum ) {
+        var phaseArr = [ 'concept', 'prototype', 'beta', 'release' ];
+        return phaseArr[ phaseNum - 1 ];
+      };
 
       // Schedule
       self.advanceCurrentMonth = function ( numMonths ) {

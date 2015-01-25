@@ -2,7 +2,7 @@
 
 angular
   .module( 'globalgamejam2015App' )
-  .factory( 'enemyJobData', function ( EnemyJob ) {
+  .factory( 'enemyJobData', function ( EnemyJob, Ability, Animation ) {
     
     // Create the base object to augment.
     var self = {};
@@ -11,17 +11,261 @@ angular
     
     ( function init () {
 
-      self.enemyJobs = {
+      self.enemyJobsMap = {
 
-        'BUG': new EnemyJob( {
+        'BUG': new EnemyJob(
+          'BUG',
+          [
+            new Ability(
+              'ABILITY 1',
+              'BUG', 
+              '', 
+              100, 
+              'Description',
+              function () {
 
-        } ),
+              }
+            ),
+            new Ability(
+              'ABILITY 2',
+              'BUG', 
+              '', 
+              100, 
+              'Description',
+              function () {
 
+              }
+            ),
+            new Ability(
+              'ABILITY 3',
+              'BUG', 
+              '', 
+              100, 
+              'Description',
+              function () {
 
+              }
+            )
+          ],
+          {
+            'idle': new Animation(
+              'idle',
+              [ '' ]
+            )
+          }
+        ),
+
+        'CLN': new EnemyJob(
+          'CLN',
+          [
+            new Ability(
+              'ABILITY 1',
+              'CLN', 
+              '', 
+              100, 
+              'Description',
+              function () {
+
+              }
+            ),
+            new Ability(
+              'ABILITY 2',
+              'CLN', 
+              '', 
+              100, 
+              'Description',
+              function () {
+
+              }
+            ),
+            new Ability(
+              'ABILITY 3',
+              'CLN', 
+              '', 
+              100, 
+              'Description',
+              function () {
+
+              }
+            )
+          ],
+          {
+            'idle': new Animation(
+              'idle',
+              [ '' ]
+            )
+          }
+        ),
+
+        'CRT': new EnemyJob(
+          'CRT',
+          [
+            new Ability(
+              'ABILITY 1',
+              'CRT', 
+              '', 
+              100, 
+              'Description',
+              function () {
+
+              }
+            ),
+            new Ability(
+              'ABILITY 2',
+              'CRT', 
+              '', 
+              100, 
+              'Description',
+              function () {
+
+              }
+            ),
+            new Ability(
+              'ABILITY 3',
+              'CRT', 
+              '', 
+              100, 
+              'Description',
+              function () {
+
+              }
+            )
+          ],
+          {
+            'idle': new Animation(
+              'idle',
+              [ '' ]
+            )
+          }
+        ),
+
+        'CSL': new EnemyJob(
+          'CSL',
+          [
+            new Ability(
+              'ABILITY 1',
+              'CSL', 
+              '', 
+              100, 
+              'Description',
+              function () {
+
+              }
+            ),
+            new Ability(
+              'ABILITY 2',
+              'CSL', 
+              '', 
+              100, 
+              'Description',
+              function () {
+
+              }
+            ),
+            new Ability(
+              'ABILITY 3',
+              'CSL', 
+              '', 
+              100, 
+              'Description',
+              function () {
+
+              }
+            )
+          ],
+          {
+            'idle': new Animation(
+              'idle',
+              [ '' ]
+            )
+          }
+        ),
+
+        'EXE': new EnemyJob(
+          'EXE',
+          [
+            new Ability(
+              'ABILITY 1',
+              'EXE', 
+              '', 
+              100, 
+              'Description',
+              function () {
+
+              }
+            ),
+            new Ability(
+              'ABILITY 2',
+              'EXE', 
+              '', 
+              100, 
+              'Description',
+              function () {
+
+              }
+            ),
+            new Ability(
+              'ABILITY 3',
+              'EXE', 
+              '', 
+              100, 
+              'Description',
+              function () {
+
+              }
+            )
+          ],
+          {
+            'idle': new Animation(
+              'idle',
+              [ '' ]
+            )
+          }
+        ),
+
+        'HRD': new EnemyJob(
+          'HRD',
+          [
+            new Ability(
+              'ABILITY 1',
+              'HRD', 
+              '', 
+              100, 
+              'Description',
+              function () {
+
+              }
+            ),
+            new Ability(
+              'ABILITY 2',
+              'HRD', 
+              '', 
+              100, 
+              'Description',
+              function () {
+
+              }
+            ),
+            new Ability(
+              'ABILITY 3',
+              'HRD', 
+              '', 
+              100, 
+              'Description',
+              function () {
+
+              }
+            )
+          ],
+          {
+            'idle': new Animation(
+              'idle',
+              [ '' ]
+            )
+          }
+        )
 
       };
-
-      ];
 
     } )();
 

@@ -19,18 +19,17 @@ angular
     };
 
     $scope.onHireCardClicked = function ( index ) {
-      hireIndex = index;
       $scope.cardState = 'hire';
     };
 
-    $scope.onHireableDevHireClicked = function ( dev, index ) {
-      var hireDev = devsData.hireableDevs[ index ];
-      if ( gameData.game.spend$$$( hireDev.getHireCost() ) ) {
-        devsData.devs[ hireIndex ] = hireDev;
-        devsData.hireableDevs[ index ] = null;
-      }
-      $scope.cardState = 'team';
-    };
+    // $scope.onHireableDevHireClicked = function ( dev, index ) {
+    //   var hireDev = devsData.hireableDevs[ index ];
+    //   if ( gameData.game.spend$$$( hireDev.getHireCost() ) ) {
+    //     devsData.devs[ hireIndex ] = hireDev;
+    //     devsData.hireableDevs[ index ] = null;
+    //   }
+    //   $scope.cardState = 'team';
+    // };
 
     // Ability Web Event Handlers
 
@@ -63,8 +62,8 @@ angular
     }
 
     // Init
-    
-    var hireIndex = 0;
+
+    var hireIndex;
 
     ( function init () {
 
@@ -72,15 +71,10 @@ angular
       $scope.devsData = devsData;
       $scope.gameData = gameData;
       $scope.jobsData = jobsData;
-      $scope.selectedDev = null;
+      $scope.selectedDev = $scope.devsData.devs[ 0 ];
       $scope.state = 'team';
 
-      //$scope.devsData.devs[ 0 ] = devsData.getRandomDev( 1 );
-      $scope.selectedDev = $scope.devsData.devs[ 0 ];
-      //$scope.selectedDev.gainXp( 2000 );
-
-      //console.log( $scope.selectedDev );
-
+      // Wait a moment to enable popovers or they don't work.
       $timeout( function () {
         $( '[data-toggle="popover"]' ).popover( { 
           trigger: 'hover', 
