@@ -33,7 +33,7 @@ angular
     // Helpers
     
 
-    
+
     // Update
 
     $scope.$on( 'update', function () {
@@ -41,7 +41,9 @@ angular
       //console.log( devsData.devs[ 0 ].getCurrentAniClass() );
 
       for ( var i = 0; i < devsData.devs.length; i++ ) {
-        devsData.devs[ i ].update();
+        if ( !devsData.devs[ i ].empty ) {
+          devsData.devs[ i ].update();
+        }
       }
 
       for ( i = 0; i < enemyData.enemies.length; i++ ) {
@@ -70,8 +72,8 @@ angular
 
         console.log( devsData.devs[ 0 ].getInitialJobName() );
         console.log( devsData.devs[ 1 ].getInitialJobName() );
-        console.log( devsData.devs[ 2 ].getInitialJobName() );
-        console.log( devsData.devs[ 3 ].getInitialJobName() );
+        //console.log( devsData.devs[ 2 ].getInitialJobName() );
+        //console.log( devsData.devs[ 3 ].getInitialJobName() );
 
         devsData.devs[ 0 ].setAnimation( 'attack' );
 

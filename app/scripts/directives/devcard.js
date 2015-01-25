@@ -21,6 +21,11 @@ angular
             $scope.onClicked( $scope.model );
           }
         };
+        $scope.onConfirmButtonClicked = function () {
+          if ( typeof( $scope.onFired ) === 'function' ) {
+            $scope.onFired( $scope.model );
+          }
+        };
         $scope.onFireButtonClicked = function () {
           if ( typeof( $scope.onFired ) === 'function' ) {
             $scope.onFired( $scope.model );

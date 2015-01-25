@@ -3,7 +3,7 @@
     <div ng-if="type === 'team'" class="dev-fire" ng-click="onFireButtonClicked()">
       <span class="fa fa-times fa-2x"></span>
     </div>
-    <div ng-if="type === 'hire'" class="dev-confirm" ng-click="onHireButtonClicked()">
+    <div ng-if="type === 'hire'" class="dev-confirm" ng-click="onConfirmButtonClicked()">
       <span class="fa fa-times fa-2x"></span>
     </div>
     <div class="dev-avatar">
@@ -25,7 +25,7 @@
       </li>
     </ul>
   </div>
-  <div ng-if="model.empty">
+  <div ng-if="model.empty" ng-click="onHireButtonClicked()">
     <div class="dev-hire">
       <span class="fa fa-plus fa-2x"></span>
     </div>
