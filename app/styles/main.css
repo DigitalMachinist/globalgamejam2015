@@ -703,10 +703,24 @@ input {
 .enemy-sprite-3 { top: 185px; left: 200px; }
 .enemy-sprite-4 { top: 245px; left: 90px; }
 
+.enemy-sprite-1.acting-enemy { left: 470px }
+.enemy-sprite-2.acting-enemy { left: 360px }
+.enemy-sprite-3.acting-enemy { left: 250px }
+.enemy-sprite-4.acting-enemy { left: 140px }
+
+.acting-enemy {
+    padding-left: 50px;
+}
+
 .sprite-icon.enemy-sprite-1 { top: 45px; left: 570px; }
 .sprite-icon.enemy-sprite-2 { top: 105px; left: 460px; }
 .sprite-icon.enemy-sprite-3 { top: 165px; left: 350px; }
 .sprite-icon.enemy-sprite-4 { top: 225px; left: 240px; }
+
+.sprite-icon.enemy-sprite-1.acting-enemy { left: 620px }
+.sprite-icon.enemy-sprite-2.acting-enemy { left: 510px }
+.sprite-icon.enemy-sprite-3.acting-enemy { left: 400px }
+.sprite-icon.enemy-sprite-4.acting-enemy { left: 290px }
 
 .enemy-sprite-bug { background: url(../images/enemies_1_GGJ2015.gif) }
 .enemy-sprite-cln { background: url(../images/enemies_2_GGJ2015.gif) }
@@ -728,10 +742,20 @@ input {
 .dev-sprite-3 { top: 410px; left: 890px; }
 .dev-sprite-4 { top: 470px; left: 810px; }
 
+.dev-sprite-1.acting-dev { left: 980px }
+.dev-sprite-2.acting-dev { left: 910px }
+.dev-sprite-3.acting-dev { left: 840px }
+.dev-sprite-4.acting-dev { left: 760px }
+
 .sprite-icon.dev-sprite-1 { top: 260px; left: 1050px; }
 .sprite-icon.dev-sprite-2 { top: 320px; left: 980px; }
 .sprite-icon.dev-sprite-3 { top: 380px; left: 910px; }
 .sprite-icon.dev-sprite-4 { top: 440px; left: 830px; }
+
+.sprite-icon.dev-sprite-1.acting-dev { left: 1020px !important; }
+.sprite-icon.dev-sprite-2.acting-dev { left: 930px !important; }
+.sprite-icon.dev-sprite-3.acting-dev { left: 860px !important; }
+.sprite-icon.dev-sprite-4.acting-dev { left: 780px !important; }
 
 .dev-sprite-dsn-idle-1     { background-position:  0px       0px; }
 .dev-sprite-dsn-idle-2     { background-position: -78px      0px; }

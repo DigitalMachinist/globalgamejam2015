@@ -137,7 +137,7 @@ angular
 
       // HP
 	  	self.doDamage = function ( damageHp ) {
-	  		self.currentHp += damageHp;
+	  		self.currentHp -= damageHp;
 	  		if ( self.currentHp < 0 ) {
 	  			self.currentHp = 0;
 	  		}

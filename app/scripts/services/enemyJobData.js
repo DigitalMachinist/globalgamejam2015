@@ -11,20 +11,56 @@ angular
     
     ( function init () {
 
+        self.attackAbilityFn = function ( enemy, target, ability, $scope, $rootScope ) {
+          var isMiss = ( Math.random() > 0.8 );
+          if ( isMiss ) {
+            $scope.instructions = enemy.getName() + ' misses! ' + 
+              target.getName() + ' snickers.';
+            return;
+          }
+          var targetJob = target.getInitialJobName().toLowerCase();
+          var attackStat = enemy[ targetJob ];
+          var damage = 0.5 * ( 0.5 * attackStat * Math.random() + attackStat );
+          var isCritical = ( Math.random() > 0.8 );
+          if ( isCritical ) {
+            var multiplier = 1 + Math.random();
+            damage *= multiplier;
+          }
+          var finalDamage = Math.round( damage );
+          target.doDamage( finalDamage ); 
+          if ( isCritical ) {
+            $scope.instructions = enemy.getName() + ' scored a crit! ' + 
+              target.getName() + ' takes ' + finalDamage + ' damage.';
+          }
+          else {
+            $scope.instructions = enemy.getName() + ' hit! ' + 
+              target.getName() + ' takes ' + finalDamage + ' damage.';
+          }
+          $rootScope.$apply();
+        };
+
+        self.attackAbility = new Ability(
+          'ATTACK', 
+          '', 
+          '', 
+          1, 
+          'Use the pointy end.', 
+          self.attackAbilityFn
+        );
+
       self.enemyJobsMap = {
 
         'BUG': new EnemyJob(
           'BUG',
           [
+            self.attackAbility, 
             new Ability(
               'ABILITY 1',
               'BUG', 
               '', 
               100, 
               'Description',
-              function () {
-
-              }
+              self.attackAbilityFn
             ),
             new Ability(
               'ABILITY 2',
@@ -32,9 +68,7 @@ angular
               '', 
               100, 
               'Description',
-              function () {
-
-              }
+              self.attackAbilityFn
             ),
             new Ability(
               'ABILITY 3',
@@ -42,9 +76,7 @@ angular
               '', 
               100, 
               'Description',
-              function () {
-
-              }
+              self.attackAbilityFn
             )
           ],
           {
@@ -58,15 +90,14 @@ angular
         'CLN': new EnemyJob(
           'CLN',
           [
+            self.attackAbility, 
             new Ability(
               'ABILITY 1',
               'CLN', 
               '', 
               100, 
               'Description',
-              function () {
-
-              }
+              self.attackAbilityFn
             ),
             new Ability(
               'ABILITY 2',
@@ -74,9 +105,7 @@ angular
               '', 
               100, 
               'Description',
-              function () {
-
-              }
+              self.attackAbilityFn
             ),
             new Ability(
               'ABILITY 3',
@@ -84,9 +113,7 @@ angular
               '', 
               100, 
               'Description',
-              function () {
-
-              }
+              self.attackAbilityFn
             )
           ],
           {
@@ -100,15 +127,14 @@ angular
         'CRT': new EnemyJob(
           'CRT',
           [
+            self.attackAbility, 
             new Ability(
               'ABILITY 1',
               'CRT', 
               '', 
               100, 
               'Description',
-              function () {
-
-              }
+              self.attackAbilityFn
             ),
             new Ability(
               'ABILITY 2',
@@ -116,9 +142,7 @@ angular
               '', 
               100, 
               'Description',
-              function () {
-
-              }
+              self.attackAbilityFn
             ),
             new Ability(
               'ABILITY 3',
@@ -126,9 +150,7 @@ angular
               '', 
               100, 
               'Description',
-              function () {
-
-              }
+              self.attackAbilityFn
             )
           ],
           {
@@ -142,15 +164,14 @@ angular
         'CSL': new EnemyJob(
           'CSL',
           [
+            self.attackAbility, 
             new Ability(
               'ABILITY 1',
               'CSL', 
               '', 
               100, 
               'Description',
-              function () {
-
-              }
+              self.attackAbilityFn
             ),
             new Ability(
               'ABILITY 2',
@@ -158,9 +179,7 @@ angular
               '', 
               100, 
               'Description',
-              function () {
-
-              }
+              self.attackAbilityFn
             ),
             new Ability(
               'ABILITY 3',
@@ -168,9 +187,7 @@ angular
               '', 
               100, 
               'Description',
-              function () {
-
-              }
+              self.attackAbilityFn
             )
           ],
           {
@@ -184,15 +201,14 @@ angular
         'EXE': new EnemyJob(
           'EXE',
           [
+            self.attackAbility, 
             new Ability(
               'ABILITY 1',
               'EXE', 
               '', 
               100, 
               'Description',
-              function () {
-
-              }
+              self.attackAbilityFn
             ),
             new Ability(
               'ABILITY 2',
@@ -200,9 +216,7 @@ angular
               '', 
               100, 
               'Description',
-              function () {
-
-              }
+              self.attackAbilityFn
             ),
             new Ability(
               'ABILITY 3',
@@ -210,9 +224,7 @@ angular
               '', 
               100, 
               'Description',
-              function () {
-
-              }
+              self.attackAbilityFn
             )
           ],
           {
@@ -226,15 +238,14 @@ angular
         'HRD': new EnemyJob(
           'HRD',
           [
+            self.attackAbility, 
             new Ability(
               'ABILITY 1',
               'HRD', 
               '', 
               100, 
               'Description',
-              function () {
-
-              }
+              self.attackAbilityFn
             ),
             new Ability(
               'ABILITY 2',
@@ -242,9 +253,7 @@ angular
               '', 
               100, 
               'Description',
-              function () {
-
-              }
+              self.attackAbilityFn
             ),
             new Ability(
               'ABILITY 3',
@@ -252,9 +261,7 @@ angular
               '', 
               100, 
               'Description',
-              function () {
-
-              }
+              self.attackAbilityFn
             )
           ],
           {

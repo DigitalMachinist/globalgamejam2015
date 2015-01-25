@@ -2,7 +2,7 @@
 
 angular
   .module( 'globalgamejam2015App' )
-  .controller( 'SprintCtrl', function ( $scope, $state, gameData, devsData, sprintData, 
+  .controller( 'SprintCtrl', function ( $scope, $rootScope, $state, gameData, devsData, sprintData, 
     enemyData, gameLoop, $timeout ) {
 
     // Event Handlers
@@ -89,7 +89,7 @@ angular
         $scope.actionDev.setAnimation( 'attack' );
         $timeout( function () {
 
-          ability.abilityFn( $scope.actionDev, target, ability, $scope );
+          ability.abilityFn( $scope.actionDev, target, ability, $scope, $rootScope );
           $timeout( function () {
 
             $scope.$apply();
@@ -103,6 +103,8 @@ angular
               $scope.actionTarget = null;
               $scope.waitingActor = null;
               $scope.actionInProgress = false;
+
+              console.log( target.getCurrentHp() );
 
             }, 500 );
 
@@ -137,15 +139,44 @@ angular
     // Update
     $scope.$on( 'update', function () {
 
-      // Acvance animation frames
-      for ( var i = 0; i < $scope.devs.length; i++ ) {
+      // Is the fight over?
+      var count = 0;
+      for ( var i = 0; i < $scope.enemies.length; i++ ) {
+        if ( $scope.enemies[ i ].empty ) {
+          count++;
+        }
+      }
+      if ( count >= 4 ) {
+        for ( i = 0; i < $scope.devs.length; i++ ) {
+          if ( !$scope.devs[ i ].empty ) {
+            $scope.devs[ i ].currentHp = $scope.devs[ i ].getMaxHp();
+          }
+        }
+        gameData.game.currentMonth += sprintData.selectedSprint.getLength();
+        gameData.game.add$$$( sprintData.selectedSprint.getPayout() );
+        $state.go( 'planning.project' );
+      }
+
+      // Advance animation frames and remove dead things.
+      for ( i = 0; i < $scope.devs.length; i++ ) {
         if ( !$scope.devs[ i ].empty ) {
           $scope.devs[ i ].advanceAnimationFrame();
+          if ( $scope.devs[ i ].getCurrentHp() <= 0 ) {
+            $scope.devs[ i ] = devsData.getEmptyDev();
+          }
         }
       }
       for ( i = 0; i < $scope.enemies.length; i++ ) {
         if ( !$scope.enemies[ i ].empty ) {
           $scope.enemies[ i ].advanceAnimationFrame();
+          if ( $scope.enemies[ i ].getCurrentHp() <= 0 ) {
+            for ( var j = 0; j < $scope.devs.length; j++ ) {
+              if ( !$scope.devs[ j ].empty ) {
+                $scope.devs[ i ].gainXp( $scope.enemies[ j ].xp );
+              }
+            }
+            $scope.enemies[ i ] = enemyData.getEmptyEnemy();
+          }
         }
       }
 
@@ -177,7 +208,10 @@ angular
 
         // Enemy AI (ability and target selection).
         var randomTargetIndex = Math.floor( Math.random() * devsData.getNumDevs() );
-        var randomTarget = $scope.devs[ randomTargetIndex ];
+        var randomTarget = null;
+        do {
+          randomTarget = $scope.devs[ randomTargetIndex ];
+        } while ( randomTarget.empty );
         var randomAbilityIndex = Math.floor( Math.random() * enemy.job.abilitiesArray.length );
         var randomAbility = enemy.job.abilitiesArray[ randomAbilityIndex ];
 
@@ -191,7 +225,7 @@ angular
           randomAbility.name + ' on ' + randomTarget.getName() + '!';
         $timeout( function () {
 
-          randomAbility.abilityFn( enemy, randomTarget, randomAbility, $scope );
+          randomAbility.abilityFn( enemy, randomTarget, randomAbility, $scope, $rootScope );
 
           $timeout( function () {
 
