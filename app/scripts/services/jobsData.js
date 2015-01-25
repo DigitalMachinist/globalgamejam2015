@@ -351,7 +351,7 @@ angular
               'PRD', 
               'CRUNCH',
               100, 
-              'Producer covers adjacent party members for a short time',
+              'Producer takes damage for adjacent party members for a short time',
               function () {
 
               }
@@ -432,31 +432,31 @@ angular
           } ),
           abilities: [
             new Ability( 
-              'ABILITY 1',
+              'TEASER',
               'PR', 
               '', 
               100, 
-              'Description',
+              'Attack all enemies for a small amount of damage',
               function () {
 
               }
             ),
             new Ability( 
-              'ABILITY 2',
+              '"REVIEWS"',
               'PR', 
-              'ABILITY 1', 
+              'TEASER', 
               100, 
-              'Description',
+              'Defend party against Critics',
               function () {
 
               }
             ),
             new Ability( 
-              'ABILITY 3',
+              'CROWDFUNDING',
               'PR', 
-              'ABILITY 1', 
+              'TEASER', 
               100, 
-              'Description',
+              'Increases payout when Hardcores are in the sprint',
               function () {
 
               }
@@ -465,19 +465,19 @@ angular
           animationMap: {
             'attack': new Animation(
               'attack',
-              [ '', '' ]
+              [ 'dev-sprite-pr-attack-1', 'dev-sprite-pr-attack-2', 'dev-sprite-pr-attack-3', 'dev-sprite-pr-attack-4', 'dev-sprite-pr-attack-5', 'dev-sprite-pr-attack-6', 'dev-sprite-pr-attack-7' ]
             ),
             'cast': new Animation(
               'cast',
-              [ '', '' ]
+              [ 'dev-sprite-pr-cast-1', 'dev-sprite-pr-cast-2' ]
             ),
             'cower': new Animation(
               'cower',
-              [ '', '' ]
+              [ 'dev-sprite-pr-cower-1' ]
             ),
             'dead': new Animation(
               'dead',
-              [ '', '' ]
+              [ 'dev-sprite-pr-dead-1' ]
             ),
             'flee': new Animation(
               'flee',
@@ -485,15 +485,15 @@ angular
             ),
             'hurt': new Animation(
               'hurt',
-              [ '', '' ]
+              [ 'dev-sprite-pr-hurt-1' ]
             ),
             'idle': new Animation(
               'idle',
-              [ '', '' ]
+              [ 'dev-sprite-pr-idle-1' ]
             ),
             'win': new Animation(
               'win',
-              [ '', '' ]
+              [ 'dev-sprite-pr-win-1' ]
             )
           }
         } ),
@@ -527,31 +527,31 @@ angular
           } ),
           abilities: [
             new Ability( 
-              'ABILITY 1',
+              'TEST PLAN',
               'QA', 
               '', 
               100, 
-              'Description',
+              'Defense to party against bugs',
               function () {
 
               }
             ),
             new Ability( 
-              'ABILITY 2',
+              'DRM',
               'QA', 
-              'ABILITY 1', 
+              'TEST PLAN', 
               100, 
-              'Description',
+              'Damage to all enemies; Hardcore immune',
               function () {
 
               }
             ),
             new Ability( 
-              'ABILITY 3',
+              'BREAKTHROUGH',
               'QA', 
-              'ABILITY 1', 
+              'TEST PLAN', 
               100, 
-              'Description',
+              'Decrease length of sprint by 1 month',
               function () {
 
               }
@@ -560,19 +560,19 @@ angular
           animationMap: {
             'attack': new Animation(
               'attack',
-              [ '', '' ]
+              [ 'dev-sprite-qa-attack-1', 'dev-sprite-qa-attack-2', 'dev-sprite-qa-attack-3', 'dev-sprite-qa-attack-4', 'dev-sprite-qa-attack-5', 'dev-sprite-qa-attack-6', 'dev-sprite-qa-attack-7' ]
             ),
             'cast': new Animation(
               'cast',
-              [ '', '' ]
+              [ 'dev-sprite-qa-cast-1' ]
             ),
             'cower': new Animation(
               'cower',
-              [ '', '' ]
+              [ 'dev-sprite-qa-cower-1' ]
             ),
             'dead': new Animation(
               'dead',
-              [ '', '' ]
+              [ 'dev-sprite-qa-dead-1' ]
             ),
             'flee': new Animation(
               'flee',
@@ -580,15 +580,15 @@ angular
             ),
             'hurt': new Animation(
               'hurt',
-              [ '', '' ]
+              [ 'dev-sprite-qa-hurt-1' ]
             ),
             'idle': new Animation(
               'idle',
-              [ '', '' ]
+              [ 'dev-sprite-qa-idle-1' ]
             ),
             'win': new Animation(
               'win',
-              [ '', '' ]
+              [ 'dev-sprite-qa-win-1' ]
             )
           }
         } )
