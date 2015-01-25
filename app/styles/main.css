@@ -61,6 +61,46 @@ input {
     color: #51d96a;
 }
 
+#game-area {
+    width: 1200px;
+    height: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/** HEADER **/
+#header {
+    background: #000000;
+    height: 80px;
+}
+
+#header .view-title, #header .game-title {
+    font-size: 42px;
+    padding: 10px 15px;
+    margin-top: 15px;
+}
+
+#header .view-title {
+    float: left;
+    color: #444444;
+}
+
+#header .game-title {
+    float: right;
+}
+
+/** SCREEN BUTTONS **/
+#nav {
+    position: absolute;
+    top: 750px;
+    left: 15px;
+}
+
+#nav .nav-btn {
+    padding: 15px;
+    margin: 0 6px 0 0;
+}
+
 /**********************************************************
  ** MAIN MENU *********************************************
  **********************************************************/
@@ -103,46 +143,6 @@ input {
     border-radius: 0;
     margin-top: 10px;
  }
-
-#game-area {
-    width: 1200px;
-    height: 800px;
-    margin: 0 auto;
-    position: relative;
-}
-
-/** HEADER **/
-#header {
-    background: #000000;
-    height: 80px;
-}
-
-#header .view-title, #header .game-title {
-    font-size: 42px;
-    padding: 10px 15px;
-    margin-top: 15px;
-}
-
-#header .view-title {
-    float: left;
-    color: #444444;
-}
-
-#header .game-title {
-    float: right;
-}
-
-/** SCREEN BUTTONS **/
-#nav {
-    position: absolute;
-    top: 750px;
-    left: 15px;
-}
-
-#nav .nav-btn {
-    padding: 15px;
-    margin: 0 6px 0 0;
-}
 
 /**********************************************************
  ** TEAM PAGE *********************************************
@@ -559,3 +559,152 @@ input {
     padding: 15px;
     font-size: 32px;
 }
+
+/**********************************************************
+ ** SPRINT BATTLE *****************************************
+ **********************************************************/
+
+.battlefield ul li { list-style: none; }
+
+.sprite-icon {
+    position: absolute;
+}
+
+/* ENEMIES */
+.enemy-sprite {
+    width: 312px;
+    height: 312px;
+    position: absolute;
+}
+
+.enemy-sprite-1 { top: 65px; left: 420px; }
+.enemy-sprite-2 { top: 125px; left: 310px; }
+.enemy-sprite-3 { top: 185px; left: 200px; }
+.enemy-sprite-4 { top: 245px; left: 90px; }
+
+.sprite-icon.enemy-sprite-1 { top: 45px; left: 570px; }
+.sprite-icon.enemy-sprite-2 { top: 105px; left: 460px; }
+.sprite-icon.enemy-sprite-3 { top: 165px; left: 350px; }
+.sprite-icon.enemy-sprite-4 { top: 225px; left: 240px; }
+
+.enemy-sprite-bug { background: url(../images/enemies_1_GGJ2015.gif) }
+.enemy-sprite-cln { background: url(../images/enemies_2_GGJ2015.gif) }
+.enemy-sprite-exe { background: url(../images/enemies_3_GGJ2015.gif) }
+.enemy-sprite-hrd { background: url(../images/enemies_4_GGJ2015.gif) }
+.enemy-sprite-crt { background: url(../images/enemies_5_GGJ2015.gif) }
+.enemy-sprite-csl { background: url(../images/enemies_6_GGJ2015.gif) }
+
+/* CHARACTERS */ 
+.dev-sprite {
+    width: 78px;
+    height: 78px;
+    position: absolute;
+    background: url(../images/spritesheet_GGJ2015.gif)
+}
+
+.dev-sprite-1 { top: 290px; left: 1030px; }
+.dev-sprite-2 { top: 350px; left: 960px; }
+.dev-sprite-3 { top: 410px; left: 890px; }
+.dev-sprite-4 { top: 470px; left: 810px; }
+
+.sprite-icon.dev-sprite-1 { top: 260px; left: 1050px; }
+.sprite-icon.dev-sprite-2 { top: 320px; left: 980px; }
+.sprite-icon.dev-sprite-3 { top: 380px; left: 910px; }
+.sprite-icon.dev-sprite-4 { top: 440px; left: 830px; }
+
+.dev-sprite-dsn-idle-1     { background-position:  0px       0px; }
+.dev-sprite-dsn-idle-2     { background-position: -78px      0px; }
+.dev-sprite-dsn-cast-1     { background-position: -156px     0px; }
+.dev-sprite-dsn-cast-2     { background-position: -234px     0px; }
+.dev-sprite-dsn-attack-1   { background-position: -312px     0px; }
+.dev-sprite-dsn-attack-2   { background-position: -390px     0px; }
+.dev-sprite-dsn-attack-3   { background-position: -468px     0px; }
+.dev-sprite-dsn-attack-4   { background-position: -546px     0px; }
+.dev-sprite-dsn-attack-5   { background-position: -624px     0px; }
+.dev-sprite-dsn-attack-6   { background-position: -702px     0px; }
+.dev-sprite-dsn-attack-7   { background-position: -780px     0px; }
+.dev-sprite-dsn-attack-8   { background-position: -858px     0px; }
+.dev-sprite-dsn-win-1      { background-position: -936px     0px; }
+.dev-sprite-dsn-cower-1    { background-position: -1014px    0px; }
+.dev-sprite-dsn-hurt-1     { background-position: -1092px    0px; }
+.dev-sprite-dsn-dead-1     { background-position: -1170px    0px; }
+
+.dev-sprite-prd-idle-1     { background-position:  0px      -78px; }
+.dev-sprite-prd-idle-2     { background-position: -78px     -78px; }
+.dev-sprite-prd-cast-1     { background-position: -156px    -78px; }
+.dev-sprite-prd-cast-2     { background-position: -234px    -78px; }
+.dev-sprite-prd-attack-1   { background-position: -312px    -78px; }
+.dev-sprite-prd-attack-2   { background-position: -390px    -78px; }
+.dev-sprite-prd-attack-3   { background-position: -468px    -78px; }
+.dev-sprite-prd-attack-4   { background-position: -546px    -78px; }
+.dev-sprite-prd-attack-5   { background-position: -624px    -78px; }
+.dev-sprite-prd-attack-6   { background-position: -702px    -78px; }
+.dev-sprite-prd-attack-7   { background-position: -780px    -78px; }
+.dev-sprite-prd-win-1      { background-position: -936px    -78px; }
+.dev-sprite-prd-cower-1    { background-position: -1014px   -78px; }
+.dev-sprite-prd-hurt-1     { background-position: -1092px   -78px; }
+.dev-sprite-prd-dead-1     { background-position: -1170px   -78px; }
+
+.dev-sprite-art-idle-1     { background-position:  0px      -156px; }
+.dev-sprite-art-idle-2     { background-position: -78px     -156px; }
+.dev-sprite-art-cast-1     { background-position: -156px    -156px; }
+.dev-sprite-art-cast-2     { background-position: -234px    -156px; }
+.dev-sprite-art-attack-1   { background-position: -312px    -156px; }
+.dev-sprite-art-attack-2   { background-position: -390px    -156px; }
+.dev-sprite-art-attack-3   { background-position: -468px    -156px; }
+.dev-sprite-art-attack-4   { background-position: -546px    -156px; }
+.dev-sprite-art-attack-5   { background-position: -624px    -156px; }
+.dev-sprite-art-attack-6   { background-position: -702px    -156px; }
+.dev-sprite-art-attack-7   { background-position: -780px    -156px; }
+.dev-sprite-art-win-1      { background-position: -936px    -156px; }
+.dev-sprite-art-cower-1    { background-position: -1014px   -156px; }
+.dev-sprite-art-hurt-1     { background-position: -1092px   -156px; }
+.dev-sprite-art-dead-1     { background-position: -1170px   -156px; }
+
+.dev-sprite-cod-idle-1     { background-position:  0px      -234px; }
+.dev-sprite-cod-idle-2     { background-position: -78px     -234px; }
+.dev-sprite-cod-cast-1     { background-position: -156px    -234px; }
+.dev-sprite-cod-cast-2     { background-position: -234px    -234px; }
+.dev-sprite-cod-attack-1   { background-position: -312px    -234px; }
+.dev-sprite-cod-attack-2   { background-position: -390px    -234px; }
+.dev-sprite-cod-attack-3   { background-position: -468px    -234px; }
+.dev-sprite-cod-attack-4   { background-position: -546px    -234px; }
+.dev-sprite-cod-attack-5   { background-position: -624px    -234px; }
+.dev-sprite-cod-attack-6   { background-position: -702px    -234px; }
+.dev-sprite-cod-attack-7   { background-position: -780px    -234px; }
+.dev-sprite-cod-attack-8   { background-position: -858px    -234px; }
+.dev-sprite-cod-win-1      { background-position: -936px    -234px; }
+.dev-sprite-cod-cower-1    { background-position: -1014px   -234px; }
+.dev-sprite-cod-hurt-1     { background-position: -1092px   -234px; }
+.dev-sprite-cod-dead-1     { background-position: -1170px   -234px; }
+
+.dev-sprite-pr-idle-1     { background-position:  0px      -312px; }
+.dev-sprite-pr-idle-2     { background-position: -78px     -312px; }
+.dev-sprite-pr-cast-1     { background-position: -156px    -312px; }
+.dev-sprite-pr-cast-2     { background-position: -234px    -312px; }
+.dev-sprite-pr-attack-1   { background-position: -312px    -312px; }
+.dev-sprite-pr-attack-2   { background-position: -390px    -312px; }
+.dev-sprite-pr-attack-3   { background-position: -468px    -312px; }
+.dev-sprite-pr-attack-4   { background-position: -546px    -312px; }
+.dev-sprite-pr-attack-5   { background-position: -624px    -312px; }
+.dev-sprite-pr-attack-6   { background-position: -702px    -312px; }
+.dev-sprite-pr-attack-7   { background-position: -780px    -312px; }
+.dev-sprite-pr-win-1      { background-position: -936px    -312px; }
+.dev-sprite-pr-cower-1    { background-position: -1014px   -312px; }
+.dev-sprite-pr-hurt-1     { background-position: -1092px   -312px; }
+.dev-sprite-pr-dead-1     { background-position: -1170px   -312px; }
+
+.dev-sprite-qa-idle-1     { background-position:  0px      -390px; }
+.dev-sprite-qa-idle-2     { background-position: -78px     -390px; }
+.dev-sprite-qa-cast-1     { background-position: -156px    -390px; }
+.dev-sprite-qa-attack-1   { background-position: -312px    -390px; }
+.dev-sprite-qa-attack-2   { background-position: -390px    -390px; }
+.dev-sprite-qa-attack-3   { background-position: -468px    -390px; }
+.dev-sprite-qa-attack-4   { background-position: -546px    -390px; }
+.dev-sprite-qa-attack-5   { background-position: -624px    -390px; }
+.dev-sprite-qa-attack-6   { background-position: -702px    -390px; }
+.dev-sprite-qa-attack-7   { background-position: -780px    -390px; }
+.dev-sprite-qa-win-1      { background-position: -936px    -390px; }
+.dev-sprite-qa-cower-1    { background-position: -1014px   -390px; }
+.dev-sprite-qa-hurt-1     { background-position: -1092px   -390px; }
+.dev-sprite-qa-dead-1     { background-position: -1170px   -390px; }

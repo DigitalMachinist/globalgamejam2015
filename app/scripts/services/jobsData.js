@@ -85,35 +85,35 @@ angular
           animationMap: {
             'attack': new Animation(
               'attack',
-              [ '', '' ]
+              [ '.dev-sprite-art-attack-1', '.dev-sprite-art-attack-2', '.dev-sprite-art-attack-3', '.dev-sprite-art-attack-4', '.dev-sprite-art-attack-5', '.dev-sprite-art-attack-6', '.dev-sprite-art-attack-7' ]
             ),
             'cast': new Animation(
               'cast',
-              [ '', '' ]
+              [ '.dev-sprite-art-cast-1', '.dev-sprite-art-cast-2' ]
             ),
             'cower': new Animation(
               'cower',
-              [ '', '' ]
+              [ '.dev-sprite-art-cower-1' ]
             ),
             'dead': new Animation(
               'dead',
-              [ '', '' ]
+              [ '.dev-sprite-art-dead-1' ]
             ),
             'flee': new Animation(
               'flee',
-              [ '', '' ]
+              [ '' ]
             ),
             'hurt': new Animation(
               'hurt',
-              [ '', '' ]
+              [ '.dev-sprite-art-hurt-1' ]
             ),
             'idle': new Animation(
               'idle',
-              [ '', '' ]
+              [ '.dev-sprite-art-idle-1', '.dev-sprite-art-idle-2' ]
             ),
             'win': new Animation(
               'win',
-              [ '', '' ]
+              [ '.dev-sprite-art-win-1' ]
             )
           }
         } ),
