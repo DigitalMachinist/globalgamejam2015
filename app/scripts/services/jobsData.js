@@ -85,19 +85,19 @@ angular
           animationMap: {
             'attack': new Animation(
               'attack',
-              [ '.dev-sprite-art-attack-1', '.dev-sprite-art-attack-2', '.dev-sprite-art-attack-3', '.dev-sprite-art-attack-4', '.dev-sprite-art-attack-5', '.dev-sprite-art-attack-6', '.dev-sprite-art-attack-7' ]
+              [ 'dev-sprite-art-attack-1', 'dev-sprite-art-attack-2', 'dev-sprite-art-attack-3', 'dev-sprite-art-attack-4', 'dev-sprite-art-attack-5', 'dev-sprite-art-attack-6', 'dev-sprite-art-attack-7' ]
             ),
             'cast': new Animation(
               'cast',
-              [ '.dev-sprite-art-cast-1', '.dev-sprite-art-cast-2' ]
+              [ 'dev-sprite-art-cast-1', 'dev-sprite-art-cast-2' ]
             ),
             'cower': new Animation(
               'cower',
-              [ '.dev-sprite-art-cower-1' ]
+              [ 'dev-sprite-art-cower-1' ]
             ),
             'dead': new Animation(
               'dead',
-              [ '.dev-sprite-art-dead-1' ]
+              [ 'dev-sprite-art-dead-1' ]
             ),
             'flee': new Animation(
               'flee',
@@ -105,15 +105,15 @@ angular
             ),
             'hurt': new Animation(
               'hurt',
-              [ '.dev-sprite-art-hurt-1' ]
+              [ 'dev-sprite-art-hurt-1' ]
             ),
             'idle': new Animation(
               'idle',
-              [ '.dev-sprite-art-idle-1', '.dev-sprite-art-idle-2' ]
+              [ 'dev-sprite-art-idle-1', 'dev-sprite-art-idle-2' ]
             ),
             'win': new Animation(
               'win',
-              [ '.dev-sprite-art-win-1' ]
+              [ 'dev-sprite-art-win-1' ]
             )
           }
         } ),
@@ -180,19 +180,19 @@ angular
           animationMap: {
             'attack': new Animation(
               'attack',
-              [ '.dev-sprite-cod-attack-1', '.dev-sprite-cod-attack-2', '.dev-sprite-cod-attack-3', '.dev-sprite-cod-attack-4', '.dev-sprite-cod-attack-5', '.dev-sprite-cod-attack-6', '.dev-sprite-cod-attack-7', '.dev-sprite-cod-attack-8' ]
+              [ 'dev-sprite-cod-attack-1', 'dev-sprite-cod-attack-2', 'dev-sprite-cod-attack-3', 'dev-sprite-cod-attack-4', 'dev-sprite-cod-attack-5', 'dev-sprite-cod-attack-6', 'dev-sprite-cod-attack-7', 'dev-sprite-cod-attack-8' ]
             ),
             'cast': new Animation(
               'cast',
-              [ '.dev-sprite-cod-cast-1', '.dev-sprite-cod-cast-2' ]
+              [ 'dev-sprite-cod-cast-1', 'dev-sprite-cod-cast-2' ]
             ),
             'cower': new Animation(
               'cower',
-              [ '.dev-sprite-cod-cower-1' ]
+              [ 'dev-sprite-cod-cower-1' ]
             ),
             'dead': new Animation(
               'dead',
-              [ '.dev-sprite-cod-dead-1 ' ]
+              [ 'dev-sprite-cod-dead-1 ' ]
             ),
             'flee': new Animation(
               'flee',
@@ -200,15 +200,15 @@ angular
             ),
             'hurt': new Animation(
               'hurt',
-              [ '.dev-sprite-cod-hurt-1' ]
+              [ 'dev-sprite-cod-hurt-1' ]
             ),
             'idle': new Animation(
               'idle',
-              [ '.dev-sprite-cod-idle-1', '.dev-sprite-cod-idle-2' ]
+              [ 'dev-sprite-cod-idle-1', 'dev-sprite-cod-idle-2' ]
             ),
             'win': new Animation(
               'win',
-              [ '.dev-sprite-cod-win-1' ]
+              [ 'dev-sprite-cod-win-1' ]
             )
           }
         } ),
@@ -242,31 +242,31 @@ angular
           } ),
           abilities: [
             new Ability( 
-              'ABILITY 1',
+              'ROGUELIKE',
               'DSN', 
               '', 
               100, 
-              'Description',
+              'Powerful attack to a single enemy; ineffective against Casuals',
               function () {
 
               }
             ),
             new Ability( 
-              'ABILITY 2',
+              'ADDICTION PSYCHOLOGY',
               'DSN', 
-              'ABILITY 1',
+              'ROGUELIKE',
               100, 
-              'Description',
+              'Slows Hardcores, Casuals and Critics ',
               function () {
 
               }
             ),
             new Ability( 
-              'ABILITY 3',
+              'PLAYTEST',
               'DSN', 
-              'ABILITY 1', 
+              'ROGUELIKE', 
               100, 
-              'Description',
+              'Increases Payout when Executives are in the sprint',
               function () {
 
               }
@@ -275,19 +275,19 @@ angular
           animationMap: {
             'attack': new Animation(
               'attack',
-              [ '', '' ]
+              [ 'dev-sprite-dsn-attack-1', 'dev-sprite-dsn-attack-2', 'dev-sprite-dsn-attack-3', 'dev-sprite-dsn-attack-4', 'dev-sprite-dsn-attack-5', 'dev-sprite-dsn-attack-6', 'dev-sprite-dsn-attack-7', 'dev-sprite-dsn-attack-8' ]
             ),
             'cast': new Animation(
               'cast',
-              [ '', '' ]
+              [ 'dev-sprite-dsn-cast-1', 'dev-sprite-dsn-cast-2' ]
             ),
             'cower': new Animation(
               'cower',
-              [ '', '' ]
+              [ 'dev-sprite-dsn-cower-1 ' ]
             ),
             'dead': new Animation(
               'dead',
-              [ '', '' ]
+              [ 'dev-sprite-dsn-dead-1' ]
             ),
             'flee': new Animation(
               'flee',
@@ -295,15 +295,15 @@ angular
             ),
             'hurt': new Animation(
               'hurt',
-              [ '', '' ]
+              [ 'dev-sprite-dsn-hurt-1' ]
             ),
             'idle': new Animation(
               'idle',
-              [ '', '' ]
+              [ 'dev-sprite-dsn-idle-1', 'dev-sprite-dsn-idle-2' ]
             ),
             'win': new Animation(
               'win',
-              [ '', '' ]
+              [ 'dev-sprite-dsn-win-1' ]
             )
           }
         } ),
@@ -337,11 +337,11 @@ angular
           } ),
           abilities: [
             new Ability( 
-              'ABILITY 1',
+              'CRUNCH',
               'PRD', 
               '', 
               100, 
-              'Description',
+              'Increase speed of all party members',
               function () {
 
               }
