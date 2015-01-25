@@ -1,33 +1,33 @@
-'use strict';
+// 'use strict';
 
-angular
-  .module( 'globalgamejam2015App' )
-  .directive( 'devcard', function () {
-    return {
-      templateUrl: 'views/confirmcard.html',
-      restrict: 'E',
-      scope: {
-        model: '=',
-        onHireConfirm: '='
-      },
-      link: function postLink( $scope, $element, $attrs ) {
+// angular
+//   .module( 'globalgamejam2015App' )
+//   .directive( 'devcard', function () {
+//     return {
+//       templateUrl: 'views/confirmcard.html',
+//       restrict: 'E',
+//       scope: {
+//         model: '=',
+//         onHireConfirm: '='
+//       },
+//       link: function postLink( $scope, $element, $attrs ) {
 
-        // Event Handlers
+//         // Event Handlers
         
-        $scope.onHireButtonClicked = function () {
-          if ( typeof( $scope.onHireConfirm ) === 'function' ) {
-            $scope.onHireConfirm( $scope.model );
-          }
-        };
+//         $scope.onHireButtonClicked = function () {
+//           if ( typeof( $scope.onHireConfirm ) === 'function' ) {
+//             $scope.onHireConfirm( $scope.model );
+//           }
+//         };
 
-        // Init
+//         // Init
 
-        ( function init () {
+//         ( function init () {
 
-          //console.log( $scope.model );
+//           //console.log( $scope.model );
 
-        } )();
+//         } )();
 
-      }
-    };
-  } );
+//       }
+//     };
+//   } );

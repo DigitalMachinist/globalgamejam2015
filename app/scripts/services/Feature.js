@@ -38,7 +38,7 @@ angular
         } );
         self.modifiedFun = fun + numAffinities * fun;
         return self.modifiedFun;
-      }
+      };
 
       // Init
       ( function init () {

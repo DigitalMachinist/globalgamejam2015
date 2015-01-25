@@ -4,24 +4,18 @@
     <h1 class="game-title">{{ gameData.game.name }}</h1>
   </div>
   <div id="content">
-    <!-- This goes on every screen -->
     <div id="nav">
       <a href="#" ui-sref="planning.project"><button type="button" class="nav-btn">Project</button></a>
       <button type="button" class="nav-btn disabled">Team</button>
       <a href="#" ui-sref="planning.sprint"><button type="button" class="nav-btn">Sprint</button></a>
     </div>
     <div id="sidebar">
-      <ul ng-if="cardState == 'team'">
+      <ul>
         <li ng-repeat="dev in devsData.devs">
-          <div ng-show="dev" ng-click="onDevCardClicked( dev )">
-            <devcard index="{{ $index }}" model="dev" on-fired="onDevFired"></devcard>
-          </div>
-          <div ng-show="!dev" ng-click="onHireCardClicked( $index )">
-            <hirecard></hirecard>
-          </div>
+          <devcard index="{{ $index }}" model="dev" type="state" on-fired="onDevFired" on-fired="onDevHired" ng-if="!!dev" on-clicked="onDevClicked"></devcard>
         </li>
       </ul>
-      <ul ng-if="cardState == 'hire'">
+      <!-- <ul ng-if="cardState == 'hire'">
         <li ng-repeat="dev in devsData.hireableDevs">
           <div ng-show="dev" ng-click="onDevClicked( dev )">
             <confirmcard index="{{ $index }}" model="dev" on-hire-confirm="onHireableDevHire"></confirmcard>
@@ -30,7 +24,7 @@
             <div class="dev-card"></div>
           </div>
         </li>
-      </ul>
+      </ul> -->
     </div>
     <div id="dev-info">
       <div id="dev-strengths">

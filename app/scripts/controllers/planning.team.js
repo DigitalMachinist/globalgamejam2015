@@ -5,21 +5,21 @@ angular
   .controller( 'PlanningTeamCtrl', function ( $scope, gameData, devsData, jobsData, $timeout ) {
 
     // Sidebar Event Handlers
-
+    $scope.onDevClicked = function ( dev ) {
+      $scope.cardState = 'team';
+      $scope.selectedDev = dev;
+    };
     $scope.onDevFireClicked = function ( dev ) {
       if ( dev === $scope.selectedDev ) {
         $scope.selectedDev = null;
       }
       dev = null;
     };
-
-    $scope.onDevCardClicked = function ( dev ) {
-      $scope.cardState = 'team';
-      $scope.selectedDev = dev;
-    };
-
-    $scope.onHireCardClicked = function ( index ) {
+    $scope.onDevHireClicked = function ( dev ) {
       $scope.cardState = 'hire';
+    };
+    $scope.onConfirmHireClicked = function ( dev ) {
+      //$scope.cardState = 'hire';
     };
 
     // $scope.onHireableDevHireClicked = function ( dev, index ) {

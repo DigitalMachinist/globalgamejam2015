@@ -23,8 +23,8 @@ angular
       devsData.devs = [ 
         devsData.getRandomDev( self.game.getCurrentMonth() + 1 ), 
         devsData.getRandomDev( self.game.getCurrentMonth() + 1 ), 
-        devsData.getRandomDev( self.game.getCurrentMonth() + 1 ),
-        devsData.getRandomDev( self.game.getCurrentMonth() + 1 ) 
+        { empty: true },//devsData.getRandomDev( self.game.getCurrentMonth() + 1 ),
+        { empty: true }//devsData.getRandomDev( self.game.getCurrentMonth() + 1 ) 
       ];
       //console.log( self.game );
     };

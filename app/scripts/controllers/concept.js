@@ -8,7 +8,7 @@ angular
 
     $scope.onOkButtonClicked = function () {
       gameData.initGame( $scope.title );
-      $state.go( 'planning.sprint' );
+      $state.go( 'planning.team' );
     };
 
     // Init

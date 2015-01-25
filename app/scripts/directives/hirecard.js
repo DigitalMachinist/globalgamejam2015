@@ -1,24 +1,24 @@
-'use strict';
+// 'use strict';
 
-angular
-  .module( 'globalgamejam2015App' )
-  .directive( 'hirecard', function () {
-    return {
-      templateUrl: 'views/hirecard.html',
-      restrict: 'E',
-      scope: {
-        model: '='
-      },
-      link: function postLink( $scope, $element, $attrs ) {
+// angular
+//   .module( 'globalgamejam2015App' )
+//   .directive( 'hirecard', function () {
+//     return {
+//       templateUrl: 'views/hirecard.html',
+//       restrict: 'E',
+//       scope: {
+//         model: '='
+//       },
+//       link: function postLink( $scope, $element, $attrs ) {
 
-        // Init
+//         // Init
 
-        ( function init () {
+//         ( function init () {
 
           
 
-        } )();
+//         } )();
 
-      }
-    };
-  } );
+//       }
+//     };
+//   } );

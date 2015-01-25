@@ -109,7 +109,7 @@ angular
             ),
             'idle': new Animation(
               'idle',
-              [ 'dev-sprite-art-idle-1', 'dev-sprite-art-idle-2' ]
+              [ 'dev-sprite-art-idle-1' ]
             ),
             'win': new Animation(
               'win',
@@ -204,7 +204,7 @@ angular
             ),
             'idle': new Animation(
               'idle',
-              [ 'dev-sprite-cod-idle-1', 'dev-sprite-cod-idle-2' ]
+              [ 'dev-sprite-cod-idle-1' ]
             ),
             'win': new Animation(
               'win',
@@ -299,7 +299,7 @@ angular
             ),
             'idle': new Animation(
               'idle',
-              [ 'dev-sprite-dsn-idle-1', 'dev-sprite-dsn-idle-2' ]
+              [ 'dev-sprite-dsn-idle-1' ]
             ),
             'win': new Animation(
               'win',
@@ -394,7 +394,7 @@ angular
             ),
             'idle': new Animation(
               'idle',
-              [ 'dev-sprite-prd-idle-1 ', 'dev-sprite-prd-idle-2' ]
+              [ 'dev-sprite-prd-idle-1 ' ]
             ),
             'win': new Animation(
               'win',
