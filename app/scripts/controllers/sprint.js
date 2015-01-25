@@ -36,7 +36,7 @@ angular
 
     $scope.$on( 'update', function () {
 
-      console.log( 'Update' );
+      //console.log( devsData.devs[ 0 ].getCurrentAniClass() );
 
       for ( var i = 0; i < devsData.devs.length; i++ ) {
         devsData.devs[ i ].update();
@@ -57,10 +57,22 @@ angular
         $state.go( 'menu.main' );
       }
       else {
+
         // Wait briefly before starting up combat.
         $timeout( function () {
           gameLoop.startUpdate( 100 );
         }, 1000 );
+
+        $scope.devsData = devsData;
+        $scope.enemyData = enemyData;
+
+        console.log( devsData.devs[ 0 ].getInitialJobName() );
+        console.log( devsData.devs[ 1 ].getInitialJobName() );
+        console.log( devsData.devs[ 2 ].getInitialJobName() );
+        console.log( devsData.devs[ 3 ].getInitialJobName() );
+
+        devsData.devs[ 0 ].setAnimation( 'attack' );
+
       }
 
     } )();

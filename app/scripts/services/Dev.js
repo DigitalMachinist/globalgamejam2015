@@ -35,15 +35,23 @@ angular
         self.currentAniFrame = ( self.currentAniFrame + 1 ) % length;
       };
       self.getAnimationMap = function () {
-	  		return jobsData.jobsMap[ self.jobLevels[ 0 ].jobName ].animationMap;
+        var initialJobName = self.jobLevels[ 0 ].jobName;
+        var aniMap = jobsData.jobsMap[ initialJobName ].animationMap;
+	  		return aniMap;
 	  	};
+      self.getCurrentAniClass = function () {
+        var aniMap = self.getAnimationMap();
+        var aniArray = aniMap[ self.currentAniName ].framesArray;
+        var aniClass = aniArray[ self.currentAniFrame ];
+        return aniClass;
+      };
       self.isLastAnimationFrame = function () {
-        var currentAnimation = self.animationMap[ self.currentAniName ];
+        var currentAnimation = self.getAnimationMap()[ self.currentAniName ];
         var length = currentAnimation.framesArray.length;
         return ( self.currentAniFrame === length - 1 );
       };
       self.setAnimation = function ( animationName ) {
-        var currentAnimation = self.animationMap[ animationName ];
+        var currentAnimation = self.getAnimationMap()[ animationName ];
         if ( !currentAnimation ) {
           throw new Error( 'Invalid animation name!' );
         }

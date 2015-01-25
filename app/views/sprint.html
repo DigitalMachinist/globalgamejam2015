@@ -46,32 +46,10 @@
 						<sprite facing="left" model="enemy" ng-hover="onDevHovered( dev )" ng-click="onDevClicked( dev )"></sprite>
 					</div>
 				</li> -->
-				<li>
+				<li ng-repeat="dev in devsData.devs">
 					<div class="sprite-container">
-						<i class="fa fa-2x fa-caret-down sprite-icon dev-sprite-1"></i>
-						<!-- To go in sprite directive -->
-						<div class="dev-sprite dev-sprite-1 dev-sprite-pr-idle-1"></div>
-					</div>
-				</li>
-				<li>
-					<div class="sprite-container">
-						<i class="fa fa-2x fa-caret-down sprite-icon dev-sprite-2"></i>
-						<!-- To go in sprite directive -->
-						<div class="dev-sprite dev-sprite-2 dev-sprite-pr-idle-2"></div>
-					</div>
-				</li>
-				<li>
-					<div class="sprite-container">
-						<i class="fa fa-2x fa-caret-down sprite-icon dev-sprite-3"></i>
-						<!-- To go in sprite directive -->
-						<div class="dev-sprite dev-sprite-3 dev-sprite-pr-cast-1"></div>
-					</div>
-				</li>
-				<li>
-					<div class="sprite-container">
-						<i class="fa fa-2x fa-caret-down sprite-icon dev-sprite-4"></i>
-						<!-- To go in sprite directive -->
-						<div class="dev-sprite dev-sprite-4 dev-sprite-pr-cast-2"></div>
+						<i class="fa fa-2x fa-caret-down sprite-icon dev-sprite-{{ $index + 1 }}"></i>
+						<div class="dev-sprite dev-sprite-{{ $index + 1 }} {{ dev.getCurrentAniClass() }}"></div>
 					</div>
 				</li>
 			</ul>
