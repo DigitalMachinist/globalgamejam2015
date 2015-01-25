@@ -4,12 +4,12 @@
 		"selected_items":
 		[
 			[
-				"te",
+				"text",
 				"text-align"
 			],
 			[
-				"text",
-				"text-transform"
+				"te",
+				"text-align"
 			],
 			[
 				"font",
@@ -43,31 +43,47 @@
 			"file": "app/styles/main.css",
 			"settings":
 			{
-				"buffer_size": 6401,
+				"buffer_size": 10336,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/views/planning.team.html",
+			"file": "app/views/concept.html",
 			"settings":
 			{
-				"buffer_size": 9086,
+				"buffer_size": 259,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/team.html",
+			"file": "app/views/sprint.html",
 			"settings":
 			{
-				"buffer_size": 13146,
+				"buffer_size": 2021,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/sprint.html",
+			"file": "app/views/menu.html",
 			"settings":
 			{
-				"buffer_size": 4539,
+				"buffer_size": 89,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/menu.main.html",
+			"settings":
+			{
+				"buffer_size": 417,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/scripts/services/jobsData.js",
+			"settings":
+			{
+				"buffer_size": 13568,
 				"line_ending": "Windows"
 			}
 		}
@@ -130,13 +146,24 @@
 	[
 		"/D/github/globalgamejam2015",
 		"/D/github/globalgamejam2015/app",
+		"/D/github/globalgamejam2015/app/scripts",
 		"/D/github/globalgamejam2015/app/styles",
 		"/D/github/globalgamejam2015/app/views"
 	],
 	"file_history":
 	[
-		"/D/github/globalgamejam2015/app/project.html",
+		"/D/github/globalgamejam2015/app/views/planning.html",
+		"/D/github/globalgamejam2015/app/views/menu.credits.html",
+		"/D/github/globalgamejam2015/app/views/menu.instructions.html",
+		"/D/github/globalgamejam2015/app/views/confirmcard.html",
+		"/D/github/globalgamejam2015/app/views/devcard.html",
+		"/D/github/globalgamejam2015/app/views/hirecard.html",
+		"/D/github/globalgamejam2015/app/views/planning.team.html",
 		"/D/github/globalgamejam2015/app/team.html",
+		"/D/github/globalgamejam2015/app/project.html",
+		"/D/github/globalgamejam2015/app/sprint.html",
+		"/D/github/globalgamejam2015/app/build.html",
+		"/D/github/globalgamejam2015/app/views/sprint.html",
 		"/D/github/globalgamejam2015/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/test_underscore/vendor/jquery.js",
 		"/D/github/globalgamejam2015/Gruntfile.js",
 		"/C/Users/Jeff/Documents/__dev/__repos/__projects/globalgamejam2015/dist/index.html",
@@ -252,21 +279,11 @@
 		"/Y/__repos/__projects/peir/client/app/directives/peirContentKtExercise/peirContentKtExercise.html",
 		"/Y/__repos/__projects/peir/client/app/views/user/Program/Module2/M2P06_PASTGlobalRatingScaleDefinitions/M2P06_PASTGlobalRatingScaleDefinitionsController.js",
 		"/Y/__repos/__projects/peir/client/app/views/user/Program/Module2/M2P06_PASTGlobalRatingScaleDefinitions/M2P06_PASTGlobalRatingScaleDefinitions.html",
-		"/Y/__repos/__projects/peir/client/app/directives/errorMessage/errorMessageDirective.js",
-		"/Y/__repos/__projects/peir/client/app/services/$errorMessage/$errorMessage.js",
-		"/Y/__repos/__projects/peir/client/app/views/user/Program/Module3/M3P09_KTCommentary6/M3P09_KTCommentary6.html",
-		"/Y/__repos/__projects/peir/client/app/directives/peirContentAccordionGroup/peirContentAccordionGroup.html",
-		"/Y/__repos/__projects/peir/client/app/directives/peirContentAccordionGroup/peirContentAccordionGroupDirective.js",
-		"/Y/__repos/__projects/peir/client/app/directives/peirContentKtExercise/peirContentKtExerciseDirective.js",
-		"/Y/__repos/__projects/peir/client/app/directives/quizAnswer/quizAnswer.html",
-		"/Y/__repos/__projects/peir/client/app/directives/quizScorecard/quizScorecardDirective.js",
-		"/Y/__repos/__projects/peir/client/app/views/user/Program/Module1/M1P09_PainMisbeliefsExercise/M1P09_PainMisbeliefsExercise.html",
-		"/Y/__repos/__projects/peir/client/app/views/user/Program/Module2/M2P08_KTCommentary4/M2P08_KTCommentary4Controller.js",
-		"/Y/__repos/__projects/peir/client/app/views/user/Program/Module2/M2P08_KTCommentary4/M2P08_KTCommentary4.html"
+		"/Y/__repos/__projects/peir/client/app/directives/errorMessage/errorMessageDirective.js"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 36.0
 	},
 	"find_in_files":
 	{
@@ -278,9 +295,16 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"HEAD",
+			"<li class=\"feature\">",
+			"float-",
+			"dev",
+			"<div class=\"sprint-avatar\"></div>",
+			"<div class=\"sprint-fire\"><span class=\"fa fa-times fa-2x\"></span></div>",
+			"dev",
 			" \n                    ",
 			"                    ",
 			"fa-5x",
@@ -384,7 +408,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -393,15 +417,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6401,
+						"buffer_size": 10336,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3122,
-								3122
+								2051,
+								2051
 							]
 						],
 						"settings":
@@ -411,27 +435,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3674.0,
+						"translation.y": 1300.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/views/planning.team.html",
+					"file": "app/views/concept.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9086,
+						"buffer_size": 259,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2292,
-								2292
+								259,
+								259
 							]
 						],
 						"settings":
@@ -439,70 +463,125 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1122.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/sprint.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2021,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1086,
+								1086
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 380.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "app/team.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 13146,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2506,
-								2506
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 836.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
 					"buffer": 3,
-					"file": "app/sprint.html",
+					"file": "app/views/menu.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4539,
+						"buffer_size": 89,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1916,
-								1916
+								88,
+								88
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 638.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/menu.main.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 417,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								29,
+								29
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/scripts/services/jobsData.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13568,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								229,
+								229
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -510,7 +589,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 28.0
 	},
 	"input":
 	{
@@ -546,7 +625,7 @@
 	"project": "globalgamejam2015.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 52.0
 	},
 	"save_all_on_build": true,
 	"select_file":

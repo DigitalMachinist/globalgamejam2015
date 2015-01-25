@@ -117,6 +117,11 @@ angular
       // Init
       ( function init () {
 
+        // Abilities
+        if ( !self.abilities || !self.abilities instanceof Array || self.abilities.length < 1 ) {
+          throw new Error( 'Invalid abilities!' );
+        }
+
         // Animation
         self.currentAniFrame = 0;
         self.currentAniName = 'idle';
@@ -144,11 +149,6 @@ angular
         }
         if ( !self.qa || !parseInt( self.qa ) ) {
           self.qa = 10;
-        }
-
-        // Fun
-        if ( !self.fun || !parseInt( self.fun ) ) {
-          self.fun = 30;
         }
 
         // Hire Cost
