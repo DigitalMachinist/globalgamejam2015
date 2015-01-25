@@ -20,11 +20,13 @@ angular
         7500   // Fun required to advance to release
       );
       devsData.getRandomHireableDevs( self.game.getCurrentMonth() + 1 );
+
+      devsData.numDevs = 4;
       devsData.devs = [ 
         devsData.getRandomDev( self.game.getCurrentMonth() + 1 ), 
         devsData.getRandomDev( self.game.getCurrentMonth() + 1 ), 
-        { empty: true },//devsData.getRandomDev( self.game.getCurrentMonth() + 1 ),
-        { empty: true }//devsData.getRandomDev( self.game.getCurrentMonth() + 1 ) 
+        devsData.getRandomDev( self.game.getCurrentMonth() + 1 ), 
+        devsData.getRandomDev( self.game.getCurrentMonth() + 1 )
       ];
       //console.log( self.game );
     };

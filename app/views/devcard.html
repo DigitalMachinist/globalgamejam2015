@@ -1,11 +1,14 @@
 <div class="dev-card">
   <div ng-if="!model.empty" ng-click="onCardClicked()">
-    <div ng-if="type === 'team'" class="dev-fire" ng-click="onFireButtonClicked()">
+    <!-- <div ng-if="type === 'team'" class="dev-fire" ng-click="onFireButtonClicked()">
       <span class="fa fa-times fa-2x"></span>
     </div>
-    <div ng-if="type === 'hire'" class="dev-confirm" ng-click="onConfirmButtonClicked()">
-      <span class="fa fa-times fa-2x"></span>
+    <div ng-if="type === 'team' && confirmFire" class="dev-fire" ng-click="onConfirmFireButtonClicked()">
+      <span class="fa fa-times fa-3x"></span>
     </div>
+    <div ng-if="type === 'hire'" class="dev-confirm" ng-click="onConfirmHireButtonClicked()">
+      <span class="fa fa-times fa-2x"></span>
+    </div> -->
     <div class="dev-avatar">
       <img src="{{ model.person.avatarUrl }}" alt="{{ model.person.name }}" />
       <h3>{{ model.person.name }}</h3>

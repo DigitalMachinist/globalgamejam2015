@@ -12,7 +12,7 @@
     <div id="sidebar">
       <ul>
         <li ng-repeat="dev in devsData.devs">
-          <devcard index="{{ $index }}" model="dev" type="state" on-fired="onDevFired" on-fired="onDevHired" ng-if="!!dev" on-clicked="onDevClicked"></devcard>
+          <devcard index="{{ $index }}" model="dev" type="state" on-begin-hire="onDevBeginHireClicked" on-clicked="onDevClicked" on-confirm-fire="onDevConfirmFireClicked" on-confirm-hire="onDevConfirmHireClicked" ></devcard>
         </li>
       </ul>
       <!-- <ul ng-if="cardState == 'hire'">

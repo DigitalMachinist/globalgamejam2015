@@ -7,33 +7,39 @@ angular
       templateUrl: 'views/devcard.html',
       restrict: 'E',
       scope: {
-        model: '=',
-        onClicked: '=', 
-        onFired: '=',
-        onHired: '=',
-        type: '@'
+        model: '=', 
+        onBeginHire: '=',
+        onClicked: '=',
+        onConfirmFire: '=',
+        onConfirmHire: '=',
+        type: '='
       },
       link: function postLink( $scope, $element, $attrs ) {
 
         // Event Handlers
         $scope.onCardClicked = function () {
+          $scope.confirmFire = false;
           if ( typeof( $scope.onClicked ) === 'function' ) {
             $scope.onClicked( $scope.model );
           }
         };
-        $scope.onConfirmButtonClicked = function () {
-          if ( typeof( $scope.onFired ) === 'function' ) {
-            $scope.onFired( $scope.model );
+        $scope.onConfirmFireButtonClicked = function () {
+          $scope.confirmFire = false;
+          if ( typeof( $scope.onConfirmHire ) === 'function' ) {
+            $scope.onConfirmFire( $scope.model );
+          }
+        };
+        $scope.onConfirmHireButtonClicked = function () {
+          if ( typeof( $scope.onConfirmHire ) === 'function' ) {
+            $scope.onConfirmHire( $scope.model );
           }
         };
         $scope.onFireButtonClicked = function () {
-          if ( typeof( $scope.onFired ) === 'function' ) {
-            $scope.onFired( $scope.model );
-          }
+          $scope.confirmFire = true;
         };
         $scope.onHireButtonClicked = function () {
-          if ( typeof( $scope.onHired ) === 'function' ) {
-            $scope.onHired( $scope.model );
+          if ( typeof( $scope.onBeginHire ) === 'function' ) {
+            $scope.onBeginHire( $scope.model );
           }
         };
 

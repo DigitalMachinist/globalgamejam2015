@@ -30,12 +30,20 @@ angular
       }
 
       // Create a dev from a random person and the job levels array.
-      return new Dev(
+      var dev = new Dev(
         peopleData.getRandomPerson(),
         jobLevels,
         abilities
       );
+      dev.gainXp( 100 );
+      return dev;
 
+    };
+
+    self.getEmptyDev = function () {
+      return {
+        empty: true
+      };
     };
 
     self.getRandomHireableDevs = function ( maxLevel ) {
@@ -51,8 +59,19 @@ angular
     
     ( function init () {
 
-      self.devs = [ null, null, null, null ];
-      self.hireableDevs = [ null, null, null, null ];
+      self.numDevs = 0;
+      self.devs = [ 
+        self.getEmptyDev(), 
+        self.getEmptyDev(),
+        self.getEmptyDev(), 
+        self.getEmptyDev()
+      ];
+      self.hireableDevs = [ 
+        self.getEmptyDev(), 
+        self.getEmptyDev(), 
+        self.getEmptyDev(), 
+        self.getEmptyDev() 
+      ];
 
     } )();
 

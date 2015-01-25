@@ -6,20 +6,24 @@ angular
 
     // Sidebar Event Handlers
     $scope.onDevClicked = function ( dev ) {
-      $scope.cardState = 'team';
       $scope.selectedDev = dev;
     };
-    $scope.onDevFireClicked = function ( dev ) {
+    $scope.onDevBeginHireClicked = function ( dev ) {
+      $scope.state = 'hire';
+    };
+    $scope.onDevConfirmFireClicked = function ( dev ) {
+      var emptyDev = devsData.getEmptyDev();
       if ( dev === $scope.selectedDev ) {
-        $scope.selectedDev = null;
+        $scope.selectedDev = emptyDev;
       }
-      dev = null;
+      dev = emptyDev;
     };
-    $scope.onDevHireClicked = function ( dev ) {
-      $scope.cardState = 'hire';
-    };
-    $scope.onConfirmHireClicked = function ( dev ) {
-      //$scope.cardState = 'hire';
+    $scope.onDevConfirmHireClicked = function ( dev ) {
+      $scope.selectedDev = dev;
+      if ( devsData.numDevs < 4 ) {
+        devsData.devs[ devsData.numDevs++ ] = dev;
+      }
+      $scope.state = 'team';
     };
 
     // $scope.onHireableDevHireClicked = function ( dev, index ) {
@@ -28,7 +32,7 @@ angular
     //     devsData.devs[ hireIndex ] = hireDev;
     //     devsData.hireableDevs[ index ] = null;
     //   }
-    //   $scope.cardState = 'team';
+    //   $scope.state = 'team';
     // };
 
     // Ability Web Event Handlers
