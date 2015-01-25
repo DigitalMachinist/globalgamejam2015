@@ -11,7 +11,7 @@ angular
 
       // Animations
       self.advanceAnimationFrame = function () {
-        var currentAnimation = self.animationMap[ self.currentAniName ];
+        var currentAnimation = self.getAnimationMap()[ self.currentAniName ];
         var length = currentAnimation.framesArray.length;
         self.currentAniFrame = ( self.currentAniFrame + 1 ) % length;
       };
@@ -112,6 +112,13 @@ angular
       // XP
       self.getXp = function () {
         return self.xp;
+      };
+
+      // Update
+      
+      self.update = function () {
+        self.advanceAnimationFrame();
+        self.addAtbProgress();
       };
 
       // Init

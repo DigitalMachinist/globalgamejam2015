@@ -30,12 +30,12 @@ angular
 
 	  	// Animations
       self.advanceAnimationFrame = function () {
-        var currentAnimation = self.animationMap[ self.currentAniName ];
+        var currentAnimation = self.getAnimationMap()[ self.currentAniName ];
         var length = currentAnimation.framesArray.length;
         self.currentAniFrame = ( self.currentAniFrame + 1 ) % length;
       };
       self.getAnimationMap = function () {
-	  		return jobsData[ self.jobLevels[ 0 ].jobName ].animationMap;
+	  		return jobsData.jobsMap[ self.jobLevels[ 0 ].jobName ].animationMap;
 	  	};
       self.isLastAnimationFrame = function () {
         var currentAnimation = self.animationMap[ self.currentAniName ];
@@ -202,6 +202,12 @@ angular
 	  			return total + obj[ propertyName ];
 	  		};
 	  	}
+
+      // Update
+      self.update = function () {
+        self.advanceAnimationFrame();
+        self.addAtbProgress();
+      };
 
 	  	// Init
 	  	( function init () {
