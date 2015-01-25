@@ -10,6 +10,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, button, input {
     text-transform: uppercase;
     margin: 0;
     text-shadow: 3px 3px 0px #000000;
+    list-style: none;
 }
 
 h1 { font-size: 42px; }
@@ -564,13 +565,95 @@ input {
  ** SPRINT BATTLE *****************************************
  **********************************************************/
 
+/** BATTLE UI **/
+.sprint-controls {
+    position: absolute;
+    top: 600px;
+    height: 180px;
+    width: 1200px;
+    background: #444444;
+}
+
+.sprint-instructions {
+    width: 1200px;
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+.enemy-list, .ability-list, .dev-list { float: left; padding: 10px; }
+
+.enemy-list {
+    width: 140px;
+}
+
+.enemy-list-item, .ability-list-item, .dev-list-item, .dev-list-hp, .stat-bar-filled, .stat-bar-container {
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.ability-list {
+    width: 500px;
+}
+
+.ability-list .left-arrow, .ability-list .right-arrow {
+    width: 20px;
+    margin-top: 40px;
+    text-shadow: 3px 3px 0px #000000;
+}
+
+.ability-list .scrollable {
+    width: 420px;
+    height: 110px;
+    margin: 0 20px;
+    overflow-y: auto;
+}
+
+.ability-list-icon {
+    padding-left: 10px;
+}
+
+.ability-list .selected {
+    background: #666666;
+}
+
+.dev-list {
+    width: 500px;
+}
+
+.dev-list-icon { width: 20px; clear: both; float: left; }
+.dev-list-item { width: 120px; }
+.dev-list-hp { width: 100px; }
+
+.dev-list .stat-bar-filled {
+    height: 20px;
+    width: 100px;
+    background: #51d96a;
+    float: left;
+    position: relative;
+    z-index: 999;
+    margin-top: 5px;
+}
+
+.dev-list .stat-bar-container {
+    height: 20px;
+    width: 200px;
+    background: #000000;
+    float: left;
+    margin-top: -25px;
+    margin-left: 280px;
+}
+
+/** BATTLE AREA **/
 .battlefield ul li { list-style: none; }
 
 .sprite-icon {
     position: absolute;
 }
 
-/* ENEMIES */
+/** ENEMIES **/
 .enemy-sprite {
     width: 312px;
     height: 312px;
@@ -594,7 +677,7 @@ input {
 .enemy-sprite-crt { background: url(../images/enemies_5_GGJ2015.gif) }
 .enemy-sprite-csl { background: url(../images/enemies_6_GGJ2015.gif) }
 
-/* CHARACTERS */ 
+/** CHARACTERS **/ 
 .dev-sprite {
     width: 78px;
     height: 78px;

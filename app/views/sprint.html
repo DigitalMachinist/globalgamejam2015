@@ -1,5 +1,6 @@
 <div class="sprint">
 	<div class="battlefield">
+		<div class="sprint-instructions">Choose an enemy.</div>
 		<div class="enemy-sprites">
 			<ul>
 				<!-- <li ng-repeat="enemy in enemies">
@@ -57,28 +58,86 @@
 	</div>
 	<div class="sprint-controls">
 		<div class="enemy-list">
+			<h3>NPC</h3>
 			<ul>
+				<li class="clearfix">
+					<div class="enemy-list-icon fa fa-2x fa-caret-right left"></div> 
+					<div class="enemy-list-item left">EXE 1</div> 
+				</li>
+				<li class="clearfix">
+					<div class="enemy-list-icon fa fa-2x fa-caret-right left"></div> 
+					<div class="enemy-list-item left">CRT 1</div> 
+				</li>
+
+				<li class="clearfix">
+					<div class="enemy-list-icon fa fa-2x fa-caret-right left"></div> 
+					<div class="enemy-list-item left">BUG 1</div> 
+				</li>
+				<li class="clearfix">
+					<div class="enemy-list-icon fa fa-2x fa-caret-right left"></div> 
+					<div class="enemy-list-item left">CLN 1</div> 
+				</li>
+
 				<!-- <li ng-repeat="enemy in enemies">
 					<div class="enemy-list-item" ng-class="{ 'selected': isEnemySelected( enemy ) }" ng-hover="onEnemyHovered( enemy )" ng-click="onEnemyClicked( enemy )">{{ enemy.name }}</div> 
 				</li> -->
 			</ul>
 		</div>
 		<div class="ability-list">
+			<h3>ABL</h3>
 			<div class="left-arrow left" ng-click="onChangeDevArrowClicked( 'left' )">
-				<i class="fa fa-2x fa-left"></i>
+				<i class="fa fa-2x fa-caret-left"></i>
 			</div>
 			<ul class="scrollable left">
+				<li class="clearfix selected">
+					<div class="ability-list-icon fa fa-2x fa-caret-right left"></div> 
+					<div class="ability-list-item left">CRUNCH</div> 
+				</li>
+				<li class="clearfix">
+					<div class="ability-list-icon fa fa-2x fa-caret-right left hide"></div> 
+					<div class="ability-list-item left">SHIT UMBRELLA</div> 
+				</li>
 				<!-- <li ng-repeat="ability in selectedDev.abilities">
 					<div class="ability-list-item" ng-class="{ 'selected': isAbilitySelected( ability ) }" ng-hover="onAbilityHovered( ability )" ng-click="onAbilityClicked( ability )">{{ ability.name }}</div> 
 				</li> -->
 			</ul>
-			<div class="right-arrow left" ng-click="onChangeDevArrowClicked( 'right' )">
-				<i class="fa fa-2x fa-right"></i>
+			<div class="right-arrow right" ng-click="onChangeDevArrowClicked( 'right' )">
+				<i class="fa fa-2x fa-caret-right"></i>
 			</div>
 			<div class="clearfix"></div>
 		</div>
 		<div class="dev-list">
+			<h3>PC</h3>
 			<ul>
+				<li class="clearfix">
+					<div class="dev-list-icon fa fa-2x fa-caret-right left"></div> 
+					<div class="dev-list-item left">TABYROSE</div> 
+					<div class="dev-list-hp left"> <span class="dev-list-hp-points">999</span>/<span class="dev-list-hp-total">999</span></div>
+					<div class="stat-bar stat-bar-filled"></div>
+            		<div class="stat-bar stat-bar-container"></div>
+				</li>
+				<li class="clearfix">
+					<div class="dev-list-icon fa fa-2x fa-caret-right left"></div> 
+					<div class="dev-list-item left">JEFFROSE</div> 
+					<div class="dev-list-hp left"> <span class="dev-list-hp-points">999</span>/<span class="dev-list-hp-total">999</span></div>
+					<div class="stat-bar stat-bar-filled"></div>
+            		<div class="stat-bar stat-bar-container"></div>
+				</li>
+
+				<li class="clearfix">
+					<div class="dev-list-icon fa fa-2x fa-caret-right left"></div> 
+					<div class="dev-list-item left">J ZINGER</div> 
+					<div class="dev-list-hp left"> <span class="dev-list-hp-points">999</span>/<span class="dev-list-hp-total">999</span></div>
+					<div class="stat-bar stat-bar-filled"></div>
+            		<div class="stat-bar stat-bar-container"></div>
+				</li>
+				<li class="clearfix">
+					<div class="dev-list-icon fa fa-2x fa-caret-right left"></div> 
+					<div class="dev-list-item left">KRIS NEU</div> 
+					<div class="dev-list-hp left"> <span class="dev-list-hp-points">999</span>/<span class="dev-list-hp-total">999</span></div>
+					<div class="stat-bar stat-bar-filled"></div>
+            		<div class="stat-bar stat-bar-container"></div>
+				</li>
 				<!-- <li ng-repeat="dev in devs">
 					<status model="dev" class="dev-list-item" ng-class="{ 'selected': isDevSelected( enemy ) }" ng-hover="onDevHovered( dev )" ng-click="onDevClicked( dev )">{{ dev.name }}</status> 
 				</li> -->
