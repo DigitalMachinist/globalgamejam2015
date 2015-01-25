@@ -2,7 +2,7 @@
 
 angular
   .module( 'globalgamejam2015App' )
-  .factory( 'gameLoop', function gameLoop( $interval, $rootScope, $broadcast, gameData ) {
+  .factory( 'gameLoop', function gameLoop( $rootScope, $interval ) {
 
     // Create the base object to augment.
     var self = {};

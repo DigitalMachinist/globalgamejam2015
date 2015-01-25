@@ -1,7 +1,8 @@
 'use strict';
 angular
 	.module( 'globalgamejam2015App' )
-	.controller( 'SprintCtrl', function ( $scope, $state, gameData, $gameLoop, $timeout ) {
+	.controller( 'SprintCtrl', function ( $scope, $state, gameData, devsData, enemyData, 
+    gameLoop, $timeout ) {
 
     // Event Handlers
 
@@ -31,7 +32,21 @@ angular
 
     // Helpers
     
-    
+    // Update
+
+    $scope.$on( 'update', function () {
+
+      console.log( 'Update' );
+
+      for ( var i = 0; i < devsData.devs.length; i++ ) {
+        devsData.devs[ i ].update();
+      }
+
+      for ( i = 0; i < enemyData.enemies.length; i++ ) {
+        enemyData.enemies[ i ].update();
+      }
+
+    } );
 
     // Init
     
@@ -44,8 +59,8 @@ angular
       else {
         // Wait briefly before starting up combat.
         $timeout( function () {
-          $gameLoop.startUpdate( 100 );
-        }, 2000 );
+          gameLoop.startUpdate( 100 );
+        }, 1000 );
       }
 
     } )();
