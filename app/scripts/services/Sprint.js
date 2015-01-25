@@ -37,7 +37,8 @@ angular
       };
       self.getRandomEnemy = function ( phaseNum ) {
         var randomInt = Math.floor( Math.random() * enemyData.enemies.length );
-        return angular.copy( enemyData.enemies[ randomInt ] );
+        var enemyCopy = angular.copy( enemyData.enemies[ randomInt ] );
+        return enemyCopy;
       };
       self.createEnemies = function ( phaseNum ) {
 

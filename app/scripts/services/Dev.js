@@ -2,7 +2,7 @@
 
 angular
 	.module( 'globalgamejam2015App' )
-  .factory( 'Dev', function Dev( jobsData, $rootScope ) {
+  .factory( 'Dev', function Dev( jobsData, $rootScope, $timeout ) {
 
   	return function Dev( person, jobLevelsArray, abilitiesArray ) {
 
@@ -61,6 +61,9 @@ angular
 
 	  	// ATB
 	  	self.advanceAtb = function () {
+        if ( self.currentHp <= 0 ) {
+          return;
+        }
         self.atbProgress += self.atbSpeed;
         if ( self.atbProgress >= self.atbMax ) {
           self.atbProgress = self.atbMax;
@@ -145,6 +148,10 @@ angular
 	  		if ( self.currentHp > maxHp ) {
 	  			self.currentHp = maxHp;
 	  		}
+        self.isShaking = true;
+        $timeout( function () {
+          self.isShaking = false;
+        }, 500 );
 	  	};
 	  	self.getCurrentHp = function () {
 	  		return self.currentHp;
@@ -220,6 +227,8 @@ angular
         // These have to be set before anything else.
         self.jobLevels = jobLevelsArray;
         self.abilities = abilitiesArray;
+        
+        self.isShaking = false;
 
         self.atbMax = 1000;
 		  	self.atbProgress = 0;
@@ -227,6 +236,7 @@ angular
         self.currentAniFrame = 0;
         self.currentAniName = 'idle';
 		  	self.currentHp = self.getMaxHp();
+        self.isActing = false;
 	  		self.person = person;
         self.xp = 0;
 

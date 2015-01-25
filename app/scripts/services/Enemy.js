@@ -2,7 +2,7 @@
 
 angular
   .module( 'globalgamejam2015App' )
-  .factory( 'Enemy', function Enemy( jobsData, $rootScope ) {
+  .factory( 'Enemy', function Enemy( jobsData, $rootScope, $timeout ) {
 
     return function Enemy( baseObj ) {
 
@@ -40,6 +40,9 @@ angular
 
       // ATB
       self.advanceAtb = function () {
+        if ( self.currentHP <= 0 ) {
+          return;
+        }
         self.atbProgress += self.atbSpeed;
         if ( self.atbProgress >= self.atbMax ) {
           self.atbProgress = self.atbMax;
@@ -89,6 +92,10 @@ angular
         if ( self.currentHp < 0 ) {
           self.currentHp = 0;
         }
+        self.isShaking = true;
+        $timeout( function () {
+          self.isShaking = false;
+        }, 500 );
       };
       self.doHealing = function ( healHp ) {
         self.currentHp += healHp;
@@ -104,18 +111,18 @@ angular
         return self.maxHP;
       };
       self.isHpCritical = function () {
-        return self.currentHp < ( 0.4 * self.maxHp );
+        return self.currentHP < ( 0.4 * self.maxHp );
       };
       self.isHpHurt = function () {
-        return self.currentHp >= ( 0.4 * self.maxHp );
+        return self.currentHP >= ( 0.4 * self.maxHp );
       };
       self.isHpSafe = function () {
-        return self.currentHp >= ( 0.7 * self.maxHp );
+        return self.currentHP >= ( 0.7 * self.maxHp );
       };
 
       // Name
       self.getName = function () {
-        return self.person.name;
+        return self.name;
       };
 
       // XP
@@ -131,6 +138,8 @@ angular
         self.currentAniName = 'idle';
 
         // ATB
+        self.atbMax = 1000;
+        self.atbProgress = 0;
         if ( !self.atbSpeed || !parseInt( self.atbSpeed ) ) {
           self.atbSpeed = 10;
         }
@@ -160,9 +169,13 @@ angular
           self.hireCost = 10;
         }
 
+        self.isActing = false;
+        self.isShaking = false;
+
         // HP
         if ( !self.maxHP || !parseInt( self.maxHP ) ) {
           self.maxHP = 30;
+          self.currentHP = self.maxHP;
         }
 
         // Job
