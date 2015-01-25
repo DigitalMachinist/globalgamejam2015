@@ -13,7 +13,7 @@
     <div id="sidebar">
       <ul ng-if="cardState == 'team'">
         <li ng-repeat="dev in devsData.devs">
-          <div ng-show="dev" ng-click="onDevFireClicked( dev )">
+          <div ng-show="dev" ng-click="onDevCardClicked( dev )">
             <devcard index="{{ $index }}" model="dev" on-fired="onDevFired"></devcard>
           </div>
           <div ng-show="!dev" ng-click="onHireCardClicked( $index )">

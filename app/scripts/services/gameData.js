@@ -16,12 +16,17 @@ angular
         100,   // Concept completion bonus $$$ 
         250,   // Prototype completion bonus $$$
         2500,  // Fun required to advance to prototype
-        5000,  // Fun required to advance to alpha
-        7500, // Fun required to advance to beta
-        10000  // Fun required to advance to release
+        5000,  // Fun required to advance to beta
+        7500   // Fun required to advance to release
       );
       devsData.getRandomHireableDevs( self.game.getCurrentMonth() + 1 );
-      console.log( self.game );
+      devsData.devs = [ 
+        devsData.getRandomDev( self.game.getCurrentMonth() + 1 ), 
+        devsData.getRandomDev( self.game.getCurrentMonth() + 1 ), 
+        devsData.getRandomDev( self.game.getCurrentMonth() + 1 ),
+        devsData.getRandomDev( self.game.getCurrentMonth() + 1 ) 
+      ];
+      //console.log( self.game );
     };
 
     // Init

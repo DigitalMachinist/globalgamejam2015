@@ -13,7 +13,8 @@ angular
       dev = null;
     };
 
-    $scope.onDevClicked = function ( dev ) {
+    $scope.onDevCardClicked = function ( dev ) {
+      $scope.cardState = 'team';
       $scope.selectedDev = dev;
     };
 
@@ -74,11 +75,11 @@ angular
       $scope.selectedDev = null;
       $scope.state = 'team';
 
-      $scope.devsData.devs[ 0 ] = devsData.getRandomDev( 1 );
+      //$scope.devsData.devs[ 0 ] = devsData.getRandomDev( 1 );
       $scope.selectedDev = $scope.devsData.devs[ 0 ];
-      $scope.selectedDev.gainXp( 2000 );
+      //$scope.selectedDev.gainXp( 2000 );
 
-      console.log( $scope.selectedDev );
+      //console.log( $scope.selectedDev );
 
       $timeout( function () {
         $( '[data-toggle="popover"]' ).popover( { 

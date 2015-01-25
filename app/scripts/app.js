@@ -47,6 +47,11 @@ angular.module( 'globalgamejam2015App', [
       templateUrl: 'views/planning.html',
       controller: 'PlanningCtrl'
     } )
+    .state( 'planning.build', {
+      url: '/build', 
+      templateUrl: 'views/planning.build.html',
+      controller: 'PlanningBuildCtrl'
+    } )
     .state( 'planning.project', {
       url: '/project', 
       templateUrl: 'views/planning.project.html',
