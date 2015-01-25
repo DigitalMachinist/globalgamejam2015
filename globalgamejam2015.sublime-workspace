@@ -44,10 +44,18 @@
 	"buffers":
 	[
 		{
-			"file": "app/scripts/services/Ability.js",
+			"file": "app/styles/main.css",
 			"settings":
 			{
-				"buffer_size": 1312,
+				"buffer_size": 20969,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/sprint.html",
+			"settings":
+			{
+				"buffer_size": 3137,
 				"line_ending": "Windows"
 			}
 		}
@@ -112,7 +120,8 @@
 		"/D/github/globalgamejam2015/app",
 		"/D/github/globalgamejam2015/app/scripts",
 		"/D/github/globalgamejam2015/app/scripts/services",
-		"/D/github/globalgamejam2015/app/styles"
+		"/D/github/globalgamejam2015/app/styles",
+		"/D/github/globalgamejam2015/app/views"
 	],
 	"file_history":
 	[
@@ -395,31 +404,58 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/scripts/services/Ability.js",
-					"semi_transient": true,
+					"file": "app/styles/main.css",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1312,
+						"buffer_size": 20969,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								245,
-								245
+								12465,
+								12465
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 11913.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/sprint.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3137,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								425,
+								425
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

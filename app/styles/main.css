@@ -499,7 +499,7 @@ input {
 #build-milestone-area .budget {
     float: left;
     margin-right: 75px;
-    margin-top: 85px;
+    margin-top: 40px;
 }
 
 #build-milestone-area .milestone-progress {
@@ -509,7 +509,7 @@ input {
 }
 
 #build-milestone-area .milestone-progress-text {
-    top: 85px;
+    top: 40px;
 }
 
 /** FEATURES AREA **/
@@ -620,11 +620,13 @@ input {
     padding-top: 10px;
 }
 
-.enemy-list, .ability-list, .dev-list { float: left; padding: 10px; }
+.enemy-list, .ability-list, .dev-list { float: left; padding: 10px; position: relative; }
 
 .enemy-list {
-    width: 140px;
+    width: 180px;
 }
+
+.enemy-list-hp { width: 100px; position: absolute; left: 80px; margin-top: 5px; }
 
 .enemy-list-item, .ability-list-item, .dev-list-item, .dev-list-hp, .dev-list .stat-bar-filled, .dev-list .stat-bar-container {
     margin-left: 10px;
@@ -633,17 +635,17 @@ input {
 }
 
 .ability-list {
-    width: 500px;
+    width: 400px;
 }
 
-.ability-list .left-arrow, .ability-list .right-arrow {
+/*.ability-list .left-arrow, .ability-list .right-arrow {
     width: 20px;
     margin-top: 40px;
     text-shadow: 3px 3px 0px #000000;
-}
+}*/
 
 .ability-list .scrollable {
-    width: 420px;
+    width: 360px;
     height: 110px;
     margin: 0 20px;
     overflow-y: auto;
@@ -657,13 +659,18 @@ input {
     background: #666666;
 }
 
+.act-btn button {
+	padding: 5px;
+	margin-top: 5px;
+}
+
 .dev-list {
     width: 500px;
 }
 
-.dev-list-icon { width: 20px; clear: both; float: left; }
-.dev-list-item { width: 120px; }
-.dev-list-hp { width: 100px; }
+.dev-list-icon { width: 20px; clear: both; position: absolute; }
+.dev-list-item { width: 120px; position: absolute; left: 30px; }
+.dev-list-hp { width: 100px; position: absolute; left: 160px; }
 
 .dev-list .stat-bar-filled {
     height: 20px;
@@ -673,6 +680,7 @@ input {
     position: relative;
     z-index: 999;
     margin-top: 5px;
+    margin-left: 260px;
 }
 
 .dev-list .stat-bar-container {
@@ -681,7 +689,7 @@ input {
     background: #000000;
     float: left;
     margin-top: -25px;
-    margin-left: 280px;
+    margin-left: 260px;
 }
 
 /** BATTLE AREA **/
